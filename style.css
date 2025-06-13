@@ -345,8 +345,12 @@ img.gallery {
   transition: .5s ease;
 }
 
+.cv {
+  padding: 2em 0 2em;
+}
+
 .accordion {
-  box-shadow: 0px 1px 0px #c8c8c8;
+  box-shadow: 0px 1px 0px var(--selic-black);
 }
 
 .contentBox {
@@ -354,9 +358,9 @@ img.gallery {
 }
 
 .label {
-  font-weight: bold;
-  /* font-size: 3rem; */
-  padding: 12px 0px 12px 0px;
+  font-weight: normal;
+  font-size: 1.25rem;
+  padding: 1em 0px 1em;
   position: relative;
   cursor: pointer;
 }
@@ -366,8 +370,7 @@ img.gallery {
 } */
 
 .label::before {
-  /* content: url(assets/add_FILL0_wght400_GRAD0_opsz24.svg); */
-  content: '+';
+  content: url(/assets/expand_more_FILL0_wght400_GRAD0_opsz48.svg);
   position: absolute;
   top: 50%;
   right: 3px;
@@ -375,8 +378,7 @@ img.gallery {
 }
 
 .contentBox.active .label::before {
-  /* content: url(assets/remove_FILL0_wght400_GRAD0_opsz24.svg); */
-  content: '–';
+  content: url(/assets/expand_less_FILL0_wght400_GRAD0_opsz48.svg);
   position: absolute;
   top: 50%;
   right: 3px;

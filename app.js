@@ -9,6 +9,7 @@ const modal = document.querySelector('.previewModal');
 const modalImg = document.getElementById('previewImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
 const projects = document.querySelectorAll('.highlight-project');
+const accordion = document.getElementsByClassName('contentBox');
 
 
 // Contact/Email button interaction
@@ -72,6 +73,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Accordion
+for (let i = 0; i < accordion.length; i++) {
+	accordion[i].addEventListener('click', function () {
+		this.classList.toggle('active');
+	});
+}
+
+
 // Preview Image
 // Add click event to each image
 thumbnails.forEach((thumbnail) => {
@@ -89,13 +98,3 @@ modal.addEventListener('click', function (e) {
 		document.body.style.overflow = 'auto';
 	}
 });
-
-
-/* // Accordion
-const accordion = document.getElementsByClassName('contentBox');
-
-for (let i = 0; i < accordion.length; i++) {
-	accordion[i].addEventListener('click', function () {
-		this.classList.toggle('active');
-	});
-} */
