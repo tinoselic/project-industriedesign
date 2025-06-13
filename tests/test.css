@@ -1,0 +1,24 @@
+/* Basic styling for the container and boxes */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin: 50px 0;
+  }
+  
+  .highlight-box {
+    width: 60%;
+    height: 300px;
+    padding: 50px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Highlight effect styling */
+  .highlight {
+    background-color: #ffd700;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  

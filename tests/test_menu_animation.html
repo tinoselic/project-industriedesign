@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cross to Burger Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .menu-icon {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .line {
+      fill: none;
+      stroke: #000;
+      stroke-width: 2.5;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .top {
+      transform-origin: center;
+    }
+
+    .middle {
+      opacity: 1;
+      transform-origin: center;
+    }
+
+    .bottom {
+      transform-origin: center;
+    }
+
+    .menu-icon.active .top {
+      transform: rotate(45deg) translate(0px, 10px);
+    }
+
+    .menu-icon.active .middle {
+      opacity: 0;
+    }
+
+    .menu-icon.active .bottom {
+      transform: rotate(-45deg) translate(0px, -10px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" onclick="toggleMenu(this)">
+    <line class="line top" x1="10" y1="15" x2="40" y2="15"></line>
+    <line class="line middle" x1="10" y1="25" x2="40" y2="25"></line>
+    <line class="line bottom" x1="10" y1="35" x2="40" y2="35"></line>
+  </svg>
+
+  <script>
+    function toggleMenu(icon) {
+      icon.classList.toggle('active');
+    }
+  </script>
+
+</body>
+
+</html>
