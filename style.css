@@ -50,6 +50,7 @@
   font-family: "Inter", sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
   /* scrollbar-width: thin;
   scrollbar-color: #fff #000; */
 }
@@ -769,7 +770,7 @@ footer {
   }
 
   .elaboration .center {
-    margin:auto;
+    margin: auto;
   }
 
   .mission {
