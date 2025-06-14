@@ -1,15 +1,15 @@
 const contact = document.getElementById('contact');
 const mainMenu = document.querySelector('.mainMenu');
 const openMenu = document.querySelector('.openMenu');
-let isRotated = false;
 const home = document.getElementById('home');
 const main = document.querySelector('main');
 const footer = document.getElementById('copyright');
+const accordion = document.getElementsByClassName('contentBox');
 const modal = document.querySelector('.previewModal');
 const modalImg = document.getElementById('previewImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
 const projects = document.querySelectorAll('.highlight-project');
-const accordion = document.getElementsByClassName('contentBox');
+let isRotated = false;
 
 
 // Contact/Email button interaction
@@ -35,6 +35,21 @@ openMenu.addEventListener('click', () => {
 		footer.style.display = 'block';
 	}
 });
+
+
+// Footer
+document.addEventListener("DOMContentLoaded", function () {
+	var footerText = "© 2025 Selić Industriedesign";
+	footer.textContent = footerText;
+});
+
+
+// Accordion
+for (let i = 0; i < accordion.length; i++) {
+	accordion[i].addEventListener('click', function () {
+		this.classList.toggle('active');
+	});
+}
 
 
 // Highlight Project on Scroll
@@ -65,20 +80,6 @@ const observer = new IntersectionObserver(highlightOnScroll, options);
 
 // Observe each box
 projects.forEach(box => observer.observe(box));
-
-// Footer
-document.addEventListener("DOMContentLoaded", function () {
-	var footerText = "© 2025 Selić Industriedesign";
-	footer.textContent = footerText;
-});
-
-
-// Accordion
-for (let i = 0; i < accordion.length; i++) {
-	accordion[i].addEventListener('click', function () {
-		this.classList.toggle('active');
-	});
-}
 
 
 // Preview Image

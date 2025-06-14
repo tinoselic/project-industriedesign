@@ -57,17 +57,18 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 3px;
+  height: 3px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: var(--selic-black);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #fff;
+  background: var(--selic-white);
 }
 
 /* Handle on hover */
@@ -347,7 +348,7 @@ img.gallery {
 }
 
 .cv {
-  padding: 2em 0 2em;
+  padding: 2em 0 4em;
 }
 
 .accordion {
@@ -361,7 +362,7 @@ img.gallery {
 .label {
   font-weight: normal;
   font-size: 1.25rem;
-  padding: 1em 0px 1em;
+  padding: 1em 0 1em;
   position: relative;
   cursor: pointer;
 }
@@ -371,18 +372,18 @@ img.gallery {
 } */
 
 .label::before {
-  content: url(/assets/expand_more_FILL0_wght400_GRAD0_opsz48.svg);
+  content: url(assets/expand_more_FILL0_wght400_GRAD0_opsz48.svg);
   position: absolute;
   top: 50%;
-  right: 3px;
+  right: 0.25em;
   transform: translateY(-50%);
 }
 
 .contentBox.active .label::before {
-  content: url(/assets/expand_less_FILL0_wght400_GRAD0_opsz48.svg);
+  content: url(assets/expand_less_FILL0_wght400_GRAD0_opsz48.svg);
   position: absolute;
   top: 50%;
-  right: 3px;
+  right: 0.25em;
   transform: translateY(-50%);
 }
 
@@ -395,7 +396,7 @@ img.gallery {
 
 .contentBox.active .content {
   height: fit-content;
-  padding-top: 12px;
+  padding: 0 2em 2em;
 }
 
 .thumbnail {
@@ -719,6 +720,10 @@ footer {
     padding: 4em;
     max-width: 700px;
     margin: auto;
+  }
+
+  .cv {
+    width: 50vw;
   }
 }
 
