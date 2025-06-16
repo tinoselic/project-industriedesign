@@ -512,15 +512,21 @@ video {
 
 .background-video {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background: no-repeat center;
   user-select: none;
   pointer-events: none;
   filter:
-    /* brightness(0.6) */
-    grayscale(1);
-  /* display: none; */
+    brightness(0.6);
+    /* grayscale(1);
+    display: none; */
+}
+
+.background-video iframe {
+  height: 100dvh;
+  width: 100vw;
 }
 
 .responsive-video {
@@ -552,7 +558,7 @@ video {
   font-size: 2.5rem;
   text-transform: uppercase;
   /* text-align: center; */
-  color: var(--selic-black);
+  color: var(--selic-white);
   /* mix-blend-mode: difference;
   filter: invert(); */
   width: 90vw;
