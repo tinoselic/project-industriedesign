@@ -106,7 +106,6 @@ h2 i {
 
 h3 {
   color: var(--selic-black);
-  font-weight: normal;
   padding-bottom: 16px;
 }
 
@@ -337,6 +336,10 @@ img.gallery {
 
 .text-box {
   display: block;
+}
+
+img.award-label {
+  width: 10em;
 }
 
 .cv {
