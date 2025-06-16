@@ -313,18 +313,20 @@ img.gallery {
 .highlight .project-title {
   font-family: 'RobotoCondensed';
   color: var(--selic-white);
-  width: 10em;
+  width: 20em;
   position: absolute;
   left: 50%;
   top: 45%;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1;
   text-align: center;
 }
 
 .highlight .project-subtitle {
   color: var(--selic-white);
+  opacity: 0.7;
+  width: 20em;
   position: absolute;
   left: 50%;
   top: 55%;
@@ -634,30 +636,28 @@ footer {
   }
 
   .highlight-project:hover .project-title {
-    opacity: 1;
     font-family: 'RobotoCondensed';
     color: var(--selic-white);
-    width: 10em;
+    width: 20em;
     position: absolute;
     left: 50%;
     top: 45%;
     transform: translate(-50%, -50%);
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1;
     text-align: center;
-    transition: opacity 2s ease;
   }
 
   .highlight-project:hover .project-subtitle {
-    opacity: 1;
     color: var(--selic-white);
+    opacity: 0.7;
+    width: 20em;
     position: absolute;
     left: 50%;
     top: 55%;
     transform: translate(-50%, -50%);
     font-size: 1rem;
     text-align: center;
-    transition: opacity 2s ease;
   }
 
   .line {
