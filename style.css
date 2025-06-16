@@ -518,26 +518,27 @@ video {
 video {
   display: flex;
   justify-content: center;
-  height: 100dvh;
 }
 
 .background-video {
   position: fixed;
-  left: 0;
-  top: 0;
-  background-size: cover;
-  background: no-repeat center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   user-select: none;
   pointer-events: none;
   filter:
-    brightness(0.6);
+    brightness(0.5);
   /* grayscale(1);
     display: none; */
 }
 
+.background-video video {
+  height: 100dvh;
+}
+
 .background-video iframe {
   height: 100dvh;
-  width: 100vw;
 }
 
 .responsive-video {
@@ -614,8 +615,9 @@ footer {
 
   nav .logo-text {
     display: inline-block;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
   }
 
@@ -765,7 +767,7 @@ footer {
     height: 80%;
   }
 
-  video {
+  .background-video video {
     width: 100vw;
     height: auto;
   }
