@@ -36,8 +36,8 @@
 }
 
 :root {
-  --selic-white: #eee;
-  --selic-black: #111;
+  --selic-white: #fafbfc;
+  --selic-black: #050505;
   --selic-yellow: #F6E830;
   --selic-violet: #6E4AE8;
 }
@@ -338,8 +338,18 @@ img.gallery {
   display: block;
 }
 
-img.award-label {
-  width: 10em;
+.awards {
+  display: inline-flex;
+  flex-direction: column;
+  position: absolute;
+  top: 6em;
+  right: 2em;
+}
+
+img.awards-label {
+  position: relative;
+  width: 4em;
+  margin-bottom: 1em;
 }
 
 .cv {
@@ -487,9 +497,18 @@ img.award-label {
   }
 }
 
-.banner {
+.banner-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-bottom: 3em;
+}
+
+img.banner {
   width: 100%;
-  padding-bottom: 1em;
 }
 
 video {
@@ -615,10 +634,10 @@ footer {
 
   nav .logo-text {
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
+    /* letter-spacing: 0.1rem;
+    text-transform: uppercase; */
   }
 
   .mainMenu {
@@ -630,6 +649,10 @@ footer {
     grid-gap: 1em;
     height: fit-content;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .grid.project-text.project-text {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .highlight-project:hover .gallery {
@@ -669,9 +692,15 @@ footer {
     height: 1px;
   }
 
-  /* .headline {} */
+  .awards {
+    top: 6em;
+    right: 6em;
+  }
 
-  /* .row {} */
+  img.awards-label {
+    width: 6em;
+    margin-bottom: 1em;
+  }
 
   .column {
     top: 240px;
@@ -759,6 +788,16 @@ footer {
 
   .image-gallery {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .awards {
+    top: 8em;
+    right: 8em;
+  }
+
+  img.awards-label {
+    width: 10em;
+    margin-bottom: 2em;
   }
 
   #previewImage {
