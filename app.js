@@ -24,7 +24,7 @@ openMenu.addEventListener('click', () => {
 	isRotated = !isRotated;
 
 	if (isRotated) {
-		mainMenu.style.display = 'block';
+		mainMenu.style.display = 'inline-flex';
 		openMenu.style.transform = 'rotate(1845deg)';
 		main.style.display = 'none';
 		footer.style.display = 'none';
