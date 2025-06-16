@@ -348,12 +348,11 @@ img.gallery {
 }
 
 .cv {
-  padding: 2em 0 4em;
-}
+    padding-bottom: 3em;
+  }
 
 .accordion {
   box-shadow: 0px 1px 0px var(--selic-black);
-  font-weight: normal;
 }
 
 .contentBox {
@@ -361,7 +360,8 @@ img.gallery {
 }
 
 .label {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   padding: 1em 0 1em;
   position: relative;
   cursor: pointer;
@@ -399,6 +399,13 @@ img.gallery {
 .contentBox.active .content {
   height: fit-content;
   padding: 0 2em 2em;
+}
+
+.references a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2;
+  text-underline-offset: 0.3em;
 }
 
 .thumbnail {
@@ -569,7 +576,7 @@ video {
 }
 
 .ideology {
-  padding-bottom: 2em;
+  padding-bottom: 3em;
 }
 
 .statement {
@@ -659,7 +666,7 @@ footer {
   }
 
   .left {
-    padding-right: 12px;
+    padding-right: 2em;
     position: -webkit-sticky;
     /* Safari */
     position: sticky;
@@ -667,7 +674,7 @@ footer {
   }
 
   .right {
-    padding-left: 12px;
+    padding-left: 2em;
   }
 
   .about-column-left {
@@ -728,10 +735,6 @@ footer {
     padding: 4em;
     max-width: 700px;
     margin: auto;
-  }
-
-  .cv {
-    width: 50vw;
   }
 }
 
