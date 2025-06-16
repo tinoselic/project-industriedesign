@@ -396,6 +396,10 @@ img.gallery {
   overflow-y: auto;
 }
 
+.content ul li{
+  padding-bottom: 1em;
+}
+
 .contentBox.active .content {
   height: fit-content;
   padding: 0 2em 2em;
