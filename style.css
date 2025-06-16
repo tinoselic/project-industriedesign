@@ -281,6 +281,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  padding-bottom: 3em;
 }
 
 .grid a {
@@ -493,8 +494,7 @@ img.gallery {
 }
 
 .banner {
-  width: 100vw;
-  margin-left: -18px;
+  width: 100%;
   padding-bottom: 1em;
 }
 
@@ -631,9 +631,9 @@ footer {
 
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-gap: 6px;
     height: fit-content;
+    grid-template-columns: 1fr 1fr;
   }
 
   .highlight-project:hover {
@@ -745,8 +745,12 @@ footer {
 }
 
 @media only screen and (min-width: 1280px) {
-  .grid {
+  .project-gallery {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .image-gallery {
+    grid-template-columns: 1fr 1fr;
   }
 
   /* .project-title {
@@ -757,10 +761,6 @@ footer {
     width: auto;
     max-width: 1920px;
     height: 80%;
-  }
-
-  .banner {
-    margin-left: -48px;
   }
 
   video {
