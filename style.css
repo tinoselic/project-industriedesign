@@ -619,6 +619,7 @@ video {
 }
 
 .statement {
+  text-align: center;
   padding: 2em 0 2em;
 }
 
@@ -627,6 +628,7 @@ video {
 }
 
 .mission {
+  text-align: center;
   padding: 2em;
   margin: auto;
 }
