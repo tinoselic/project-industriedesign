@@ -260,7 +260,7 @@ nav a:visited:hover {
 }
 
 .banner {
-  width: 100dvw;
+  width: 100%;
   position: relative;
   overflow-x: hidden;
   margin-top: 5.25em;
@@ -817,13 +817,7 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
-  .awards {
-    top: 53em;
-  }
-
   img.awards-label {
-    height: 10em;
-    width: auto;
     margin-right: 2em;
   }
 
