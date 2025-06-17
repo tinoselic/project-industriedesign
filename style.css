@@ -263,6 +263,7 @@ nav a:visited:hover {
   width: 100dvw;
   position: relative;
   overflow-x: hidden;
+  margin-top: 5.25em;
 }
 
 .banner img {
@@ -279,16 +280,12 @@ main {
 .awards {
   display: inline-flex;
   /* flex-direction: column; */
-  position: absolute;
-  top: 12em;
-  left: 1em;
+  margin: 1em 0 0 1em;
 }
 
 img.awards-label {
-  position: relative;
-  width: 4em;
-  height: auto;
-  margin-right: 1em;
+  width: 5em;
+  padding-right: 0.25em;
 }
 
 .headline {
@@ -327,7 +324,7 @@ img.awards-label {
 }
 
 .cell-1 {
-  padding-bottom: 3em;
+  padding-bottom: 1em;
 }
 
 .highlight-project {
@@ -661,6 +658,10 @@ footer {
     display: inline-flex;
   }
 
+  .banner {
+    margin-top: 0;
+  }
+
   .grid {
     display: grid;
     grid-gap: 1em;
@@ -801,10 +802,6 @@ footer {
 }
 
 @media only screen and (min-width: 1280px) {
-  /* .banner {
-    padding-bottom: 8em;
-  } */
-
   .grid.project-text.project-text {
     grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: 6em;
