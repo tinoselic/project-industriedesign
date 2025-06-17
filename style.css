@@ -649,6 +649,9 @@ footer {
     height: fit-content;
     grid-template-columns: 1fr 1fr;
   }
+  .cell-3 {
+    grid-column: 2;
+  }
 
   .highlight-project:hover .gallery {
     overflow: hidden;
