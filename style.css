@@ -278,13 +278,14 @@ main {
 }
 
 .awards {
-  display: inline-flex;
-  /* flex-direction: column; */
+  /* display: inline-flex;
+  flex-direction: column; */
   margin: 1em 0 0 1em;
 }
 
 img.awards-label {
-  width: 5em;
+  height: 3em;
+  width: auto;
   padding-right: 0.25em;
 }
 
@@ -710,12 +711,9 @@ footer {
     height: 1px;
   }
 
-  .awards {
-    top: 27em;
-  }
-
   img.awards-label {
-    width: 6em;
+    height: 6em;
+    width: auto;
   }
 
   .column {
@@ -824,7 +822,8 @@ footer {
   }
 
   img.awards-label {
-    width: 10em;
+    height: 10em;
+    width: auto;
     margin-right: 2em;
   }
 
