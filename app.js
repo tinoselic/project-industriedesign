@@ -1,5 +1,7 @@
 const contact = document.getElementById('contact');
-const body = document.querySelector('body');
+const body = document.body;
+const bodyBg = getComputedStyle(body).backgroundColor;
+const header = document.querySelector('header');
 const mainMenu = document.querySelector('.mainMenu');
 const openMenu = document.querySelector('.openMenu');
 const nav = document.querySelector('nav');
@@ -26,12 +28,14 @@ contact.addEventListener('click', function () {
 openMenu.addEventListener('click', () => {
 	isRotated = !isRotated;
 	if (isRotated) {
+		nav.style.backgroundColor = bodyBg;
+		mainMenu.style.backgroundColor = bodyBg;
 		mainMenu.style.display = 'inline-flex';
-		mainMenu.style.backgroundColor = 'var(--selic-white)';
 		openMenu.style.transform = 'rotate(1845deg)';
 		body.style.overflow = 'hidden';
 		footer.style.display = 'none';
 	} else {
+		nav.style.backgroundColor = 'transparent';
 		mainMenu.style.display = 'none';
 		openMenu.style.transform = 'rotate(0deg)';
 		body.style.overflow = 'auto';
@@ -42,7 +46,7 @@ openMenu.addEventListener('click', () => {
 // Nav bar scrolling color change
 window.addEventListener('scroll', function () {
 	if (window.scrollY > 10) {
-		nav.style.backgroundColor = 'var(--selic-white)';
+		nav.style.backgroundColor = bodyBg;
 	} else {
 		nav.style.backgroundColor = 'transparent';
 	}
