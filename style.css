@@ -256,6 +256,18 @@ nav a:visited:hover {
   text-decoration: underline;
 }
 
+.banner {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 main {
   margin: 84px 18px 0px;
   display: block;
@@ -504,20 +516,6 @@ img.awards-label {
   to {
     transform: scale(1)
   }
-}
-
-.banner-wrapper {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding-bottom: 3em;
-}
-
-img.banner {
-  width: 100%;
 }
 
 video {
