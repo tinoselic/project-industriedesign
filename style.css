@@ -181,6 +181,10 @@ nav {
   z-index: 50;
 }
 
+#home {
+  filter: invert();
+}
+
 nav.hide-on-scroll {
   transform: translateY(-100%);
 }
