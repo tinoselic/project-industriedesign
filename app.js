@@ -1,6 +1,7 @@
 const contact = document.getElementById('contact');
 const mainMenu = document.querySelector('.mainMenu');
 const openMenu = document.querySelector('.openMenu');
+const nav = document.querySelector('nav');
 const home = document.getElementById('home');
 const main = document.querySelector('main');
 const footer = document.getElementById('copyright');
@@ -10,6 +11,7 @@ const modalImg = document.getElementById('previewImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
 const projects = document.querySelectorAll('.highlight-project');
 let isRotated = false;
+let lastScroll = 0;
 
 
 // Contact/Email button interaction
@@ -22,7 +24,6 @@ contact.addEventListener('click', function () {
 // Nav bar interaction
 openMenu.addEventListener('click', () => {
 	isRotated = !isRotated;
-
 	if (isRotated) {
 		mainMenu.style.display = 'inline-flex';
 		openMenu.style.transform = 'rotate(1845deg)';
@@ -34,6 +35,29 @@ openMenu.addEventListener('click', () => {
 		main.style.display = 'block';
 		footer.style.display = 'block';
 	}
+});
+
+// Nav bar scrolling color change
+window.addEventListener('scroll', function () {
+	if (window.scrollY > 10) {
+		nav.classList.add('scrolled');
+	} else {
+		nav.classList.remove('scrolled');
+	}
+});
+
+// Nav bar hide on scroll
+
+window.addEventListener('scroll', () => {
+	const currentScroll = window.pageYOffset;
+	if (currentScroll > lastScroll && currentScroll > 50) {
+		// scrolling down
+		nav.classList.add('hide-on-scroll');
+	} else {
+		// scrolling up
+		nav.classList.remove('hide-on-scroll');
+	}
+	lastScroll = currentScroll;
 });
 
 
