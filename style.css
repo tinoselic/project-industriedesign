@@ -602,10 +602,11 @@ video {
 }
 
 .quote {
-  font-family: 'RobotoCondensed';
+  /* font-family: 'RobotoCondensed'; */
+  font-weight: bold;
   font-size: 2.5rem;
-  text-transform: uppercase;
-  /* text-align: center; */
+  /* text-transform: uppercase; */
+  text-align: center;
   color: var(--selic-white);
   /* mix-blend-mode: difference;
   filter: invert(); */
