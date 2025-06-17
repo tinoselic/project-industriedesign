@@ -1,4 +1,5 @@
 const contact = document.getElementById('contact');
+const body = document.querySelector('body');
 const mainMenu = document.querySelector('.mainMenu');
 const openMenu = document.querySelector('.openMenu');
 const nav = document.querySelector('nav');
@@ -27,15 +28,13 @@ openMenu.addEventListener('click', () => {
 	if (isRotated) {
 		mainMenu.style.display = 'inline-flex';
 		mainMenu.style.backgroundColor = 'var(--selic-white)';
-		nav.style.backgroundColor = 'var(--selic-white)';
 		openMenu.style.transform = 'rotate(1845deg)';
-		main.style.display = 'none';
+		body.style.overflow = 'hidden';
 		footer.style.display = 'none';
 	} else {
 		mainMenu.style.display = 'none';
-		nav.style.backgroundColor = 'transparent';
 		openMenu.style.transform = 'rotate(0deg)';
-		main.style.display = 'block';
+		body.style.overflow = 'auto';
 		footer.style.display = 'block';
 	}
 });
@@ -43,9 +42,9 @@ openMenu.addEventListener('click', () => {
 // Nav bar scrolling color change
 window.addEventListener('scroll', function () {
 	if (window.scrollY > 10) {
-		nav.classList.add('scrolled');
+		nav.style.backgroundColor = 'var(--selic-white)';
 	} else {
-		nav.classList.remove('scrolled');
+		nav.style.backgroundColor = 'transparent';
 	}
 });
 

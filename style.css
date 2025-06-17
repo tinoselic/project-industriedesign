@@ -174,10 +174,6 @@ nav {
   z-index: 1000;
 }
 
-nav.scrolled {
-  background-color: var(--selic-white);
-}
-
 nav.hide-on-scroll {
   transform: translateY(-100%);
 }
@@ -259,13 +255,13 @@ nav a:visited:hover {
 .banner {
   width: 100dvw;
   position: relative;
+  overflow-x: hidden;
 }
 
 .banner img {
   width: 100%;
   object-fit: cover;
   display: block;
-  overflow-y: hidden;
 }
 
 main {
