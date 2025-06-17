@@ -276,6 +276,21 @@ main {
   display: block;
 }
 
+.awards {
+  display: inline-flex;
+  /* flex-direction: column; */
+  position: absolute;
+  top: 12em;
+  left: 1em;
+}
+
+img.awards-label {
+  position: relative;
+  width: 4em;
+  height: auto;
+  margin-right: 1em;
+}
+
 .headline {
   padding: 36px 0 36px;
   line-height: 1.5;
@@ -364,20 +379,6 @@ img.gallery {
 
 .text-box {
   display: block;
-}
-
-.awards {
-  display: inline-flex;
-  /* flex-direction: column; */
-  position: absolute;
-  top: 12em;
-  left: 1em;
-}
-
-img.awards-label {
-  position: relative;
-  width: 4em;
-  margin-right: 1em;
 }
 
 .cv {
