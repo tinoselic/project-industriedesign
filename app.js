@@ -26,11 +26,14 @@ openMenu.addEventListener('click', () => {
 	isRotated = !isRotated;
 	if (isRotated) {
 		mainMenu.style.display = 'inline-flex';
+		mainMenu.style.backgroundColor = 'var(--selic-white)';
+		nav.style.backgroundColor = 'var(--selic-white)';
 		openMenu.style.transform = 'rotate(1845deg)';
 		main.style.display = 'none';
 		footer.style.display = 'none';
 	} else {
 		mainMenu.style.display = 'none';
+		nav.style.backgroundColor = 'transparent';
 		openMenu.style.transform = 'rotate(0deg)';
 		main.style.display = 'block';
 		footer.style.display = 'block';
