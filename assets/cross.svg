@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
-  <!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141)  -->
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <defs>
     <style>
-      .st0 {
-        fill: #111;
+      .b {
+        fill: #050505;
       }
     </style>
   </defs>
-  <path class="st0" d="M11,13H0v-2h11V0h2v11h11v2h-11v11h-2v-11Z"/>
+  <path class="b" d="M11,13H0v-2h11V0h2v11h11v2h-11v11h-2v-11Z"/>
 </svg>
