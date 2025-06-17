@@ -90,8 +90,9 @@ h2 {
   color: var(--selic-black);
   font-size: 1.5rem;
   line-height: 1.1;
+  font-weight: bold;
+  text-transform: uppercase;
   max-width: 800px;
-  z-index: 2;
 }
 
 h2 a {
@@ -107,12 +108,20 @@ h3 {
   color: var(--selic-black);
   font-size: 1.5rem;
   line-height: 1.1;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 h4 {
+  color: var(--selic-black);
+  font-size: 1.5rem;
+  line-height: 1.1;
   font-weight: normal;
-  text-transform: uppercase;
+}
+
+h5 {
+  color: var(--selic-black);
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 p {
@@ -300,6 +309,10 @@ main {
 
 .grid a {
   text-decoration: none;
+}
+
+.cell-1 {
+  padding-bottom: 3em;
 }
 
 .highlight-project {
@@ -785,13 +798,17 @@ footer {
 }
 
 @media only screen and (min-width: 1280px) {
-  .banner {
+  /* .banner {
     padding-bottom: 8em;
-  }
+  } */
 
   .grid.project-text.project-text {
     grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: 6em;
+  }
+
+  .cell-3 {
+    grid-column: 3;
   }
 
   .project-gallery {
