@@ -90,7 +90,6 @@ h2 {
   color: var(--selic-black);
   font-size: 1.5rem;
   line-height: 1.1;
-  font-weight: normal;
   max-width: 800px;
   z-index: 2;
 }
@@ -106,6 +105,9 @@ h2 i {
 
 h3 {
   color: var(--selic-black);
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: normal;
 }
 
 h4 {
@@ -378,7 +380,7 @@ img.awards-label {
 }
 
 .label {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   padding: 1em 0 1em;
   position: relative;
@@ -425,9 +427,9 @@ img.awards-label {
 
 .references a {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 2;
-  text-underline-offset: 0.3em;
+  text-underline-offset: 0.2em;
 }
 
 .thumbnail {
@@ -649,6 +651,7 @@ footer {
     height: fit-content;
     grid-template-columns: 1fr 1fr;
   }
+
   .cell-3 {
     grid-column: 2;
   }
@@ -747,6 +750,10 @@ footer {
     width: calc(100vw - 96px);
   }
 
+  .ideology {
+    padding-bottom: 6em;
+  }
+
   .statement {
     padding: 4em;
     max-width: 750px;
@@ -779,7 +786,7 @@ footer {
 
 @media only screen and (min-width: 1280px) {
   .banner {
-    padding-bottom: 6em;
+    padding-bottom: 8em;
   }
 
   .grid.project-text.project-text {
@@ -821,7 +828,7 @@ footer {
   }
 
   .ideology {
-    padding-bottom: 2em;
+    padding-bottom: 6em;
   }
 
   .statement {
