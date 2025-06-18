@@ -645,7 +645,7 @@ video {
 footer {
   width: 100%;
   padding: 3em 1em;
-  background-color: var(--selic-black);
+  background-color: var(--selic-violet);
   color: var(--selic-white);
   font-size: 0.8rem;
   line-height: 1.5;
