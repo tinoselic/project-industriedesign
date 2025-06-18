@@ -223,7 +223,7 @@ nav .openMenu img {
 }
 
 nav .mainMenu {
-  height: 100dvh;
+  height: 91dvh;
   width: 100%;
   display: none;
   flex-direction: column;
@@ -232,7 +232,6 @@ nav .mainMenu {
 }
 
 nav .mainMenu li {
-  padding-left: 1em;
   list-style-type: none;
 }
 
