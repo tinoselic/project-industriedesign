@@ -13,13 +13,13 @@ const modal = document.querySelector('.previewModal');
 const modalImg = document.getElementById('previewImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
 const projects = document.querySelectorAll('.highlight-project');
+const mailtoLink = 'mailto:mario@selic.com}';
 let isRotated = false;
 let lastScroll = 0;
 
 
 // Contact/Email button interaction
 contact.addEventListener('click', function () {
-	const mailtoLink = 'mailto:tino.selic@gmail.com}';
 	window.location.href = mailtoLink;
 });
 
@@ -69,8 +69,12 @@ window.addEventListener('scroll', () => {
 
 // Footer
 document.addEventListener("DOMContentLoaded", function () {
-	var footerText = "© 2025 Selić Industriedesign";
-	footer.textContent = footerText;
+	var footerText =
+		'<div class="address-section">Selic Industriedesign<br>Schertlinstrasse 17a<br>86159 Augsburg</div>' +
+		'<div class="contact-section">T +49 821 3499450<br>mario@selic.de</div>' +
+		'<div class="copyright-section">© 2025 Selić Industriedesign<br>All rights reserved.</div>'
+		;
+	footer.innerHTML = footerText;
 });
 
 
