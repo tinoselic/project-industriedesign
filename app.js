@@ -18,12 +18,6 @@ let isRotated = false;
 let lastScroll = 0;
 
 
-// Contact/Email button interaction
-contact.addEventListener('click', function () {
-	window.location.href = mailtoLink;
-});
-
-
 // Nav bar interaction
 openMenu.addEventListener('click', () => {
 	isRotated = !isRotated;
@@ -133,3 +127,9 @@ modal.addEventListener('click', function (e) {
 		document.body.style.overflow = 'auto';
 	}
 });
+
+
+// Contact/Email button interaction
+/* contact.addEventListener('click', function () {
+	window.location.href = mailtoLink;
+}); */
