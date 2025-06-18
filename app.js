@@ -31,7 +31,7 @@ openMenu.addEventListener('click', () => {
 		nav.style.backgroundColor = bodyBg;
 		mainMenu.style.backgroundColor = bodyBg;
 		mainMenu.style.display = 'inline-flex';
-		openMenu.style.transform = 'rotate(45deg)'; // 1845 deg for screwdriver effect
+		openMenu.style.transform = 'rotate(calc(45*7deg))'; // 1845 deg for screwdriver effect
 		body.style.overflow = 'hidden';
 		footer.style.display = 'none';
 	} else {

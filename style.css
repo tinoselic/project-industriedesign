@@ -263,6 +263,12 @@ nav a:visited:hover {
   text-decoration: underline;
 }
 
+#active {
+  text-decoration: underline;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 3px;
+}
+
 .banner {
   width: 100%;
   position: relative;
