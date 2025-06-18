@@ -181,7 +181,7 @@ nav {
   z-index: 50;
 }
 
-#home {
+#nav-home {
   filter: invert();
 }
 
@@ -667,6 +667,15 @@ footer {
 .copyright-section {
   color: var(--selic-white);
   font-size: 0.8rem;
+}
+
+.footer-home {  
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--selic-black);
+  color: var(--selic-white);
 }
 
 @media only screen and (min-width: 796px) {
