@@ -194,9 +194,7 @@ nav img {
 }
 
 button.logo {
-  margin-top: 1em;
-  padding-left: 1em;
-  width: fit-content;
+  margin: 1em 0 0 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,19 +212,19 @@ button.logo {
   display: none;
 }
 
-nav .openMenu {
+.openMenu {
   position: absolute;
   top: 1em;
   right: 1em;
   transition: transform .5s ease;
 }
 
-nav .openMenu img {
+.openMenu img {
   height: 48px;
 }
 
-nav .mainMenu {
-  height: 91dvh;
+.mainMenu {
+  height: 93dvh;
   width: 100%;
   display: none;
   flex-direction: column;
@@ -234,11 +232,11 @@ nav .mainMenu {
   align-items: center;
 }
 
-nav .mainMenu li {
+.mainMenu li {
   list-style-type: none;
 }
 
-nav .mainMenu li a {
+.mainMenu li a {
   font-size: 3rem;
   line-height: 2;
   text-underline-offset: 12px;
@@ -544,6 +542,8 @@ video {
 button {
   border: none;
   background-color: transparent;
+  height: fit-content;
+  width: auto;
 }
 
 button.contact {
@@ -686,15 +686,8 @@ footer {
 }
 
 @media only screen and (min-width: 796px) {
-  nav .logo a {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-  }
-
-  button.logo .logo-text {
-    display: inline-flex;
-    align-items: center;
+  button.logo span.logo-text {
+    display: inline-block;
     padding-left: 0.5em;
     font-size: 1.6rem;
     font-weight: bold;
