@@ -193,21 +193,26 @@ nav img {
   cursor: pointer;
 }
 
-nav .logo {
+button.logo {
   margin-top: 1em;
   padding-left: 1em;
   width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
 }
 
-nav .logo img {
+.logo img {
   height: 48px;
 }
 
-nav .logo a:hover {
+.logo a:hover {
   text-decoration: none;
 }
 
-nav .logo-text {
+.logo-text {
   display: none;
 }
 
@@ -538,7 +543,7 @@ video {
   justify-content: center;
 }
 
-.button {
+button.contact {
   font-size: 3rem;
   color: var(--selic-black);
   border: solid 2px var(--selic-black);
@@ -549,7 +554,7 @@ video {
   transition-duration: 0.5s;
 }
 
-.button:hover {
+button.contact:hover {
   border: solid 2px var(--selic-black);
   background-color: var(--selic-black);
   color: var(--selic-white);
@@ -668,7 +673,7 @@ footer {
   font-size: 0.8rem;
 }
 
-.footer-home {  
+.footer-home {
   position: absolute;
   top: 120%;
   left: 50%;
@@ -684,16 +689,14 @@ footer {
     gap: 1em;
   }
 
-  nav .logo-text {
-    display: inline-block;
+  button.logo .logo-text {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 0.5em;
     font-size: 1.6rem;
     font-weight: bold;
     /* letter-spacing: 0.1rem;
     text-transform: uppercase; */
-  }
-
-  .mainMenu {
-    display: inline-flex;
   }
 
   .banner {
