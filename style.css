@@ -855,13 +855,18 @@ footer {
     display: flex;
     justify-content: space-between;
     text-align: left;
+    padding: 4em 8em;
+  }
+
+  .address-section {
+    padding: 0;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .grid.project-text.project-text {
     grid-template-columns: 1fr 1fr;
-    padding-bottom: 6em;
+    padding: 4em 6em 6em 6em;
   }
 
   .cell-3 {
@@ -925,6 +930,10 @@ footer {
   .mission {
     padding: 5em;
     margin: auto;
+  }
+
+  footer {
+    padding: 4em 8em 4em 8em;
   }
 }
 
