@@ -843,12 +843,12 @@ footer {
 
 @media only screen and (min-width: 1280px) {
   .grid.project-text.project-text {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding-bottom: 6em;
   }
 
   .cell-3 {
-    grid-column: 3;
+    grid-column: 2;
   }
 
   .project-gallery {
