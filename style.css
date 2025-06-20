@@ -554,11 +554,18 @@ button {
 button#readMore {
   font-size: 0.8rem;
   font-weight: bold;
+  /* text-decoration: underline;
+  text-underline-offset: 3px; */
+  border: solid var(--selic-black) 1px;
+  border-radius: 2em;
+  padding: 1em;
   cursor: pointer;
+  margin: 1em 0;
 }
 
 button#readMore:hover {
   color: var(--selic-violet);
+  border-color: var(--selic-violet);
 }
 
 button.contact {

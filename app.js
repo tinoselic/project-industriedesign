@@ -136,11 +136,11 @@ function toggleReadMore() {
   if (moreText.classList.contains("hidden")) {
     moreText.classList.remove("hidden");
     moreText.classList.add("visible");
-    readMoreButton.textContent = "[Read less]";
+    readMoreButton.textContent = "Read less";
   } else {
     moreText.classList.remove("visible");
     moreText.classList.add("hidden");
-    readMoreButton.textContent = "[Read more]";
+    readMoreButton.textContent = "Read more";
   }
 }
 
