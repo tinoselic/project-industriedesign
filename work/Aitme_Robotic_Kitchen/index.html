@@ -24,8 +24,8 @@
   <header>
     <nav>
       <button class="logo" onclick="window.location.href='../../'">
-          <img src="../../assets/logo.svg" alt="">
-          <span class="logo-text">Selić Industriedesign</span>
+        <img src="../../assets/logo.svg" alt="">
+        <span class="logo-text">Selić Industriedesign</span>
       </button>
       <button class="openMenu"><img src="../../assets/cross.svg" alt=""></button>
       <ul class="mainMenu">
@@ -45,37 +45,44 @@
         <br>
         <h4>Robotic Kitchen</h4>
         <br>
+        <p style="font-size: 0.7rem;">Images © Selic Industriedesign</p>
+        <br>
       </div>
       <div class="cell-2">
-        <p>
+        <p id="moreText" class="collapsed">
           The Aitme Robotic Kitchen is a fully automated robot kitchen that prepares various dishes such as pasta,
           risotto, bowls or salads from fresh ingredients completely independently. It is a self-contained,
           self-sufficient system with two robots and several cooking pots working in parallel that can prepare around 60
           dishes per hour. You can order either directly via a touchscreen or conveniently in advance via the app.
           <br>
           <br>
-          The appearance of the Aitme Robotic Kitchen is based on the mix of a classic food truck and an Airstream food
-          truck. The system is characterized by its hygienic design as it is easy to clean and thoroughly disinfected.
-          It is made entirely of stainless steel as the material is safe for the food sector.
+          <span class="more-content">
+            The appearance of the Aitme Robotic Kitchen is based on the mix of a classic food truck and an Airstream
+            food
+            truck. The system is characterized by its hygienic design as it is easy to clean and thoroughly disinfected.
+            It is made entirely of stainless steel as the material is safe for the food sector.
+            <br>
+            <br>
+            The machine is made entirely of stainless steel, which is easy to clean and disinfect. The material is
+            harmless for the food sector and, in addition to constructive solutions, contributes to the hygienic design
+            of
+            the system. The large glass pane takes away the anonymity of the robot kitchen. The guest can watch as the
+            dish they have ordered is prepared and served via a serving tray after just a few minutes.
+            <br>
+            <br>
+            Aitme's robot kitchen only requires eight square meters of space and requires only one water and one power
+            connection. The compactness of the system and the fact that it can be dismantled into smaller modules that
+            fit
+            through standard entrance doors allows it to be installed in small company canteens or break rooms. But
+            larger
+            company restaurants and government canteens also benefit from the efficiency of the Robotic Kitchen, because
+            it is an important component in being able to offer high-quality, fresh and balanced nutrition at any time,
+            including off-peak and night times.
+            <br>
+            <br>
+          </span>
         </p>
-      </div>
-      <div class="cell-3">
-        <p>
-          The machine is made entirely of stainless steel, which is easy to clean and disinfect. The material is
-          harmless for the food sector and, in addition to constructive solutions, contributes to the hygienic design of
-          the system. The large glass pane takes away the anonymity of the robot kitchen. The guest can watch as the
-          dish they have ordered is prepared and served via a serving tray after just a few minutes.
-          <br>
-          <br>
-          Aitme's robot kitchen only requires eight square meters of space and requires only one water and one power
-          connection. The compactness of the system and the fact that it can be dismantled into smaller modules that fit
-          through standard entrance doors allows it to be installed in small company canteens or break rooms. But larger
-          company restaurants and government canteens also benefit from the efficiency of the Robotic Kitchen, because
-          it is an important component in being able to offer high-quality, fresh and balanced nutrition at any time,
-          including off-peak and night times.
-        </p>
-        <br>
-        <p style="font-size: 0.7rem;">Images © Aitme GmbH, Images © Selic Industriedesign</p>
+        <button id="readMore" onclick="toggleReadMore()">[Read more]</button>
       </div>
     </div>
     <div class="grid image-gallery">
