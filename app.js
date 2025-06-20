@@ -13,7 +13,7 @@ const modal = document.querySelector('.previewModal');
 const modalImg = document.getElementById('previewImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
 const projects = document.querySelectorAll('.highlight-project');
-const text = document.getElementById("moreText");
+const moreText = document.getElementById("moreText");
 const readMoreButton = document.getElementById("readMore");
 const mailtoLink = 'mailto:mario@selic.com}';
 let isRotated = false;
@@ -133,16 +133,15 @@ modal.addEventListener('click', function (e) {
 
 // Read more toggle
 function toggleReadMore() {
-
-	if (text.classList.contains("collapsed")) {
-		text.classList.remove("collapsed");
-		text.classList.add("expanded");
-		readMoreButton.textContent = "[Read less]";
-	} else {
-		text.classList.remove("expanded");
-		text.classList.add("collapsed");
-		readMoreButton.textContent = "[Read more]";
-	}
+  if (moreText.classList.contains("hidden")) {
+    moreText.classList.remove("hidden");
+    moreText.classList.add("visible");
+    readMoreButton.textContent = "[Read less]";
+  } else {
+    moreText.classList.remove("visible");
+    moreText.classList.add("hidden");
+    readMoreButton.textContent = "[Read more]";
+  }
 }
 
 

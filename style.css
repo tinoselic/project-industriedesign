@@ -129,6 +129,11 @@ p {
   line-height: 1.5;
 }
 
+.DE {
+  font-size: 0.7em;
+  color: #777;
+}
+
 .title {
   font-size: 0.8rem;
   font-style: italic;
@@ -658,12 +663,12 @@ video {
   margin: auto;
 }
 
-.collapsed .more-content {
+.hidden {
   display: none;
 }
 
-.expanded .more-content {
-  display: inline;
+.visible {
+  display: block;
 }
 
 footer {
@@ -879,6 +884,10 @@ footer {
 
   .image-gallery {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .awards {
+    padding: 0 6em;
   }
 
   img.awards-label {
