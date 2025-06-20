@@ -546,6 +546,15 @@ button {
   width: auto;
 }
 
+button#readMore {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+button#readMore:hover {
+  color: var(--selic-violet);
+}
+
 button.contact {
   font-size: 3rem;
   color: var(--selic-black);
@@ -647,6 +656,14 @@ video {
   text-align: center;
   padding: 2em;
   margin: auto;
+}
+
+.collapsed .more-content {
+  display: none;
+}
+
+.expanded .more-content {
+  display: inline;
 }
 
 footer {

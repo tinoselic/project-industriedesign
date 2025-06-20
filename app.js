@@ -13,6 +13,8 @@ const modal = document.querySelector('.previewModal');
 const modalImg = document.getElementById('previewImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
 const projects = document.querySelectorAll('.highlight-project');
+const text = document.getElementById("moreText");
+const readMoreButton = document.getElementById("readMore");
 const mailtoLink = 'mailto:mario@selic.com}';
 let isRotated = false;
 let lastScroll = 0;
@@ -127,6 +129,21 @@ modal.addEventListener('click', function (e) {
 		document.body.style.overflow = 'auto';
 	}
 });
+
+
+// Read more toggle
+function toggleReadMore() {
+
+	if (text.classList.contains("collapsed")) {
+		text.classList.remove("collapsed");
+		text.classList.add("expanded");
+		readMoreButton.textContent = "[Read less]";
+	} else {
+		text.classList.remove("expanded");
+		text.classList.add("collapsed");
+		readMoreButton.textContent = "[Read more]";
+	}
+}
 
 
 // Contact/Email button interaction

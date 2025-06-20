@@ -24,14 +24,14 @@
   <header>
     <nav>
       <button class="logo" onclick="window.location.href='../../'">
-          <img src="../../assets/logo.svg" alt="">
-          <span class="logo-text">Selić Industriedesign</span>
-      </div>
-      <div class="openMenu"><img src="../../assets/cross.svg" alt=""></div>
-      <ul class="mainMenu">
-        <li><a href="../../work/">Work</a></li>
-        <li><a href="../../about/">About</a></li>
-      </ul>
+        <img src="../../assets/logo.svg" alt="">
+        <span class="logo-text">Selić Industriedesign</span>
+        </div>
+        <div class="openMenu"><img src="../../assets/cross.svg" alt=""></div>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
     </nav>
   </header>
   <section class="banner">
@@ -52,21 +52,24 @@
         <br>
         <h4>Subtitle</h4>
         <br>
+        <p style="font-size: 0.7rem;">Images © Selic Industriedesign</p>
       </div>
       <div class="cell-2">
         <h5>Paragraph Heading
         </h5>
         <br>
-        <p>
-          Lorem ipsum dolor sit amet...
+        <p id="moreText" class="collapsed">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+          <br>
+          <br>
+          <span class="more-content">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <br>
+            <br>
+          </span>
         </p>
-      </div>
-      <div class="cell-3">
-        <p>
-          Lorem ipsum dolor sit amet...
-        </p>
-        <br>
-        <p style="font-size: 0.7rem;">Images © Selic Industriedesign</p>
+        <button id="readMore" onclick="toggleReadMore()">[Read more]</button>
       </div>
     </div>
     <div class="grid image-gallery">
