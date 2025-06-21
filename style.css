@@ -333,7 +333,7 @@ img.awards-label {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  padding-bottom: 3em;
+  padding-bottom: 1em;
 }
 
 .grid a {
@@ -557,7 +557,7 @@ button#readMore {
   font-weight: bold;
   /* text-decoration: underline;
   text-underline-offset: 3px; */
-  border: solid var(--selic-black) 1px;
+  border: solid var(--selic-black) 2px;
   border-radius: 2em;
   padding: 1em;
   cursor: pointer;
@@ -678,6 +678,13 @@ video {
 
 .visible {
   display: block;
+}
+
+.image-copyright {
+  font-size: 0.7rem;
+  text-align: center;
+  max-width: 100%;
+  padding-bottom: 3em;
 }
 
 footer {
@@ -948,6 +955,10 @@ footer {
   .mission {
     padding: 5em;
     margin: auto;
+  }
+
+  .image-copyright {
+    padding-bottom: 6em;
   }
 
   footer {

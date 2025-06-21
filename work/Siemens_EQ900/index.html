@@ -24,8 +24,8 @@
   <header>
     <nav>
       <button class="logo" onclick="window.location.href='../../'">
-          <img src="../../assets/logo.svg" alt="">
-          <span class="logo-text">Selić Industriedesign</span>
+        <img src="../../assets/logo.svg" alt="">
+        <span class="logo-text">Selić Industriedesign</span>
       </button>
       <button class="openMenu"><img src="../../assets/cross.svg" alt=""></button>
       <ul class="mainMenu">
@@ -46,35 +46,66 @@
         <br>
       </div>
       <div class="cell-2">
-        <p>
+        <h5>
           The SIEMENS EQ.900 is designed for modern kitchens and characterised by an elegant synergy of architectural
           forms and high-grade materials.
-          <br>
-          <br>
-          The stainless-steel front presents an interplay of horizontal curvature and characteristic side view. This is
-          combined with a height-adjustable metal coffee outlet and a large 5" full-touch display to enable easy user
-          guidance.
-        </p>
-      </div>
-      <div class="cell-3">
-        <p>
-          Statement by the Red Dot Jury:
-          <br>
-          "The SIEMENS EQ.900 automatic coffee machine fascinates with a well-designed body and an intuitive user
-          interface."
-          <br>
-          <br>
-          Selic Industriedesign service: CAD design, CAD freeform modeling and design concept refinement, processing of
-          design data for the engineering department;
-        </p>
+        </h5>
         <br>
-        <p style="font-size: 0.7rem;">Images © BSH GmbH</p>
+        <p>
+          The stainless-steel front presents an interplay of horizontal curvature and characteristic side view. This
+          is combined with a height-adjustable metal coffee outlet and a large 5" full-touch display to enable easy
+          user guidance.
+          <br>
+          <br>
+        </p>
+        <div id="moreText" class="more-content hidden">
+          <p>
+            Statement by the Red Dot Jury: "The SIEMENS EQ.900 automatic coffee machine fascinates with a well-designed
+            body and an intuitive user interface."
+            <br>
+            <br>
+            Selic Industriedesign service: CAD design, CAD freeform modeling and design concept refinement, processing
+            of design data for the engineering department
+            <br>
+            <br>
+            <br>
+            <br>
+          </p>
+          <p class="DE">DE</p>
+          <h4>
+            Kaffeevollautomat
+          </h4>
+          <br>
+          <br>
+          <h5>
+            Die SIEMENS EQ.900 wurde für moderne Küchen entwickelt und charakterisiert sich durch ein elegantes
+            Zusammenspiel aus architektonischen Formen und hochwertigen Materialien.
+          </h5>
+          <br>
+          <p>
+            Die Edelstahlfront setzt auf eine horizontale Wölbung mit einer markanten Seitenansicht. Sie wird kombiniert
+            mit einem höhenverstellbaren Kaffeeauslauf aus Metall und einem 5"-Full-Touch-Display, das eine einfache
+            Benutzerführung erlaubt.
+            <br>
+            <br>
+            Statement der Red Dot Jury: "Der Kaffeevollautomat SIEMENS EQ.900 begeistert mit einem formschönen Korpus
+            und einer intuitiven Benutzeroberfläche."
+            <br>
+            <br>
+            Selic Industriedesign Dienstleistung: CAD-Design, CAD-Freiform-Modellierung und Detailgestaltung,
+            Aufbereitung von Designdaten für die Konstruktion
+            <br>
+            <br>
+          </p>
+        </div>
+        <button id="readMore" onclick="toggleReadMore()">Read more</button>
       </div>
     </div>
     <div class="grid image-gallery">
       <img src="2019 Siemens EQ900 Edelstahl 02 1920x1200.jpg" alt="" class="thumbnail">
       <img src="Siemens EQ900 Black 03 1920x1200.jpg" alt="" class="thumbnail">
     </div>
+    <p class="image-copyright">Images © BSH GmbH</p>
     <div class="previewModal">
       <div id="closePreview"><img src="../../assets/close_FILL0_wght400_GRAD0_opsz48.svg" alt=""></div>
       <img id="previewImage">

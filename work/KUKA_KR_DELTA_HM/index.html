@@ -24,8 +24,8 @@
   <header>
     <nav>
       <button class="logo" onclick="window.location.href='../../'">
-          <img src="../../assets/logo.svg" alt="">
-          <span class="logo-text">Selić Industriedesign</span>
+        <img src="../../assets/logo.svg" alt="">
+        <span class="logo-text">Selić Industriedesign</span>
       </button>
       <button class="openMenu"><img src="../../assets/cross.svg" alt=""></button>
       <ul class="mainMenu">
@@ -51,31 +51,75 @@
         <br>
       </div>
       <div class="cell-2">
-        <p>
+        <h5>
           The delta robot KUKA KR 3 HM is used for precise and quick handling and picking of goods under highly
-          sensitive, hygienic conditions. It specializes in applications with strict health and safety requirements in
+          sensitive, hygienic conditions.
+        </h5>
+        <br>
+        <p>
+          It specializes in applications with strict health and safety requirements in
           industries such as food, medicine, household chemicals and electronics. Thanks to the design properties and
           the harmlessness of the corrosion-resistant, polished stainless steel components, it is certified according to
           international guidelines. The robot can therefore be used without hesitation in the food and pharmaceutical
           sectors, as unwanted contamination is excluded. Even direct contact of the robot body with food and medication
           is permitted.
-        </p>
-      </div>
-      <div class="cell-3">
-        <p>
-          The hygienic design made of highly polished and dirt-repellent surfaces with a roughness of max. 0.8
-          micrometers offers no chance of germs adhering and can be cleaned perfectly even under high pressure. All
-          surfaces are arched so that cleaning and disinfecting agents can flow away unhindered and no standing water
-          remains on the machine. The seamless design is free of discontinuous shape transitions and the edges are
-          rounded with sufficiently large radii so that there are no surfaces for contamination. There are no external
-          cable connectors and the supply lines are also food-safe and designed to be easy to clean.
           <br>
           <br>
-          The KR 3 HM works reliably in a cylindrical work area with a diameter of 1,200 mm and a height of 250 mm. Its
-          load capacity is 3 kg.
         </p>
-        <br>
-        <p style="font-size: 0.7rem;">Images © Selic Industriedesign</p>
+        <div id="moreText" class="more-content hidden">
+          <p>
+            The hygienic design made of highly polished and dirt-repellent surfaces with a roughness of max. 0.8
+            micrometers offers no chance of germs adhering and can be cleaned perfectly even under high pressure. All
+            surfaces are arched so that cleaning and disinfecting agents can flow away unhindered and no standing water
+            remains on the machine. The seamless design is free of discontinuous shape transitions and the edges are
+            rounded with sufficiently large radii so that there are no surfaces for contamination. There are no external
+            cable connectors and the supply lines are also food-safe and designed to be easy to clean.
+            <br>
+            <br>
+            The KR 3 HM works reliably in a cylindrical work area with a diameter of 1,200 mm and a height of 250 mm.
+            Its
+            load capacity is 3 kg.
+            <br>
+            <br>
+            <br>
+            <br>
+          </p>
+          <p class="DE">DE</p>
+          <h4>
+            Deltaroboter
+          </h4>
+          <br>
+          <br>
+          <h5>
+            Der Deltaroboter KUKA KR 3 HM dient dem präzisen und schnellen Greifen und Verpacken von Gütern unter höchst
+            sensiblen, hygienischen Bedingungen.
+          </h5>
+          <br>
+          <p>
+            Er ist spezialisiert auf Anwendungen mit strengen Gesundheits- und Sicherheitsanforderungen in Branchen wie
+            Lebensmittel, Medizin, Chemie und Elektronik. Dank der konstruktiven Eigenschaften und der Unbedenklichkeit
+            der korrosionsbeständigen, polierten Edelstahlkomponenten ist er nach internationalen Richtlinien
+            zertifiziert. Somit darf er bedenkenlos im Food- und Pharmasektor eingesetzt werden, da unerwünschte
+            Verunreinigungen ausgeschlossen sind. Selbst der direkte Kontakt des Roboterkörpers mit Lebensmitteln und
+            Medikamenten ist zulässig.
+            <br>
+            <br>
+            Das hygienegerechte Design aus hochglanzpolierten und schmutzabweisenden Oberflächen mit einer Rauigkeit von
+            max. 0,8 Mikrometer bietet keine Anhaftungsmöglichkeiten für Keime und ist perfekt auch unter Hochdruck zu
+            reinigen. Alle Flächen sind überwölbt, damit Reinigungs- und Desinfektionsmitteln ungehindert abfließen
+            können und kein Standwasser auf der Maschine bleibt. Das fugenlose Design ist frei von unstetigen
+            Formübergängen und die Kanten sind mit ausreichend großen Radien abgerundet, damit keine Angriffsflächen für
+            Verunreinigungen entstehen. Es gibt keine äußeren Kabel-Steckverbindungen, auch die Versorgungsleitungen
+            sind lebensmittelecht und reinigungsgerecht ausgelegt.
+            <br>
+            <br>
+            Der KR 3 HM arbeitet zuverlässig in einem zylindrischen Arbeitsraum mit 1.200 mm Durchmesser und 250 mm
+            Höhe. Seine Traglast beträgt 3 kg.
+            <br>
+            <br>
+          </p>
+        </div>
+        <button id="readMore" onclick="toggleReadMore()">Read more</button>
       </div>
     </div>
     <div class="grid image-gallery">
@@ -84,6 +128,7 @@
       <img src="231030 KUKA KR DELTA HM 1920x1200 03.jpg" alt="KUKA KR DELTA HM 03" class="thumbnail">
       <img src="231030 KUKA KR Delta HM 1920x1200 04.jpg" alt="KUKA KR DELTA HM 04" class="thumbnail">
     </div>
+    <p class="image-copyright">Images © Selic Industriedesign</p>
     <div class="previewModal">
       <div id="closePreview"><img src="../../assets/close_FILL0_wght400_GRAD0_opsz48.svg" alt=""></div>
       <img id="previewImage">
