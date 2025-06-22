@@ -275,6 +275,25 @@ nav a:visited:hover {
   text-decoration-thickness: 3px;
 }
 
+#work-button {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  color: var(--selic-white);
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  border: var(--selic-white) solid;
+  border-radius: 3em;
+  padding: 0.5em 1em;
+}
+
+#work-button:hover {
+  background-color: var(--selic-white);
+  color: var(--selic-black);
+}
+
 .banner {
   width: 100%;
   position: relative;
@@ -640,7 +659,7 @@ video {
 .quote {
   /* font-family: 'RobotoCondensed'; */
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.8rem;
   /* text-transform: uppercase; */
   text-align: center;
   color: var(--selic-white);
@@ -688,6 +707,7 @@ video {
 }
 
 footer {
+  margin-left: -1px;
   width: 100%;
   padding: 3em 1em;
   background-color: var(--selic-violet);
