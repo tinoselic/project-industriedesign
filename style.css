@@ -628,15 +628,18 @@ video {
 }
 
 .quote {
-  position: relative;
-  top: 5em;
-  /* font-family: 'RobotoCondensed'; */
-  font-weight: bold;
+  font-family: 'RobotoCondensed';
+  /* font-weight: bold; */
   font-size: 2rem;
   line-height: 1.15;
-  /* text-transform: uppercase; */
-  text-align: left;
-  color: var(--selic-yellow);
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%);
+  text-align: center;
+  color: var(--selic-white);
+  opacity: 1;
   /* mix-blend-mode: difference;
   filter: invert(); */
   width: 90vw;
@@ -646,7 +649,7 @@ video {
   position: absolute;
   left: 50%;
   top: 65%;
-  transform: translate(-50%, -35%);
+  transform: translate(-50%);
   font-size: 1.3rem;
   color: var(--selic-white);
   font-weight: bold;
@@ -844,12 +847,12 @@ footer {
   .row {
     display: flex;
   }
-  
+
   .left {
     padding-right: 1em;
     width: 60%;
   }
-  
+
   .right {
     padding-left: 1em;
     width: 40%;
@@ -869,12 +872,13 @@ footer {
 
 @media only screen and (min-width: 1280px) {
   .quote {
-    font-size: 4rem;
-    top: 2em;
+    font-size: 3rem;
+    top: 25%;
   }
 
   #work-button {
-    font-size: 3rem;
+    font-size: 2rem;
+    top: 70%;
   }
 
   .grid.project-text.project-text {
@@ -914,11 +918,9 @@ footer {
     height: auto;
   }
 
-  .ideology {
-  }
+  .ideology {}
 
-  .statement {
-  }
+  .statement {}
 
   .elaboration p {
     max-width: 30vw;
@@ -932,21 +934,19 @@ footer {
     margin-left: 50vw;
   }
 
-  .elaboration .center {
-  }
+  .elaboration .center {}
 
-  .mission {
-  }
+  .mission {}
 
   .row {
     margin-bottom: 3em;
   }
-  
+
   .left {
     padding-right: 4em;
     width: 60%;
   }
-  
+
   .right {
     padding-left: 4em;
     width: 40%;
