@@ -12,7 +12,7 @@ const accordion = document.getElementsByClassName('contentBox');
 const modal = document.querySelector('.previewModal');
 const modalImg = document.getElementById('previewImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
-const projects = document.querySelectorAll('.highlight-project');
+const projects = document.querySelectorAll('.project');
 const moreText = document.getElementById("moreText");
 const readMoreButton = document.getElementById("readMore");
 const mailtoLink = 'mailto:mario@selic.com}';
@@ -49,7 +49,6 @@ window.addEventListener('scroll', function () {
 });
 
 // Nav bar hide on scroll
-
 window.addEventListener('scroll', () => {
 	const currentScroll = window.pageYOffset;
 	if (currentScroll > lastScroll && currentScroll > 50) {

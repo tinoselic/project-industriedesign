@@ -183,7 +183,7 @@ nav {
   height: 5.25em;
   top: 0;
   background-color: transparent;
-  transition: transform 0.5s ease-in-out;
+  transition: transform .5s ease-in-out;
   z-index: 50;
 }
 
@@ -207,7 +207,7 @@ button {
   width: auto;
 }
 
-button.logo {
+.logo {
   margin: 1em 0 0 1em;
   display: flex;
   justify-content: center;
@@ -283,25 +283,6 @@ nav a:visited:hover {
   text-decoration-thickness: 3px;
 }
 
-#work-button {
-  position: absolute;
-  left: 50%;
-  top: 75%;
-  transform: translate(-50%, -50%);
-  font-size: 1.3rem;
-  color: var(--selic-white);
-  font-weight: bold;
-  /* text-transform: uppercase; */
-  border: var(--selic-white) solid;
-  border-radius: 3em;
-  padding: 0.5em 1em;
-}
-
-#work-button:hover {
-  background-color: var(--selic-white);
-  color: var(--selic-black);
-}
-
 .banner {
   width: 100%;
   position: relative;
@@ -332,24 +313,6 @@ img.awards-label {
   padding-right: 0.25em;
 }
 
-.headline {
-  padding: 36px 0 36px;
-  line-height: 1.5;
-}
-
-.row {
-  margin-bottom: 32px;
-}
-
-.column {
-  width: 100%;
-  padding-bottom: 1em;
-}
-
-.about-column-right img {
-  max-width: 100%;
-}
-
 .line {
   background-color: #333;
   height: 0.5px;
@@ -371,19 +334,22 @@ img.awards-label {
   padding-bottom: 1em;
 }
 
-.highlight-project {
+.project {
   aspect-ratio: 1;
   float: left;
   position: relative;
   overflow: hidden;
 }
 
+/* .highlight {
+  outline: var(--selic-black) solid;
+} */
+
 .highlight .gallery {
   overflow: hidden;
-  cursor: pointer;
-  filter: brightness(0.5) blur(3px);
-  transform: scale(1.25);
-  transition: 2s ease;
+  filter: brightness(0.6) blur(3px);
+  transform: scale(1.1);
+  transition: 1s ease;
 }
 
 img.gallery {
@@ -393,33 +359,34 @@ img.gallery {
   backface-visibility: hidden;
 }
 
-.highlight .project-title {
-  font-family: 'RobotoCondensed';
-  color: var(--selic-white);
-  width: 20em;
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5rem;
-  line-height: 1;
-  text-align: center;
-}
-
-.highlight .project-subtitle {
-  color: var(--selic-white);
-  opacity: 0.7;
-  width: 20em;
-  position: absolute;
-  left: 50%;
-  top: 55%;
-  transform: translate(-50%, -50%);
-  font-size: 1rem;
-  text-align: center;
-}
-
 .text-box {
   display: block;
+  position: absolute;
+  width: 20em;
+  left: 20%;
+  top: 90%;
+  transform: translate(-20%, -90%);
+  text-align: left;
+  /* background-color: var(--selic-white); */
+  padding: 1em;
+  opacity: 0;
+}
+
+.project-title {
+  font-family: 'RobotoCondensed';
+  color: var(--selic-white);
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.project-subtitle {
+  color: var(--selic-white);
+  font-size: 1rem;
+}
+
+.highlight .text-box {
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 
 .cv {
@@ -597,7 +564,7 @@ video {
   width: fit-content;
   margin-top: 30px;
   padding: 0px 24px 6px 24px;
-  transition-duration: 0.5s;
+  transition-duration: .5s;
 }
 
 .contact:hover {
@@ -660,7 +627,8 @@ video {
 .quote {
   /* font-family: 'RobotoCondensed'; */
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  line-height: 1.15;
   /* text-transform: uppercase; */
   text-align: center;
   color: var(--selic-white);
@@ -668,9 +636,28 @@ video {
   filter: invert(); */
   width: 90vw;
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  top: 45%;
+  transform: translate(-50%, -55%);
+}
+
+#work-button {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -35%);
+  font-size: 1.3rem;
+  color: var(--selic-white);
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  border: var(--selic-white) solid;
+  border-radius: 3em;
+  padding: 0.5em 1em;
+}
+
+#work-button:hover {
+  background-color: var(--selic-white);
+  color: var(--selic-black);
 }
 
 .ideology {
@@ -769,37 +756,23 @@ footer {
     grid-column: 2;
   }
 
-  .highlight-project:hover .gallery {
-    overflow: hidden;
-    cursor: pointer;
-    filter: brightness(0.5) blur(3px);
-    transform: scale(1.25);
-    transition: 2s ease;
+  /* .project:hover {
+    outline: var(--selic-black) solid;
+  } */
+
+  .project:hover .gallery {
+    filter: brightness(0.6) blur(3px);
+    transform: scale(1.1);
+    transition: 1s ease;
   }
 
-  .highlight-project:hover .project-title {
-    font-family: 'RobotoCondensed';
-    color: var(--selic-white);
-    width: 20em;
-    position: absolute;
-    left: 50%;
-    top: 45%;
-    transform: translate(-50%, -50%);
-    font-size: 1.5rem;
-    line-height: 1;
-    text-align: center;
+  .project .text-box {
+    opacity: 0;
+    transition: opacity 1s ease;
   }
 
-  .highlight-project:hover .project-subtitle {
-    color: var(--selic-white);
-    opacity: 0.7;
-    width: 20em;
-    position: absolute;
-    left: 50%;
-    top: 55%;
-    transform: translate(-50%, -50%);
-    font-size: 1rem;
-    text-align: center;
+  .project:hover .text-box {
+    opacity: 1;
   }
 
   .line {
@@ -809,39 +782,6 @@ footer {
   img.awards-label {
     height: 6em;
     width: auto;
-  }
-
-  .column {
-    top: 240px;
-    float: left;
-    width: 50%;
-  }
-
-  .left {
-    padding-right: 2em;
-    position: -webkit-sticky;
-    /* Safari */
-    position: sticky;
-    z-index: 0;
-  }
-
-  .right {
-    padding-left: 2em;
-  }
-
-  .about-column-left {
-    float: left;
-    width: 60%;
-    padding-right: 12px;
-  }
-
-  .about-column-right {
-    float: left;
-    width: 40%;
-    padding-left: 12px;
-    position: -webkit-sticky;
-    /* Safari */
-    position: sticky;
   }
 
   .row::after {
@@ -854,10 +794,6 @@ footer {
     max-width: 800px;
     /* text-align: justify;
     text-justify: inter-word; */
-  }
-
-  .quote {
-    width: calc(100vw - 96px);
   }
 
   .ideology {
@@ -942,11 +878,6 @@ footer {
     height: auto;
   }
 
-  .quote {
-    width: calc(100vw - 600px);
-    font-size: 3rem;
-  }
-
   .ideology {
     padding-bottom: 6em;
   }
@@ -989,30 +920,6 @@ footer {
 
 @media only screen and (min-width: 1920px) {}
 
-@media only screen and (min-width: 2560px) {
-  * {
-    font-size: 1.025rem;
-  }
-
-  .caption {
-    font-size: 1.025rem;
-  }
-
-  footer {
-    font-size: 0.875rem;
-  }
-
-  nav .mainMenu li a {
-    font-size: 18px;
-  }
-
-  .project-title {
-    font-size: 30px;
-  }
-
-  .project-subtitle {
-    font-size: 18px;
-  }
-}
+@media only screen and (min-width: 2560px) {}
 
 @media only screen and (min-width: 3840px) {}
