@@ -50,6 +50,8 @@ window.addEventListener('scroll', function () {
 
 // Nav bar hide on scroll
 window.addEventListener('scroll', () => {
+	// Skip if menu is open
+	if (document.body.classList.contains('openMenu')) return;
 	const currentScroll = window.pageYOffset;
 	if (currentScroll > lastScroll && currentScroll > 50) {
 		// scrolling down
@@ -132,15 +134,15 @@ modal.addEventListener('click', function (e) {
 
 // Read more toggle
 function toggleReadMore() {
-  if (moreText.classList.contains("hidden")) {
-    moreText.classList.remove("hidden");
-    moreText.classList.add("visible");
-    readMoreButton.textContent = "Show less";
-  } else {
-    moreText.classList.remove("visible");
-    moreText.classList.add("hidden");
-    readMoreButton.textContent = "Read more";
-  }
+	if (moreText.classList.contains("hidden")) {
+		moreText.classList.remove("hidden");
+		moreText.classList.add("visible");
+		readMoreButton.textContent = "Show less";
+	} else {
+		moreText.classList.remove("visible");
+		moreText.classList.add("hidden");
+		readMoreButton.textContent = "Read more";
+	}
 }
 
 
