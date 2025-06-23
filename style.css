@@ -739,10 +739,6 @@ footer {
     text-transform: uppercase; */
   }
 
-  .quote {
-    
-  }
-
   .banner {
     margin-top: 0;
   }
@@ -848,6 +844,15 @@ footer {
 }
 
 @media only screen and (min-width: 1280px) {
+  .quote {
+    font-size: 4rem;
+    top: 2em;
+  }
+
+  #work-button {
+    font-size: 3rem;
+  }
+  
   .grid.project-text.project-text {
     grid-template-columns: 1fr 1fr;
     padding: 4em 6em 6em 6em;
