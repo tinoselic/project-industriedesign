@@ -664,17 +664,25 @@ video {
 
 .statement {
   text-align: center;
-  padding: 2em 0 2em;
+  margin: 10em 0 5em;
 }
 
 .elaboration p {
-  padding: 1em 0em 1em;
+  margin-bottom: 2em;
 }
 
 .mission {
   text-align: center;
-  padding: 2em;
-  margin: auto;
+  padding: 0 2em 0 2em;
+  margin: 4em 0 4em;
+}
+
+.row {
+  display: block;
+}
+
+.column {
+  margin-bottom: 2em;
 }
 
 .hidden {
@@ -803,14 +811,12 @@ footer {
   }
 
   .statement {
-    padding: 4em;
-    max-width: 750px;
-    width: fit-content;
-    margin: auto;
+    margin: 15em 0 10em;
   }
 
   .elaboration p {
     max-width: 40vw;
+    margin-bottom: 5em;
   }
 
   .elaboration .left {
@@ -826,9 +832,25 @@ footer {
   }
 
   .mission {
-    padding: 4em;
-    max-width: 700px;
-    margin: auto;
+    margin: 10em;
+  }
+
+  .mission h3 {
+    font-size: 2rem;
+  }
+
+  .row {
+    display: flex;
+  }
+  
+  .left {
+    padding-right: 1em;
+    width: 60%;
+  }
+  
+  .right {
+    padding-left: 1em;
+    width: 40%;
   }
 
   footer {
@@ -852,7 +874,7 @@ footer {
   #work-button {
     font-size: 3rem;
   }
-  
+
   .grid.project-text.project-text {
     grid-template-columns: 1fr 1fr;
     padding: 4em 6em 6em 6em;
@@ -891,13 +913,9 @@ footer {
   }
 
   .ideology {
-    padding-bottom: 6em;
   }
 
   .statement {
-    padding: 6em;
-    max-width: 800px;
-    margin: auto;
   }
 
   .elaboration p {
@@ -913,12 +931,23 @@ footer {
   }
 
   .elaboration .center {
-    margin: auto;
   }
 
   .mission {
-    padding: 5em;
-    margin: auto;
+  }
+
+  .row {
+    margin-bottom: 3em;
+  }
+  
+  .left {
+    padding-right: 4em;
+    width: 60%;
+  }
+  
+  .right {
+    padding-left: 4em;
+    width: 40%;
   }
 
   .image-copyright {
