@@ -180,7 +180,7 @@ body {
 nav {
   position: fixed;
   width: 100%;
-  height: 5.25em;
+  height: 5em;
   top: 0;
   background-color: transparent;
   transition: transform .5s ease-in-out;
@@ -287,7 +287,7 @@ nav a:visited:hover {
   width: 100%;
   position: relative;
   overflow-x: hidden;
-  margin-top: 5.25em;
+  margin-top: 5em;
 }
 
 .banner img {
@@ -297,7 +297,7 @@ nav a:visited:hover {
 }
 
 main {
-  margin: 5.25em 1em 0;
+  margin: 5em 1em 0;
   display: block;
 }
 
@@ -323,7 +323,7 @@ img.awards-label {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  padding-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .grid a {
@@ -548,7 +548,7 @@ video {
   border-radius: 2em;
   padding: 1em;
   cursor: pointer;
-  margin: 1em 0;
+  margin: 1em 0 3em 0;
 }
 
 #readMore:hover {
@@ -756,6 +756,10 @@ footer {
     grid-column: 2;
   }
 
+  #readMore {
+    margin-bottom: 6em;
+  }
+
   /* .project:hover {
     outline: var(--selic-black) solid;
   } */
@@ -780,7 +784,7 @@ footer {
   }
 
   img.awards-label {
-    height: 6em;
+    height: 4em;
     width: auto;
   }
 
@@ -864,6 +868,7 @@ footer {
   }
 
   img.awards-label {
+    height: 6em;
     margin-right: 2em;
   }
 
