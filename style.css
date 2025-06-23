@@ -199,6 +199,14 @@ nav img {
   cursor: pointer;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  height: fit-content;
+  width: auto;
+}
+
 button.logo {
   margin: 1em 0 0 1em;
   display: flex;
@@ -564,14 +572,7 @@ video {
   justify-content: center;
 }
 
-button {
-  border: none;
-  background-color: transparent;
-  height: fit-content;
-  width: auto;
-}
-
-button#readMore {
+#readMore {
   font-size: 0.8rem;
   font-weight: bold;
   /* text-decoration: underline;
@@ -583,12 +584,12 @@ button#readMore {
   margin: 1em 0;
 }
 
-button#readMore:hover {
+#readMore:hover {
   color: var(--selic-violet);
   border-color: var(--selic-violet);
 }
 
-button.contact {
+.contact {
   font-size: 3rem;
   color: var(--selic-black);
   border: solid 2px var(--selic-black);
@@ -599,7 +600,7 @@ button.contact {
   transition-duration: 0.5s;
 }
 
-button.contact:hover {
+.contact:hover {
   border: solid 2px var(--selic-black);
   background-color: var(--selic-black);
   color: var(--selic-white);
