@@ -625,20 +625,18 @@ video {
 }
 
 .quote {
+  position: relative;
+  top: 5em;
   /* font-family: 'RobotoCondensed'; */
   font-weight: bold;
   font-size: 2rem;
   line-height: 1.15;
   /* text-transform: uppercase; */
-  text-align: center;
-  color: var(--selic-white);
+  text-align: left;
+  color: var(--selic-yellow);
   /* mix-blend-mode: difference;
   filter: invert(); */
   width: 90vw;
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -55%);
 }
 
 #work-button {
@@ -739,6 +737,10 @@ footer {
     font-weight: bold;
     /* letter-spacing: 0.1rem;
     text-transform: uppercase; */
+  }
+
+  .quote {
+    
   }
 
   .banner {
