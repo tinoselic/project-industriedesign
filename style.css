@@ -805,9 +805,9 @@ footer {
     margin-bottom: 6em;
   }
 
-  /* .project:hover {
-    outline: var(--selic-black) solid;
-  } */
+  .project .gallery {
+    transition: 1s ease;
+  }
 
   .project:hover .gallery {
     filter: brightness(0.6) blur(3px);
