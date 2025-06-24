@@ -678,22 +678,23 @@ video {
 }
 
 #work-button:hover {
-  background-color: var(--selic-white);
-  color: var(--selic-black);
+  border: var(--selic-yellow) solid;
+  color: var(--selic-yellow);
 }
 
 .explanation {
   position: absolute;
   right: 5%;
   top: 85%;
-  /* transform: translate(); */
+  transform: translate(-5%, -15%);
 }
 
 .explanation p {
   color: var(--selic-white);
   opacity: 0.8;
+  font-size: 0.8em;
   font-weight: bold;
-  font-size: 1em;
+  line-height: 1.15;
   text-align: right;
 }
 
