@@ -661,6 +661,21 @@ video {
   color: var(--selic-black);
 }
 
+.explanation {
+  position: absolute;
+  right: 5%;
+  top: 85%;
+  /* transform: translate(); */
+}
+
+.explanation p {
+  color: var(--selic-white);
+  opacity: 0.8;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: right;
+}
+
 .ideology {
   padding-bottom: 3em;
 }
