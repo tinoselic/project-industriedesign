@@ -695,6 +695,19 @@ video {
   margin: 4em 0 4em;
 }
 
+.awards-section {
+  margin-bottom: 4em;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.carousel img {
+  width: 20em;
+}
+
 .row {
   display: block;
 }
