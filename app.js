@@ -5,6 +5,7 @@ const header = document.querySelector('header');
 const mainMenu = document.querySelector('.mainMenu');
 const openMenu = document.querySelector('.openMenu');
 const nav = document.querySelector('nav');
+const navContainer = document.querySelector('.nav-container');
 const home = document.getElementById('home');
 const main = document.querySelector('main');
 const footer = document.getElementById('copyright');
@@ -25,6 +26,7 @@ openMenu.addEventListener('click', () => {
 	isRotated = !isRotated;
 	if (isRotated) {
 		nav.style.backgroundColor = bodyBg;
+		navContainer.style.height = '100dvh';
 		mainMenu.style.backgroundColor = bodyBg;
 		mainMenu.style.display = 'inline-flex';
 		openMenu.style.transform = 'rotate(calc(45*7deg))'; // 1845 deg for screwdriver effect
@@ -32,6 +34,7 @@ openMenu.addEventListener('click', () => {
 		footer.style.display = 'none';
 	} else {
 		nav.style.backgroundColor = 'transparent';
+		navContainer.style.height = '0';
 		mainMenu.style.display = 'none';
 		openMenu.style.transform = 'rotate(0deg)';
 		body.style.overflow = 'auto';
