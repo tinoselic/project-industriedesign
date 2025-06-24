@@ -31,14 +31,12 @@ openMenu.addEventListener('click', () => {
 		mainMenu.style.display = 'inline-flex';
 		openMenu.style.transform = 'rotate(calc(45*7deg))'; // 1845 deg for screwdriver effect
 		body.style.overflow = 'hidden';
-		footer.style.display = 'none';
 	} else {
 		nav.style.backgroundColor = 'transparent';
 		navContainer.style.height = '0';
 		mainMenu.style.display = 'none';
 		openMenu.style.transform = 'rotate(0deg)';
 		body.style.overflow = 'auto';
-		footer.style.display = 'block';
 	}
 });
 
