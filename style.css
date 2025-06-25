@@ -301,12 +301,12 @@ main {
   display: block;
 }
 
-.sort-section {
+.filter-section {
   display: block;
   padding: 2em 0 2em 0;
 }
 
-.sort-button {
+.filter-button {
   color: var(--selic-black);
   font-size: 0.8rem;
   font-weight: bold;
@@ -314,10 +314,9 @@ main {
   /* border-radius: 2em; */
   padding: 0.5em 1em;
   margin: 0 0.5em 0.5em 0;
-  transition: .3s ease;
 }
 
-.sort-button:hover {
+.filter-button:hover {
   border: var(--selic-green) solid;
   color: var(--selic-green);
 }
