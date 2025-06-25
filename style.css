@@ -58,23 +58,23 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.3em;
+  height: 1em;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--selic-white);
+  background: var(--selic-green);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--selic-black);
+  background: var(--selic-violet);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #999;
+  background: var(--selic-black);
 }
 
 h1 {
