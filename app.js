@@ -84,7 +84,7 @@ for (let i = 0; i < accordion.length; i++) {
 }
 
 
-// Highlight Project on Scroll
+/* // Highlight Project on Scroll
 // Options for the Intersection Observer
 const options = {
 	root: null, // Sets the viewport as the root
@@ -111,7 +111,7 @@ function highlightOnScroll(entries, observer) {
 const observer = new IntersectionObserver(highlightOnScroll, options);
 
 // Observe each box
-projects.forEach(box => observer.observe(box));
+projects.forEach(box => observer.observe(box)); */
 
 
 // Preview Image
