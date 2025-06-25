@@ -64,12 +64,12 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--selic-black);
+  background: var(--selic-white);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--selic-white);
+  background: var(--selic-black);
 }
 
 /* Handle on hover */
@@ -301,7 +301,7 @@ main {
   display: block;
 }
 
-.filter-section {
+.filter-container {
   display: block;
   padding: 2em 0 2em 0;
 }
