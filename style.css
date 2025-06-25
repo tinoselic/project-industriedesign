@@ -321,6 +321,11 @@ main {
   color: var(--selic-green);
 }
 
+.filter-button.active {
+  border: var(--selic-green) solid;
+  color: var(--selic-green);
+}
+
 .awards {
   /* display: inline-flex;
   flex-direction: column; */

@@ -10,6 +10,8 @@ const home = document.getElementById('home');
 const main = document.querySelector('main');
 const footer = document.getElementById('copyright');
 const accordion = document.getElementsByClassName('contentBox');
+const filterButtons = document.querySelectorAll('.filter-button');
+const projectItems = document.querySelectorAll('.project-item');
 const modal = document.querySelector('.previewModal');
 const modalImg = document.getElementById('previewImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
@@ -112,6 +114,38 @@ const observer = new IntersectionObserver(highlightOnScroll, options);
 
 // Observe each box
 projects.forEach(box => observer.observe(box)); */
+
+
+// Filter projects
+filterButtons.forEach(button => {
+	button.addEventListener('click', () => {
+		const isActive = button.classList.contains('active');
+		const filter = button.textContent.toLowerCase();
+
+		// Remove active class from all buttons
+		filterButtons.forEach(btn => btn.classList.remove('active'));
+
+		if (isActive) {
+			// If already active, unfilter (show all)
+			projectItems.forEach(projectItem => {
+				projectItem.style.display = '';
+			});
+		} else {
+			// Add active class to clicked button
+			button.classList.add('active');
+
+			// Filter projects
+			projectItems.forEach(projectItem => {
+				const categories = projectItem.getAttribute('data-category')?.toLowerCase() || '';
+				if (categories.includes(filter)) {
+					projectItem.style.display = '';
+				} else {
+					projectItem.style.display = 'none';
+				}
+			});
+		}
+	});
+});
 
 
 // Preview Image
