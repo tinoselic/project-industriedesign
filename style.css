@@ -39,6 +39,7 @@
   --selic-white: #fafbfc;
   --selic-black: #050505;
   --selic-yellow: #F6E830;
+  --selic-red: #e62e2e;
   --selic-violet: #6E4AE8;
   --selic-green: #88e645;
 }
@@ -56,26 +57,26 @@
   scrollbar-color: #fff #000; */
 }
 
-/* width */
+/* width 
 ::-webkit-scrollbar {
   width: 0.3em;
   height: 1em;
-}
+}*/
 
-/* Track */
+/* Track 
 ::-webkit-scrollbar-track {
-  background: var(--selic-green);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--selic-violet);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
   background: var(--selic-black);
-}
+}*/
+
+/* Handle 
+::-webkit-scrollbar-thumb {
+  background: #999;
+}*/
+
+/* Handle on hover 
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}*/
 
 h1 {
   font-family: 'RobotoCondensed';
