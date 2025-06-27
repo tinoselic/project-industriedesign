@@ -1,187 +1,158 @@
-const contact = document.getElementById('contact');
-const body = document.body;
-const bodyBg = getComputedStyle(body).backgroundColor;
-const header = document.querySelector('header');
-const mainMenu = document.querySelector('.mainMenu');
-const openMenu = document.querySelector('.openMenu');
-const nav = document.querySelector('nav');
-const navContainer = document.querySelector('.nav-container');
-const home = document.getElementById('home');
-const main = document.querySelector('main');
-const footer = document.getElementById('copyright');
-const accordion = document.getElementsByClassName('contentBox');
-const filterButtons = document.querySelectorAll('.filter-button');
-const projectItems = document.querySelectorAll('.project-item');
-const modal = document.querySelector('.previewModal');
-const modalImg = document.getElementById('previewImage');
-const thumbnails = document.querySelectorAll('.thumbnail');
-const projects = document.querySelectorAll('.project');
-const moreText = document.getElementById("moreText");
-const readMoreButton = document.getElementById("readMore");
-const mailtoLink = 'mailto:mario@selic.com}';
-let isRotated = false;
-let lastScroll = 0;
-
-
-// Nav bar interaction
-openMenu.addEventListener('click', () => {
-	isRotated = !isRotated;
-	if (isRotated) {
-		nav.style.backgroundColor = bodyBg;
-		navContainer.style.height = '100dvh';
-		mainMenu.style.backgroundColor = bodyBg;
-		mainMenu.style.display = 'inline-flex';
-		openMenu.style.transform = 'rotate(calc(45*7deg))'; // 1845 deg for screwdriver effect
-		body.style.overflow = 'hidden';
-	} else {
-		nav.style.backgroundColor = 'transparent';
-		navContainer.style.height = '0';
-		mainMenu.style.display = 'none';
-		openMenu.style.transform = 'rotate(0deg)';
-		body.style.overflow = 'auto';
-	}
-});
-
-// Nav bar scrolling color change
-window.addEventListener('scroll', function () {
-	if (window.scrollY > 10) {
-		nav.style.backgroundColor = bodyBg;
-	} else {
-		nav.style.backgroundColor = 'transparent';
-	}
-});
-
-// Nav bar hide on scroll
-window.addEventListener('scroll', () => {
-	// Skip if menu is open
-	if (document.body.classList.contains('openMenu')) return;
-	const currentScroll = window.pageYOffset;
-	if (currentScroll > lastScroll && currentScroll > 50) {
-		// scrolling down
-		nav.classList.add('hide-on-scroll');
-	} else {
-		// scrolling up
-		nav.classList.remove('hide-on-scroll');
-	}
-	lastScroll = currentScroll;
-});
-
-
-// Footer
 document.addEventListener("DOMContentLoaded", function () {
-	var footerText =
-		'<div class="address-section">Selic Industriedesign<br>Schertlinstrasse 17a<br>86159 Augsburg</div>' +
-		'<div class="contact-section">T +49 821 3499450<br>mario@selic.de</div>' +
-		'<div class="copyright-section">© 2025 Selić Industriedesign<br>All rights reserved.</div>'
-		;
-	footer.innerHTML = footerText;
+  // ========= DOM Elements ========= //
+  const body = document.body;
+  const nav = document.querySelector('nav');
+  const navContainer = document.querySelector('.nav-container');
+  const mainMenu = document.querySelector('.mainMenu');
+  const openMenu = document.querySelector('.openMenu');
+  const footer = document.getElementById('copyright');
+  const accordion = document.getElementsByClassName('contentBox');
+  const filterButtons = document.querySelectorAll('.filter-button');
+  const projectItems = document.querySelectorAll('.project-item');
+  const projects = document.querySelectorAll('.project');
+  const modal = document.querySelector('.previewModal');
+  const close = document.getElementById('closePreview');
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  const slides = document.getElementsByClassName("slides");
+  const dots = document.getElementsByClassName("demo");
+  const moreText = document.getElementById("moreText");
+  const readMoreButton = document.getElementById("readMore");
+  const bodyBg = getComputedStyle(body).backgroundColor;
+
+  let isRotated = false;
+  let lastScroll = 0;
+  let slideIndex = 1;
+
+  // ========= Navigation Toggle ========= //
+  openMenu.addEventListener('click', () => {
+    isRotated = !isRotated;
+    nav.style.backgroundColor = isRotated ? bodyBg : 'transparent';
+    navContainer.style.height = isRotated ? '100dvh' : '0';
+    mainMenu.style.display = isRotated ? 'inline-flex' : 'none';
+    mainMenu.style.backgroundColor = isRotated ? bodyBg : '';
+    openMenu.style.transform = isRotated ? 'rotate(calc(45*7deg))' : 'rotate(0deg)';
+    body.style.overflow = isRotated ? 'hidden' : 'auto';
+  });
+
+  // ========= Scroll Behavior ========= //
+  window.addEventListener('scroll', () => {
+    nav.style.backgroundColor = window.scrollY > 10 ? bodyBg : 'transparent';
+
+    if (!body.classList.contains('openMenu')) {
+      const currentScroll = window.pageYOffset;
+      nav.classList.toggle('hide-on-scroll', currentScroll > lastScroll && currentScroll > 50);
+      lastScroll = currentScroll;
+    }
+  });
+
+  // ========= Dynamic Footer ========= //
+  footer.innerHTML = `
+    <div class="address-section">
+      Selic Industriedesign<br>Schertlinstrasse 17a<br>86159 Augsburg
+    </div>
+    <div class="contact-section">
+      T +49 821 3499450<br>mario@selic.de
+    </div>
+    <div class="copyright-section">
+      © 2025 Selić Industriedesign<br>All rights reserved.
+    </div>
+  `;
+
+  // ========= Accordion ========= //
+  Array.from(accordion).forEach(box =>
+    box.addEventListener('click', () => box.classList.toggle('active'))
+  );
+
+  // ========= Project Filter Buttons ========= //
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.textContent.toLowerCase();
+      const isActive = button.classList.contains('active');
+
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+
+      if (!isActive) button.classList.add('active');
+
+      projectItems.forEach(item => {
+        const categories = item.getAttribute('data-category')?.toLowerCase() || '';
+        item.style.display = isActive || !categories.includes(filter) ? '' : 'none';
+      });
+    });
+  });
+
+  // ========= Gallery Generator ========= //
+  window.generateGallery = function (slidesId, thumbnailsId, imagePaths) {
+    const slidesContainer = document.getElementById(slidesId);
+    const thumbnailsContainer = document.getElementById(thumbnailsId);
+
+    imagePaths.forEach((src, i) => {
+      // Create slide
+      const slide = document.createElement('div');
+      slide.className = 'slides';
+      slide.innerHTML = `
+        <div class="slide-container">
+          <div class="numbertext">${i + 1} / ${imagePaths.length}</div>
+          <img src="${src}" class="slide-img">
+        </div>
+      `;
+      slidesContainer.appendChild(slide);
+
+      // Create thumbnail
+      const thumb = document.createElement('div');
+      thumb.className = 'slideshow-column';
+      thumb.innerHTML = `
+        <img class="demo cursor" src="${src}" style="width:100%" onclick="currentSlide(${i + 1})">
+      `;
+      thumbnailsContainer.appendChild(thumb);
+    });
+
+    showSlides(slideIndex);
+  };
+
+  // ========= Gallery Navigation ========= //
+  window.currentSlide = function (n) {
+    showSlides(slideIndex = n);
+  };
+
+  window.plusSlides = function (n) {
+    showSlides(slideIndex += n);
+  };
+
+  function showSlides(n) {
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+
+    Array.from(slides).forEach(slide => slide.style.display = "none");
+    Array.from(dots).forEach(dot => dot.classList.remove("active"));
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1]?.classList.add("active");
+  }
+
+  // ========= Modal Interaction ========= //
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+      const index = parseInt(thumbnail.getAttribute('data-index'), 10);
+      modal.style.display = 'flex';
+      currentSlide(index);
+      body.style.overflow = 'hidden';
+    });
+  });
+
+  close.addEventListener('click', () => {
+    modal.style.display = 'none';
+    body.style.overflow = 'auto';
+  });
+
+  // ========= Read More Toggle ========= //
+  readMoreButton?.addEventListener('click', () => {
+    moreText.classList.toggle("hidden");
+    moreText.classList.toggle("visible");
+    readMoreButton.textContent = moreText.classList.contains("visible") ? "Show less" : "Read more";
+  });
+
+  // ========= Optional Contact Email ========= //
+  // document.getElementById('contact')?.addEventListener('click', () => {
+  //   window.location.href = 'mailto:mario@selic.com';
+  // });
 });
-
-
-// Accordion
-for (let i = 0; i < accordion.length; i++) {
-	accordion[i].addEventListener('click', function () {
-		this.classList.toggle('active');
-	});
-}
-
-
-/* // Highlight Project on Scroll
-// Options for the Intersection Observer
-const options = {
-	root: null, // Sets the viewport as the root
-	rootMargin: '0px',
-	threshold: 1 // Triggers when 100% of the box is visible
-};
-
-// Callback function for the observer
-function highlightOnScroll(entries, observer) {
-	if (window.innerWidth <= 796) {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				// Add the highlight class when the element is in view
-				entry.target.classList.add('highlight');
-			} else {
-				// Optionally, remove the highlight when it’s out of view
-				entry.target.classList.remove('highlight');
-			}
-		});
-	}
-}
-
-// Create the observer with the callback and options
-const observer = new IntersectionObserver(highlightOnScroll, options);
-
-// Observe each box
-projects.forEach(box => observer.observe(box)); */
-
-
-// Filter projects
-filterButtons.forEach(button => {
-	button.addEventListener('click', () => {
-		const isActive = button.classList.contains('active');
-		const filter = button.textContent.toLowerCase();
-
-		// Remove active class from all buttons
-		filterButtons.forEach(btn => btn.classList.remove('active'));
-
-		if (isActive) {
-			// If already active, unfilter (show all)
-			projectItems.forEach(projectItem => {
-				projectItem.style.display = '';
-			});
-		} else {
-			// Add active class to clicked button
-			button.classList.add('active');
-
-			// Filter projects
-			projectItems.forEach(projectItem => {
-				const categories = projectItem.getAttribute('data-category')?.toLowerCase() || '';
-				if (categories.includes(filter)) {
-					projectItem.style.display = '';
-				} else {
-					projectItem.style.display = 'none';
-				}
-			});
-		}
-	});
-});
-
-
-// Preview Image
-// Add click event to each image
-thumbnails.forEach((thumbnail) => {
-	thumbnail.addEventListener('click', function () {
-		modal.style.display = 'flex'; // Show the modal
-		modalImg.src = this.src; // Set the clicked image in the modal
-		document.body.style.overflow = 'hidden';
-	});
-});
-
-// Close the modal when clicking anywhere outside the image or on the close button
-modal.addEventListener('click', function (e) {
-	if (e.target !== modalImg) {
-		modal.style.display = 'none';
-		document.body.style.overflow = 'auto';
-	}
-});
-
-
-// Read more toggle
-function toggleReadMore() {
-	if (moreText.classList.contains("hidden")) {
-		moreText.classList.remove("hidden");
-		moreText.classList.add("visible");
-		readMoreButton.textContent = "Show less";
-	} else {
-		moreText.classList.remove("visible");
-		moreText.classList.add("hidden");
-		readMoreButton.textContent = "Read more";
-	}
-}
-
-
-// Contact/Email button interaction
-/* contact.addEventListener('click', function () {
-	window.location.href = mailtoLink;
-}); */
