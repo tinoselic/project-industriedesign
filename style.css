@@ -542,13 +542,13 @@ img.awards-label {
 
 #closePreview {
   position: absolute;
-  top: 26px;
+  top: 24px;
   right: 1em;
   color: #F6E830;
 }
 
 #closePreview img {
-  height: 26px;
+  height: 24px;
   cursor: pointer;
 }
 
