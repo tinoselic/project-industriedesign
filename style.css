@@ -524,7 +524,7 @@ img.awards-label {
 
 .slide-container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
 }
 
@@ -569,15 +569,15 @@ img.awards-label {
 /* Next & previous buttons */
 .prev,
 .next {
+  height: 24px;
+  width: 24px;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 70%;
+  transform: translateY(-70%);
   z-index: 1000;
   cursor: pointer;
-  margin: 0 .5em 0 .5em;
+  margin: 0 1em 0 1em;
   color: var(--selic-yellow);
-  font-weight: normal;
-  font-size: 3rem;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -603,6 +603,7 @@ img.awards-label {
 .numbertext {
   color: var(--selic-yellow);
   font-size: 0.8rem;
+  margin-left: 1em;
 }
 
 .slideshow-row {
@@ -961,6 +962,20 @@ footer {
   img.awards-label {
     height: 4em;
     width: auto;
+  }
+  
+  .prev,
+  .next {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .slide-container {
+    width: 100%;
+  }
+
+  .numbertext {
+    margin-left: 0;
   }
 
   .slide-img {
