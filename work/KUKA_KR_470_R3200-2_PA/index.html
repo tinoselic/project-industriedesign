@@ -54,7 +54,8 @@
         <br>
         <p>
           The palletizing robot was developed for precise handling in the shortest cycle times
-          and can move workpieces with payloads of up to 470 kg (1036 lbs) with a range of up to 3200 mm (126 inches). It
+          and can move workpieces with payloads of up to 470 kg (1036 lbs) with a range of up to 3200 mm (126 inches).
+          It
           offers maximum performance in the smallest space and is equipped for the latest applications, from battery
           handling to mega- and giga-casting. The extremely torsion-resistant design combined with powerful drives
           enables precise and quick handling of heavy, large-format components with high moments of inertia.
@@ -107,19 +108,39 @@
       </div>
     </div>
     <div class="grid image-gallery">
-      <img src="241031-KUKA-KR-470-R3200-2-PA-1920x1200-03.jpg" alt="KUKA KR 470 R3200-2 PA: perspective right" class="thumbnail">
-      <img src="241031-KUKA-KR-470-R3200-2-PA-1920x1200-02.jpg" alt="KUKA KR 470 R3200-2 PA: perspective left" class="thumbnail">
-      <img src="241031-KUKA-KR-470-R3200-2-PA-1920x1200-04.jpg" alt="KUKA KR 470 R3200-2 PA: perspective below right" class="thumbnail">
-      <img src="241031-KUKA-KR-470-R3200-2-PA-1920x1200-01.jpg" alt="KUKA KR 470 R3200-2 PA: left" class="thumbnail">
+      <img src="241031-KUKA-KR-470-R3200-2-PA-1920x1200-03.jpg" alt="KUKA KR 470 R3200-2 PA: perspective right"
+        class="thumbnail" data-index="1">
+      <img src="241031-KUKA-KR-470-R3200-2-PA-1920x1200-02.jpg" alt="KUKA KR 470 R3200-2 PA: perspective left"
+        class="thumbnail" data-index="2">
+      <img src="241031-KUKA-KR-470-R3200-2-PA-1920x1200-04.jpg" alt="KUKA KR 470 R3200-2 PA: perspective below right"
+        class="thumbnail" data-index="3">
+      <img src="241031-KUKA-KR-470-R3200-2-PA-1920x1200-01.jpg" alt="KUKA KR 470 R3200-2 PA: left" class="thumbnail"
+        data-index="4">
     </div>
     <p class="image-copyright">Images © Selic Industriedesign</p>
     <div class="previewModal">
-      <div id="closePreview"><img src="../../assets/close_FILL0_wght400_GRAD0_opsz48.svg" alt="Close icon"></div>
-      <img id="previewImage">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryKUKAKR470R32002PA">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsKUKAKR470R32002PA"></div>
     </div>
   </main>
   <footer id="copyright"></footer>
   <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryKUKAKR470R32002PA", "thumbnailsKUKAKR470R32002PA", [
+        "241031-KUKA-KR-470-R3200-2-PA-1920x1200-03.jpg",
+        "241031-KUKA-KR-470-R3200-2-PA-1920x1200-02.jpg",
+        "241031-KUKA-KR-470-R3200-2-PA-1920x1200-04.jpg",
+        "241031-KUKA-KR-470-R3200-2-PA-1920x1200-01.jpg"
+      ]);
+    });
+  </script>
 </body>
 
 </html>
