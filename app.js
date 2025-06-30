@@ -63,20 +63,27 @@ document.addEventListener("DOMContentLoaded", function () {
     box.addEventListener('click', () => box.classList.toggle('active'))
   );
 
-  // ========= Project Filter Buttons ========= //
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
       const filter = button.textContent.toLowerCase();
       const isActive = button.classList.contains('active');
 
-      filterButtons.forEach(btn => btn.classList.remove('active'));
+      // Toggle off: Show all
+      if (isActive) {
+        button.classList.remove('active');
+        projectItems.forEach(item => {
+          item.style.display = '';
+        });
+      } else {
+        // Toggle on: Set active and filter
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
 
-      if (!isActive) button.classList.add('active');
-
-      projectItems.forEach(item => {
-        const categories = item.getAttribute('data-category')?.toLowerCase() || '';
-        item.style.display = isActive || !categories.includes(filter) ? '' : 'none';
-      });
+        projectItems.forEach(item => {
+          const categories = item.getAttribute('data-category')?.toLowerCase() || '';
+          item.style.display = categories.includes(filter) ? '' : 'none';
+        });
+      }
     });
   });
 
