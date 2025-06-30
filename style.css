@@ -80,7 +80,7 @@
 
 h1 {
   font-family: 'RobotoCondensed';
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: normal;
   line-height: 1;
   color: var(--selic-black);
@@ -115,7 +115,7 @@ h3 {
 
 h4 {
   color: var(--selic-black);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.1;
   font-weight: normal;
 }
@@ -826,13 +826,35 @@ video {
   text-align: right;
 }
 
+.about-background {
+  position: absolute;
+  top: 5em;
+}
+
+.sticker {
+  align-items: left;
+}
+
+.sticker img {
+  position: absolute;
+  z-index: 1;
+  max-width: 500px;
+  overflow: hidden;
+}
+
 .ideology {
+  position: relative;
+  z-index: 10;
   padding-bottom: 3em;
 }
 
 .statement {
   text-align: center;
   margin: 10em 0 5em;
+}
+
+.statement h1 {
+  font-size: 3rem;
 }
 
 .elaboration p {
@@ -963,7 +985,7 @@ footer {
     height: 4em;
     width: auto;
   }
-  
+
   .prev,
   .next {
     top: 50%;
