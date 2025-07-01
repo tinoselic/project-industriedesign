@@ -124,6 +124,7 @@ h5 {
   color: var(--selic-black);
   font-size: 1rem;
   font-weight: bold;
+  max-width: 650px;
 }
 
 p {
@@ -530,7 +531,7 @@ img.awards-label {
 
 .slide-img {
   width: 100%;
-  max-height: 80vh;
+  max-height: 80dvh;
   object-fit: contain;
   display: block;
 }
@@ -1019,7 +1020,7 @@ footer {
   .slide-img {
     width: auto;
     max-width: 70vw;
-    max-height: 70vh;
+    max-height: 70dvh;
   }
 
   .row::after {
