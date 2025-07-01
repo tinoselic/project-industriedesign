@@ -775,11 +775,11 @@ video {
 }
 
 .quote {
-  font-family: 'RobotoCondensed';
-  /* font-weight: bold; */
+  /* font-family: 'RobotoCondensed'; */
+  font-weight: bold;
   font-size: 2rem;
   line-height: 1.15;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   position: absolute;
   left: 50%;
   top: 35%;
