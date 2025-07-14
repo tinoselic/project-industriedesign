@@ -151,10 +151,6 @@ p {
   font-style: italic;
 }
 
-i {
-  color: #999;
-}
-
 a:link {
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -418,6 +414,10 @@ img.awards-label {
   transition: 1s ease;
 }
 
+.team {
+  padding-bottom: 3em;
+}
+
 .cv {
   padding-bottom: 3em;
 }
@@ -474,6 +474,10 @@ img.awards-label {
 .contentBox.active .content {
   height: fit-content;
   padding: 0 2em 2em;
+}
+
+.references {
+  padding-bottom: 3em;
 }
 
 .references a {
@@ -804,42 +808,56 @@ video {
 }
 
 .about-background {
-  /* margin-top: 5em; */
-}
-
-.sticker {
-  overflow: hidden;
-  background-color: transparent;
-}
-
-#kukaKR800 img {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  border: 1px dashed red;
+}
+
+.background-image img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+#kukaKR800 {
   top: 3em;
   left: 3em;
-  z-index: 1;
   max-width: 500px;
 }
 
-#kukaKR500 img {
-  position: absolute;
+#kukaKR500 {
   top: 53em;
   left: -5em;
-  z-index: 2;
   max-width: 400px;
 }
 
-#siegmundSchweisszelle img {
-  position: absolute;
+#roboticKitchen {
+  top: 85em;
+  left: 4em;
+  max-width: 250px;
+}
+
+#siegmundSchweisszelle {
   top: 83em;
   left: 8em;
-  z-index: 3;
   max-width: 250px;
 }
 
 .ideology {
   position: relative;
   z-index: 10;
-  padding-bottom: 3em;
+  padding-bottom: 12em;
 }
 
 .statement {
@@ -888,7 +906,18 @@ video {
 }
 
 .column {
-  margin-bottom: 2em;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.portrait {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  filter: grayscale();
+  padding-bottom: 1em;
 }
 
 .hidden {
@@ -1007,8 +1036,6 @@ footer {
 
   p {
     max-width: 650px;
-    /* text-align: justify;
-    text-justify: inter-word; */
   }
 
   .ideology {
@@ -1049,13 +1076,11 @@ footer {
   }
 
   .left {
-    padding-right: 1em;
-    width: 60%;
+    padding-right: 3em;
   }
 
   .right {
-    padding-left: 1em;
-    width: 40%;
+    padding-left: 3em;
   }
 
   footer {
@@ -1170,17 +1195,20 @@ footer {
   .mission {}
 
   .row {
+    padding: 0 10em 0 10em;
     margin-bottom: 3em;
+  }
+
+  .column p {
+    max-width: 400px;
   }
 
   .left {
     padding-right: 4em;
-    width: 60%;
   }
 
   .right {
     padding-left: 4em;
-    width: 40%;
   }
 
   .image-copyright {
