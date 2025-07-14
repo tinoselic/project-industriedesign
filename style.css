@@ -687,11 +687,6 @@ video {
   margin: 1em 0 3em 0;
 }
 
-#readMore:hover {
-  color: var(--selic-violet);
-  border-color: var(--selic-violet);
-}
-
 .contact {
   font-size: 3rem;
   color: var(--selic-black);
@@ -1106,6 +1101,11 @@ footer {
   #work-button:hover {
     border: var(--selic-yellow) solid;
     color: var(--selic-yellow);
+  }
+
+  #readMore:hover {
+    color: var(--selic-violet);
+    border-color: var(--selic-violet);
   }
 
   .grid {
