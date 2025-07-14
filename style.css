@@ -164,15 +164,10 @@ a:link {
 
 a:hover {
   text-decoration: underline;
-  color: var(--selic-violet);
 }
 
 a:visited {
   color: var(--selic-black);
-}
-
-a:visited:hover {
-  color: var(--selic-violet);
 }
 
 body {
@@ -316,11 +311,6 @@ main {
   /* border-radius: 2em; */
   padding: 0.5em 1em;
   margin: 0 0.5em 0.5em 0;
-}
-
-.filter-button:hover {
-  border: var(--selic-green) solid;
-  color: var(--selic-green);
 }
 
 .filter-button.active {
@@ -551,10 +541,6 @@ img.awards-label {
 #closePreview img {
   height: 24px;
   cursor: pointer;
-}
-
-#closePreview:hover {
-  opacity: 50%;
 }
 
 /* Hide the images by default */
@@ -804,11 +790,6 @@ video {
   border: var(--selic-white) solid;
   /* border-radius: 3em; */
   padding: 0.5em 1em;
-}
-
-#work-button:hover {
-  border: var(--selic-yellow) solid;
-  color: var(--selic-yellow);
 }
 
 .explanation {
@@ -1095,6 +1076,23 @@ footer {
 }
 
 @media only screen and (min-width: 1280px) {
+  a:hover {
+    color: var(--selic-violet);
+  }
+
+  a:visited:hover {
+    color: var(--selic-violet);
+  }
+
+  .filter-button:hover {
+    border: var(--selic-green) solid;
+    color: var(--selic-green);
+  }
+
+  #closePreview:hover {
+    opacity: 50%;
+  }
+
   .quote {
     font-size: 3rem;
     top: 25%;
@@ -1103,6 +1101,11 @@ footer {
   #work-button {
     font-size: 2rem;
     top: 70%;
+  }
+
+  #work-button:hover {
+    border: var(--selic-yellow) solid;
+    color: var(--selic-yellow);
   }
 
   .grid {
