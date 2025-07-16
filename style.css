@@ -831,7 +831,7 @@ video {
 }
 
 #kukaKR800 {
-  top: 3em;
+  top: 6em;
   left: 3em;
   max-width: 500px;
 }
@@ -843,8 +843,8 @@ video {
 }
 
 #roboticKitchen {
-  top: 85em;
-  left: 4em;
+  top: 90em;
+  left: 5em;
   max-width: 250px;
 }
 
@@ -906,18 +906,31 @@ video {
 }
 
 .column {
-  text-align: center;
-  margin-bottom: 3em;
+  /* text-align: center; */
+  margin-bottom: 5em;
 }
 
 .portrait {
   border-radius: 50%;
-  width: 100%;
+  width: 300px;
+  height: 300px;
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
-  filter: grayscale();
-  padding-bottom: 1em;
+  margin-bottom: 2em;
+  background-color: var(--selic-violet);
+  background-blend-mode: overlay;
+  filter: brightness(130%) saturate(55%) contrast(110%);
+}
+
+#mario {
+  background-image: url(images/Mario_Selic_sw.jpg);
+  background-size: contain;
+}
+
+#tino {
+  background-image: url(images/202208_TinoSelic_bw.jpg);
+  background-size: contain;
 }
 
 .hidden {
