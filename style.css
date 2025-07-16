@@ -816,9 +816,9 @@ video {
 
 .about-background {
   position: absolute;
-  top: 0;
+  top: -120px;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   z-index: 0;
   pointer-events: none;
@@ -827,32 +827,32 @@ video {
 
 .background-image {
   position: absolute;
-  border: 1px dashed red;
+  /* border: 1px dashed var(--selic-violet); */
 }
 
 .background-image img {
-  display: block;
   width: auto;
   max-width: 100%;
   height: auto;
 }
 
 #kukaKR800 {
-  top: 6em;
-  left: 3em;
-  max-width: 500px;
+  top: 0px;
+  left: 1%;
+  width: 550px;
 }
 
 #kukaKR500 {
-  top: 53em;
-  left: -5em;
-  max-width: 400px;
+  top: 20%;
+  left: -80px;
+  width: 350px;
 }
 
 #roboticKitchen {
-  top: 90em;
-  left: 5em;
-  max-width: 250px;
+  top: 31.5%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 250px;
 }
 
 #siegmundSchweisszelle {
@@ -1067,6 +1067,28 @@ footer {
     max-width: 650px;
   }
 
+  .about-background {
+    top: -200px;
+  }
+
+  #kukaKR800 {
+    top: 0px;
+    left: 20%;
+    width: 900px;
+  }
+
+  #kukaKR500 {
+    top: 19%;
+    left: -80px;
+    width: 500px;
+  }
+
+  #roboticKitchen {
+    top: 43%;
+    left: 70%;
+    width: 300px;
+  }
+
   .ideology {
     padding-bottom: 6em;
   }
@@ -1205,9 +1227,27 @@ footer {
     height: auto;
   }
 
-  .ideology {}
+  .about-background {
+    top: -220px;
+  }
 
-  .statement {}
+  #kukaKR800 {
+    top: 0px;
+    left: 50%;
+    width: 900px;
+  }
+
+  #kukaKR500 {
+    top: 18%;
+    left: -15%;
+    width: 900px;
+  }
+
+  #roboticKitchen {
+    top: 37%;
+    left: 70%;
+    width: 500px;
+  }
 
   .elaboration p {
     max-width: 30vw;
