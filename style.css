@@ -414,12 +414,9 @@ img.awards-label {
   transition: 1s ease;
 }
 
-.team {
+.info {
   padding-bottom: 3em;
-}
-
-.cv {
-  padding-bottom: 3em;
+  text-align: left;
 }
 
 .accordion {
@@ -444,19 +441,19 @@ img.awards-label {
 
 .label::before {
   content: url(assets/expand_more_FILL0_wght400_GRAD0_opsz48.svg);
-  width: 24px;
+  width: 1rem;
   position: absolute;
   top: 50%;
-  right: 1em;
+  right: 0;
   transform: translateY(-50%);
 }
 
 .contentBox.active .label::before {
   content: url(assets/expand_less_FILL0_wght400_GRAD0_opsz48.svg);
-  width: 24px;
+  width: 1rem;
   position: absolute;
   top: 50%;
-  right: 1em;
+  right: 0;
   transform: translateY(-50%);
 }
 
@@ -467,13 +464,23 @@ img.awards-label {
   overflow-y: auto;
 }
 
-.content ul li {
+.content ul {
+  font-size: inherit;
+  font-weight: bold;
   padding-bottom: 1em;
 }
 
+.content ul li {
+  font-size: inherit;
+  font-weight: normal;
+  margin-left: 1.5em;
+  padding-bottom: 0.5em;
+}
+
 .contentBox.active .content {
+  line-height: 1.5;
   height: fit-content;
-  padding: 0 2em 2em;
+  padding-bottom: 2em;
 }
 
 .references {
@@ -903,11 +910,21 @@ video {
 
 .row {
   display: block;
+  text-align: center;
 }
 
 .column {
   /* text-align: center; */
   margin-bottom: 5em;
+}
+
+.bio-header {
+  margin: 2em 0 1em 0;
+}
+
+.bio {
+  display: block;
+  text-align: left;
 }
 
 .portrait {
@@ -917,7 +934,6 @@ video {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2em;
   background-color: var(--selic-violet);
   background-blend-mode: overlay;
   filter: brightness(130%) saturate(55%) contrast(110%);
@@ -1089,10 +1105,12 @@ footer {
   }
 
   .left {
+    width: 50%;
     padding-right: 3em;
   }
 
   .right {
+    width: 50%;
     padding-left: 3em;
   }
 
