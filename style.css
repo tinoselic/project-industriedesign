@@ -89,10 +89,11 @@ h1 {
 }
 
 h2 {
+  font-family: 'RobotoCondensed';
   color: var(--selic-black);
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.1;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: uppercase;
   max-width: 800px;
 }
@@ -826,34 +827,13 @@ video {
 }
 
 .background-image {
-  position: absolute;
-  /* border: 1px dashed var(--selic-violet); */
+  display: none;
 }
 
 .background-image img {
   width: auto;
   max-width: 100%;
   height: auto;
-}
-
-#kukaKR800 {
-  top: 0px;
-  left: 10%;
-  width: 550px;
-}
-
-#kukaKR500 {
-  top: 17%;
-  left: -30%;
-  width: 420px;
-}
-
-#roboticKitchen {
-  display: none;
-}
-
-#siegmundSchweisszelle {
-  display: none;
 }
 
 .ideology {
@@ -882,11 +862,7 @@ video {
 
 .mission {
   text-align: center;
-  margin-top: 4em;
-}
-
-.mission h3 {
-  padding: 0 2em 0 2em;
+  margin: 4em 0em;
 }
 
 .awards-section {
@@ -1080,6 +1056,12 @@ footer {
     top: -200px;
   }
 
+  .background-image {
+    position: absolute;
+    display: block;
+    /* border: 1px dashed var(--selic-violet); */
+  }
+
   #kukaKR800 {
     top: 0px;
     left: 20%;
@@ -1087,23 +1069,21 @@ footer {
   }
 
   #kukaKR500 {
-    top: 19%;
-    left: -80px;
-    width: 500px;
+    top: 18%;
+    left: -17%;
+    width: 550px;
   }
 
   #roboticKitchen {
-    display: block;
-    top: 43%;
-    left: 70%;
+    top: 31%;
+    left: 55%;
     width: 300px;
   }
 
   #siegmundSchweisszelle {
-    display: block;
-    top: 83em;
-    left: 8em;
-    max-width: 250px;
+    top: 87%;
+    left: 40%;
+    max-width: 450px;
   }
 
   .ideology {
@@ -1131,13 +1111,10 @@ footer {
     margin: 6em 10em 4em 10em;
   }
 
-  .mission h3 {
-    font-size: 2rem;
-  }
-
   #center {
     text-align: left;
     padding-top: 6em;
+    max-width: 50vw;
   }
 
   .row {
@@ -1267,6 +1244,12 @@ footer {
     width: 500px;
   }
 
+  #roboticKitchen {
+    top: 37%;
+    left: 70%;
+    width: 500px;
+  }
+
   .elaboration p {
     max-width: 30vw;
   }
@@ -1279,14 +1262,17 @@ footer {
     margin-left: 50vw;
   }
 
-  .mission {}
-
   #center {
     margin: auto;
     text-align: left;
     max-width: none;
     width: 400px;
     padding-top: 6em;
+  }
+
+  .mission {
+    margin: 6em 0;
+    padding: 0 20em 0;
   }
 
   .row {
