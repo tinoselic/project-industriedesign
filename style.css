@@ -839,7 +839,7 @@ video {
 .ideology {
   position: relative;
   z-index: 10;
-  padding-bottom: 6em;
+  margin-bottom: 6em;
 }
 
 .statement {
@@ -869,10 +869,15 @@ video {
   margin-bottom: 6em;
 }
 
+.team {
+  margin-bottom: 6em;
+}
+
 .carousel {
   /* background-color: var(--selic-black); */
   display: flex;
   overflow-x: scroll;
+  margin-top: 2em;
   /* gap: 1em; */
 }
 
@@ -894,7 +899,7 @@ video {
 
 .column {
   /* text-align: center; */
-  margin-bottom: 5em;
+  margin-bottom: 4em;
 }
 
 .bio-header {
@@ -909,7 +914,6 @@ video {
   display: block;
   text-align: left;
   font-size: 0.8rem;
-  margin-bottom: 2em;
 }
 
 .portrait {
@@ -1087,7 +1091,7 @@ footer {
   }
 
   .ideology {
-    padding-bottom: 4em;
+    margin-bottom: 8em;
   }
 
   .statement {
@@ -1117,8 +1121,20 @@ footer {
     max-width: 50vw;
   }
 
+  .awards-section {
+    margin-bottom: 8em;
+  }
+
+  .team {
+    margin-bottom: 8em;
+  }
+
   .row {
     display: flex;
+  }
+
+  .column {
+    margin-bottom: 0;
   }
 
   .left {
@@ -1239,15 +1255,19 @@ footer {
   }
 
   #roboticKitchen {
-    top: 37%;
-    left: 70%;
+    top: 28%;
+    left: 55%;
     width: 500px;
   }
 
-  #roboticKitchen {
-    top: 37%;
-    left: 70%;
-    width: 500px;
+  #siegmundSchweisszelle {
+    top: 87%;
+    left: 50%;
+    max-width: 500px;
+  }
+
+  .ideology {
+    margin-bottom: 12em;
   }
 
   .elaboration p {
@@ -1275,9 +1295,12 @@ footer {
     padding: 0 20em 0;
   }
 
+  .awards-section {
+    margin-bottom: 12em;
+  }
+
   .row {
     padding: 0 10em 0 10em;
-    margin-bottom: 3em;
   }
 
   .column {
@@ -1290,6 +1313,10 @@ footer {
 
   .right {
     padding-left: 4em;
+  }
+
+  .team {
+    margin-bottom: 12em;
   }
 
   .image-copyright {
