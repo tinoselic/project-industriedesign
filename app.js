@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ========= Dynamic Footer ========= //
   footer.innerHTML = `
     <div class="address-section">
-      Selic Industriedesign<br>Schertlinstrasse 17a<br>86159 Augsburg
+      Selić Industriedesign<br>Schertlinstrasse 17a<br>86159 Augsburg
     </div>
     <div class="contact-section">
       T +49 821 3499450<br>mario@selic.de
