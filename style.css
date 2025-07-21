@@ -230,7 +230,7 @@ button {
 }
 
 .mainMenu {
-  height: inherit;
+  height: calc(100vh - 4em);
   width: 100vw;
   top: 0;
   left: 0;
@@ -311,8 +311,8 @@ main {
 }
 
 .filter-button.active {
-  border: var(--selic-green) solid;
-  color: var(--selic-green);
+  border: var(--selic-violet) solid;
+  color: var(--selic-violet);
 }
 
 .awards {
@@ -411,8 +411,8 @@ img.awards-label {
 
 .project:hover .gallery {
   filter: brightness(0.6) blur(3px);
-  transform: scale(1.1);
-  transition: 1s ease;
+  transform: scale(1.05);
+  transition: .5s ease;
 }
 
 .info {
@@ -852,6 +852,7 @@ video {
 }
 
 .elaboration p {
+  /* font-size: 1.2rem; */
   margin-bottom: 2em;
 }
 
@@ -1009,6 +1010,10 @@ footer {
     height: fit-content;
   }
 
+  .project-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .image-gallery {
     grid-template-columns: 1fr 1fr;
   }
@@ -1151,7 +1156,7 @@ footer {
     display: flex;
     justify-content: space-between;
     text-align: left;
-    padding: 4em 8em;
+    padding: 3em 8em;
   }
 
   .address-section {
@@ -1169,8 +1174,8 @@ footer {
   }
 
   .filter-button:hover {
-    border: var(--selic-green) solid;
-    color: var(--selic-green);
+    border: var(--selic-violet) solid;
+    color: var(--selic-violet);
   }
 
   #closePreview:hover {
@@ -1320,11 +1325,7 @@ footer {
   }
 
   .image-copyright {
-    padding-bottom: 6em;
-  }
-
-  footer {
-    padding: 4em 8em 4em 8em;
+    padding-bottom: 2em;
   }
 }
 
