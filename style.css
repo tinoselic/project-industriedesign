@@ -490,7 +490,7 @@ img.awards-label {
 
 .references a {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 2;
   text-underline-offset: 0.2em;
 }
@@ -824,9 +824,11 @@ video {
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
+  opacity: 70%;
 }
 
 .background-image {
+  position: absolute;
   display: none;
 }
 
@@ -836,6 +838,13 @@ video {
   height: auto;
 }
 
+#kukaKR800 {
+  display: block;
+  top: 0px;
+  right: -200px;
+  width: 500px;
+}
+
 .ideology {
   position: relative;
   z-index: 10;
@@ -843,12 +852,15 @@ video {
 }
 
 .statement {
+  font-family: 'RobotoCondensed';
+  font-size: 2.8rem;
+  font-weight: normal;
+  line-height: 1;
+  color: var(--selic-black);
+  text-transform: uppercase;
+  /* letter-spacing: 1px; */
   text-align: center;
-  margin: 10em 0 5em;
-}
-
-.statement h1 {
-  font-size: 3rem;
+  margin: 3em 0 1.5em;
 }
 
 .elaboration p {
@@ -862,6 +874,8 @@ video {
 }
 
 .mission {
+  font-size: 1.3rem;
+  font-weight: bold;
   text-align: center;
   margin: 4em 0em;
 }
@@ -875,11 +889,13 @@ video {
 }
 
 .carousel {
-  /* background-color: var(--selic-black); */
   display: flex;
+  padding-top: 2em;
+  margin-left: -16px;
+  width: calc(100vw - 17px);
   overflow-x: scroll;
-  margin-top: 2em;
   /* gap: 1em; */
+  /* background-color: var(--selic-black); */
 }
 
 .carousel img {
@@ -912,9 +928,7 @@ video {
 }
 
 .bio {
-  display: block;
   text-align: left;
-  font-size: 0.8rem;
 }
 
 .portrait {
@@ -1062,62 +1076,59 @@ footer {
   }
 
   .about-background {
-    top: -200px;
+    top: -220px;
   }
 
   .background-image {
-    position: absolute;
     display: block;
     /* border: 1px dashed var(--selic-violet); */
   }
 
   #kukaKR800 {
     top: 0px;
-    left: 20%;
+    right: -200px;
     width: 900px;
   }
 
   #kukaKR500 {
-    top: 18%;
-    left: -17%;
-    width: 550px;
+    top: 740px;
+    left: -170px;
+    width: 700px;
   }
 
   #roboticKitchen {
-    top: 31%;
-    left: 55%;
-    width: 300px;
+    top: 1600px;
+    right: -108px;
+    width: 500px;
   }
 
   #siegmundSchweisszelle {
-    top: 87%;
-    left: 40%;
-    max-width: 450px;
+    top:  3800px;
+    right: 50px;
+    max-width: 400px;
   }
 
   .ideology {
-    margin-bottom: 8em;
+    margin: 0 5vw 8em 5vw;
   }
 
   .statement {
-    margin: 15em 0 10em;
+    margin: 5em 0 3em;
   }
 
   .elaboration p {
+    font-size: 1.4rem;
     max-width: 40vw;
     margin-bottom: 5em;
   }
 
-  #left {
-    margin-left: 5vw;
-  }
-
   #right {
-    margin-left: 50vw;
+    margin-left: 45vw;
   }
 
   .mission {
-    margin: 6em 10em 4em 10em;
+    font-size: 2.2rem;
+    margin: 3em 0;
   }
 
   #center {
@@ -1135,21 +1146,13 @@ footer {
   }
 
   .row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5em;
   }
 
   .column {
     margin-bottom: 0;
-  }
-
-  .left {
-    width: 50%;
-    padding-right: 3em;
-  }
-
-  .right {
-    width: 50%;
-    padding-left: 3em;
   }
 
   footer {
@@ -1248,39 +1251,34 @@ footer {
   }
 
   #kukaKR800 {
-    top: 0px;
-    left: 50%;
-    width: 900px;
+    top: 10px;
+    right: -50px;
   }
 
   #kukaKR500 {
-    top: 18%;
-    left: -15%;
-    width: 900px;
+    top: 650px;
+    left: -50px;
+    width: 800px;
   }
 
   #roboticKitchen {
-    top: 28%;
-    left: 55%;
-    width: 500px;
+    top: 1450px;
+    right: 150px;
+    width: 600px;
   }
 
   #siegmundSchweisszelle {
-    top: 87%;
-    left: 50%;
-    max-width: 500px;
+    top: 3800px;
+    right: 150px;
+    max-width: 600px;
   }
 
   .ideology {
-    margin-bottom: 12em;
+    margin: 0 10vw 12em 10vw;
   }
 
   .elaboration p {
     max-width: 30vw;
-  }
-
-  #left {
-    margin-left: 15vw;
   }
 
   #right {
@@ -1296,8 +1294,7 @@ footer {
   }
 
   .mission {
-    margin: 6em 0;
-    padding: 0 20em 0;
+    margin: 3em 5em;
   }
 
   .awards-section {
@@ -1306,18 +1303,6 @@ footer {
 
   .row {
     padding: 0 10em 0 10em;
-  }
-
-  .column {
-    width: 600px;
-  }
-
-  .left {
-    padding-right: 4em;
-  }
-
-  .right {
-    padding-left: 4em;
   }
 
   .team {
