@@ -15,9 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const thumbnails = document.querySelectorAll('.thumbnail');
   const slides = document.getElementsByClassName("slides");
   const dots = document.getElementsByClassName("demo");
-  const moreText = document.getElementById("moreText");
-  const readMoreButton = document.getElementById("readMore");
   const bodyBg = getComputedStyle(body).backgroundColor;
+  const enBtn = document.getElementById("en");
+  const deBtn = document.getElementById("de");
+  const englishTexts = document.querySelectorAll(".english");
+  const germanTexts = document.querySelectorAll(".german");
+  const readMoreButton = document.getElementById("readMore");
+  const moreTextEn = document.getElementById("moreText-en");
+  const moreTextDe = document.getElementById("moreText-de");
 
   let isRotated = false;
   let lastScroll = 0;
@@ -151,12 +156,50 @@ document.addEventListener("DOMContentLoaded", function () {
     body.style.overflow = 'auto';
   });
 
-  // ========= Read More Toggle ========= //
-  readMoreButton?.addEventListener('click', () => {
-    moreText.classList.toggle("hidden");
-    moreText.classList.toggle("visible");
-    readMoreButton.textContent = moreText.classList.contains("visible") ? "Show less" : "Read more";
-  });
+
+  // ======== Language Switch ========== //
+  function setLanguage(lang) {
+    if (lang === "en") {
+      enBtn.classList.add("active");
+      deBtn.classList.remove("active");
+      englishTexts.forEach(el => el.classList.add("active"));
+      germanTexts.forEach(el => el.classList.remove("active"));
+
+      // Reset read more states
+      moreTextDe.classList.add("lang-hidden");
+      moreTextDe.classList.remove("lang-visible");
+      readMoreButton.textContent = "Read more";
+    } else {
+      deBtn.classList.add("active");
+      enBtn.classList.remove("active");
+      germanTexts.forEach(el => el.classList.add("active"));
+      englishTexts.forEach(el => el.classList.remove("active"));
+
+      // Reset read more states
+      moreTextEn.classList.add("lang-hidden");
+      moreTextEn.classList.remove("lang-visible");
+      readMoreButton.textContent = "Read more";
+    }
+  }
+
+  // Read more toggle
+  function toggleReadMore() {
+    const isGerman = deBtn.classList.contains("active");
+    const moreText = isGerman ? moreTextDe : moreTextEn;
+
+    moreText.classList.toggle("lang-hidden");
+    moreText.classList.toggle("lang-visible");
+    readMoreButton.textContent = moreText.classList.contains("lang-visible")
+      ? "Show less"
+      : "Read more";
+  }
+
+  enBtn.addEventListener("click", () => setLanguage("en"));
+  deBtn.addEventListener("click", () => setLanguage("de"));
+  readMoreButton?.addEventListener("click", toggleReadMore);
+
+  // Init default
+  setLanguage("en");
 
   // ========= Optional Contact Email ========= //
   // document.getElementById('contact')?.addEventListener('click', () => {

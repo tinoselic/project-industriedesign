@@ -297,12 +297,29 @@ main {
 
 .language-switch {
   font-size: inherit;
-  color: #777;
 }
 
-#en {}
+.language-switch.active {
+  font-weight: bold;
+}
 
-#de {}
+.english,
+.german {
+  display: none;
+}
+
+.english.active,
+.german.active {
+  display: block;
+}
+
+.lang-hidden {
+  display: none;
+}
+
+.lang-visible {
+  display: block;
+}
 
 .filter-container {
   display: block;
@@ -971,14 +988,6 @@ video {
   background-size: contain;
 }
 
-.hidden {
-  display: none;
-}
-
-.visible {
-  display: block;
-}
-
 .image-copyright {
   font-size: 0.8rem;
   text-align: center;
@@ -1121,7 +1130,7 @@ footer {
   }
 
   #siegmundSchweisszelle {
-    top:  3800px;
+    top: 3800px;
     right: 50px;
     max-width: 400px;
   }
