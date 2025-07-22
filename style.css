@@ -897,8 +897,34 @@ video {
   margin-bottom: 6em;
 }
 
-.team {
-  margin-bottom: 6em;
+.marquee-wrapper {
+  margin-left: -16px;
+  width: calc(100vw - 17px);
+}
+
+.marquee-text {
+  overflow: clip;
+}
+
+/* .marquee-text-track {
+  display: flex;
+  width: max-content;
+  animation: run 3s linear infinite;
+} */
+
+#swipe {
+  text-align: right;
+  padding: 1em;
+}
+
+@keyframes run {
+  from {
+    transform: translateX(0%);
+  }
+  /* Magic is here. This is the width of the elem with text after rendering the page */
+  to {
+    transform: translateX(-100vw);
+  }
 }
 
 .carousel {
@@ -923,6 +949,10 @@ video {
 
 .carousel a:hover img {
   opacity: 50%;
+}
+
+.team {
+  margin-bottom: 6em;
 }
 
 .row {
