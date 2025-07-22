@@ -48,39 +48,47 @@
     <img class="awards-label" src="../../images/PlaceholderImage.png" alt="Award label">
   </section>
   <main>
+    <div class="language">
+      <button class="language-switch" id="en">EN</button>
+      /
+      <button class="language-switch" id="de">DE</button>
+    </div>
     <div class="grid project-text">
       <div class="cell-1">
-        <h1>Title</h1>
-        <br>
-        <h4>Subtitle</h4>
-        <br>
+        <div class="english">
+          <h1>Title</h1>
+          <br>
+          <h4>Subtitle</h4>
+          <br>
+        </div>
+        <div class="german">
+          <h1>Titel</h1>
+          <br>
+          <h4>Untertitel</h4>
+          <br>
+        </div>
       </div>
       <div class="cell-2">
-        <h5>
-          Paragraph Heading
-        </h5>
-        <br>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
+        <div class="english">
+          <h5>
+            Paragraph Heading
+          </h5>
           <br>
-          <br>
-        </p>
-        <div id="moreText" class="more-content hidden">
           <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
-            <br>
-            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.
             <br>
             <br>
           </p>
-          <p class="DE">DE</p>
-          <h4>
-            Untertitel
-          </h4>
-          <br>
-          <br>
+          <div id="moreText" class="more-content hidden">
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </p>
+          </div>
+        </div>
+        <div class="german">
           <h5>
             Einleitungssatz
           </h5>
@@ -90,15 +98,21 @@
             <br>
             <br>
           </p>
+          <div id="moreText" class="more-content hidden">
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </p>
+          </div>
         </div>
         <button id="readMore" onclick="toggleReadMore()">Read more</button>
       </div>
     </div>
     <div class="grid image-gallery">
-      <img src="../../images/PreviewImage_1920x1200.jpg" alt="Image description" class="thumbnail" data-index="1">
-      <img src="../../images/PreviewImage_1920x1200.jpg" alt="Image description" class="thumbnail" data-index="2">
-      <img src="../../images/PreviewImage_1920x1200.jpg" alt="Imagedescription" class="thumbnail" data-index="3">
-      <img src="../../images/PreviewImage_1920x1200.jpg" alt="Image description" class="thumbnail" data-index="4">
+      <div class="image-container"><img src="../../images/PreviewImage_1920x1200.jpg" alt="Image description" class="thumbnail" data-index="1"></div>
+      <div class="image-container"><img src="../../images/PreviewImage_1920x1200.jpg" alt="Image description" class="thumbnail" data-index="2"></div>
+      <div class="image-container"><img src="../../images/PreviewImage_1920x1200.jpg" alt="Imagedescription" class="thumbnail" data-index="3"></div>
+      <div class="image-container"><img src="../../images/PreviewImage_1920x1200.jpg" alt="Image description" class="thumbnail" data-index="4"></div>
     </div>
     <p class="image-copyright">Images © Selic Industriedesign</p>
     <div class="previewModal">

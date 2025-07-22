@@ -133,11 +133,6 @@ p {
   line-height: 1.5;
 }
 
-.DE {
-  font-size: 0.7em;
-  color: #777;
-}
-
 .title {
   font-size: 0.8rem;
   font-style: italic;
@@ -295,6 +290,20 @@ main {
   display: block;
 }
 
+.language {
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.language-switch {
+  font-size: inherit;
+  color: #777;
+}
+
+#en {}
+
+#de {}
+
 .filter-container {
   display: block;
   padding: 2em 0 2em 0;
@@ -372,7 +381,6 @@ img.awards-label {
   display: block;
   width: 100%;
   height: auto;
-  /* backface-visibility: hidden; */
 }
 
 .project .text-box {
@@ -488,13 +496,19 @@ img.awards-label {
 
 .references {
   padding-bottom: 3em;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .references a {
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-size: inherit;
+  font-weight: inherit;
   line-height: 2;
   text-underline-offset: 0.2em;
+}
+
+.image-container {
+  background-color: var(--selic-violet);
 }
 
 .thumbnail {
@@ -505,7 +519,7 @@ img.awards-label {
 }
 
 .thumbnail:hover {
-  filter: brightness(0.6);
+  opacity: 50%;
   cursor: zoom-in;
 }
 
@@ -866,7 +880,6 @@ video {
 }
 
 .elaboration p {
-  /* font-size: 1.2rem; */
   margin-bottom: 2em;
 }
 
@@ -892,23 +905,26 @@ video {
 
 .carousel {
   display: flex;
-  padding-top: 2em;
+  margin-top: 2em;
   margin-left: -16px;
   width: calc(100vw - 17px);
   overflow-x: scroll;
   /* gap: 1em; */
-  /* background-color: var(--selic-black); */
+}
+
+.carousel a {
+  background-color: var(--selic-violet);
 }
 
 .carousel img {
   display: block;
   height: auto;
-  backface-visibility: hidden;
   width: 20em;
+  transition: .5s ease;
 }
 
-.carousel a:hover {
-  filter: brightness(0.7);
+.carousel a:hover img {
+  opacity: 50%;
 }
 
 .row {
@@ -1119,7 +1135,7 @@ footer {
   }
 
   .elaboration p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     max-width: 40vw;
     margin-bottom: 5em;
   }
@@ -1264,13 +1280,13 @@ footer {
   }
 
   #roboticKitchen {
-    top: 1450px;
+    top: 1300px;
     right: 150px;
     width: 600px;
   }
 
   #siegmundSchweisszelle {
-    top: 3800px;
+    top: 3600px;
     right: 150px;
     max-width: 600px;
   }
