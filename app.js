@@ -158,43 +158,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // ======== Language Switch ========== //
+  // Set button texts
+  enBtn.textContent = "English";
+  deBtn.textContent = "Deutsch";
+
   function setLanguage(lang) {
-  if (lang === "en") {
-    enBtn.classList.add("active");
-    deBtn.classList.remove("active");
-    englishTexts.forEach(el => el.classList.add("active"));
-    germanTexts.forEach(el => el.classList.remove("active"));
+    if (lang === "en") {
+      enBtn.classList.add("active");
+      deBtn.classList.remove("active");
+      englishTexts.forEach(el => el.classList.add("active"));
+      germanTexts.forEach(el => el.classList.remove("active"));
 
-    moreTextDe.classList.add("lang-hidden");
-    moreTextDe.classList.remove("lang-visible");
-    moreButton.textContent = "Show more";
-  } else {
-    deBtn.classList.add("active");
-    enBtn.classList.remove("active");
-    germanTexts.forEach(el => el.classList.add("active"));
-    englishTexts.forEach(el => el.classList.remove("active"));
+      moreTextDe.classList.add("lang-hidden");
+      moreTextDe.classList.remove("lang-visible");
+      moreButton.textContent = "Show more";
+    } else {
+      deBtn.classList.add("active");
+      enBtn.classList.remove("active");
+      germanTexts.forEach(el => el.classList.add("active"));
+      englishTexts.forEach(el => el.classList.remove("active"));
 
-    moreTextEn.classList.add("lang-hidden");
-    moreTextEn.classList.remove("lang-visible");
-    moreButton.textContent = "Mehr anzeigen";
+      moreTextEn.classList.add("lang-hidden");
+      moreTextEn.classList.remove("lang-visible");
+      moreButton.textContent = "Mehr anzeigen";
+    }
   }
-}
 
   // Read more toggle
   function toggleMore() {
-  const isGerman = deBtn.classList.contains("active");
-  const moreText = isGerman ? moreTextDe : moreTextEn;
-  const isVisible = moreText.classList.contains("lang-visible");
+    const isGerman = deBtn.classList.contains("active");
+    const moreText = isGerman ? moreTextDe : moreTextEn;
+    const isVisible = moreText.classList.contains("lang-visible");
 
-  moreText.classList.toggle("lang-hidden");
-  moreText.classList.toggle("lang-visible");
+    moreText.classList.toggle("lang-hidden");
+    moreText.classList.toggle("lang-visible");
 
-  if (isGerman) {
-    moreButton.textContent = isVisible ? "Mehr anzeigen" : "Weniger anzeigen";
-  } else {
-    moreButton.textContent = isVisible ? "Show more" : "Show less";
+    if (isGerman) {
+      moreButton.textContent = isVisible ? "Mehr anzeigen" : "Weniger anzeigen";
+    } else {
+      moreButton.textContent = isVisible ? "Show more" : "Show less";
+    }
   }
-}
 
   enBtn.addEventListener("click", () => setLanguage("en"));
   deBtn.addEventListener("click", () => setLanguage("de"));
