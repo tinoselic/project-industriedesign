@@ -862,12 +862,12 @@ video {
   width: 500px;
 }
 
-/* #kukaKR500 {
+#kukaKR500 {
   display: block;
-  top: 773px;
-  left: -43px;
-  width: 300px;
-} */
+  top: 790px;
+  left: -100px;
+  width: 350px;
+}
 
 .ideology {
   position: relative;
@@ -901,6 +901,7 @@ video {
   font-weight: bold;
   text-align: center;
   margin: 4em 0em;
+  padding: 0 1em 0 1em;
 }
 
 .awards-section {
