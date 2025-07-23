@@ -291,6 +291,9 @@ main {
 }
 
 .language {
+  /* width: fit-content;
+  border: 1px solid var(--selic-black);
+  padding: 1em; */
   color: var(--selic-black);
   font-size: 0.85rem;
   text-align: right;
@@ -704,7 +707,7 @@ video {
   justify-content: center;
 }
 
-#readMore {
+#more {
   font-size: 0.8rem;
   font-weight: bold;
   /* text-decoration: underline;
@@ -1093,7 +1096,7 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
-  #readMore {
+  #more {
     margin-bottom: 6em;
   }
 
@@ -1273,7 +1276,7 @@ footer {
     color: var(--selic-yellow);
   }
 
-  #readMore:hover {
+  #more:hover {
     color: var(--selic-violet);
     border-color: var(--selic-violet);
   }

@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const deBtn = document.getElementById("de");
   const englishTexts = document.querySelectorAll(".english");
   const germanTexts = document.querySelectorAll(".german");
-  const readMoreButton = document.getElementById("readMore");
+  const moreButton = document.getElementById("more");
   const moreTextEn = document.getElementById("moreText-en");
   const moreTextDe = document.getElementById("moreText-de");
 
@@ -159,44 +159,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ======== Language Switch ========== //
   function setLanguage(lang) {
-    if (lang === "en") {
-      enBtn.classList.add("active");
-      deBtn.classList.remove("active");
-      englishTexts.forEach(el => el.classList.add("active"));
-      germanTexts.forEach(el => el.classList.remove("active"));
+  if (lang === "en") {
+    enBtn.classList.add("active");
+    deBtn.classList.remove("active");
+    englishTexts.forEach(el => el.classList.add("active"));
+    germanTexts.forEach(el => el.classList.remove("active"));
 
-      // Reset read more states
-      moreTextDe.classList.add("lang-hidden");
-      moreTextDe.classList.remove("lang-visible");
-      readMoreButton.textContent = "Read more";
-    } else {
-      deBtn.classList.add("active");
-      enBtn.classList.remove("active");
-      germanTexts.forEach(el => el.classList.add("active"));
-      englishTexts.forEach(el => el.classList.remove("active"));
+    moreTextDe.classList.add("lang-hidden");
+    moreTextDe.classList.remove("lang-visible");
+    moreButton.textContent = "Show more";
+  } else {
+    deBtn.classList.add("active");
+    enBtn.classList.remove("active");
+    germanTexts.forEach(el => el.classList.add("active"));
+    englishTexts.forEach(el => el.classList.remove("active"));
 
-      // Reset read more states
-      moreTextEn.classList.add("lang-hidden");
-      moreTextEn.classList.remove("lang-visible");
-      readMoreButton.textContent = "Read more";
-    }
+    moreTextEn.classList.add("lang-hidden");
+    moreTextEn.classList.remove("lang-visible");
+    moreButton.textContent = "Mehr anzeigen";
   }
+}
 
   // Read more toggle
-  function toggleReadMore() {
-    const isGerman = deBtn.classList.contains("active");
-    const moreText = isGerman ? moreTextDe : moreTextEn;
+  function toggleMore() {
+  const isGerman = deBtn.classList.contains("active");
+  const moreText = isGerman ? moreTextDe : moreTextEn;
+  const isVisible = moreText.classList.contains("lang-visible");
 
-    moreText.classList.toggle("lang-hidden");
-    moreText.classList.toggle("lang-visible");
-    readMoreButton.textContent = moreText.classList.contains("lang-visible")
-      ? "Show less"
-      : "Read more";
+  moreText.classList.toggle("lang-hidden");
+  moreText.classList.toggle("lang-visible");
+
+  if (isGerman) {
+    moreButton.textContent = isVisible ? "Mehr anzeigen" : "Weniger anzeigen";
+  } else {
+    moreButton.textContent = isVisible ? "Show more" : "Show less";
   }
+}
 
   enBtn.addEventListener("click", () => setLanguage("en"));
   deBtn.addEventListener("click", () => setLanguage("de"));
-  readMoreButton?.addEventListener("click", toggleReadMore);
+  moreButton?.addEventListener("click", toggleMore);
 
   // Init default
   setLanguage("en");
