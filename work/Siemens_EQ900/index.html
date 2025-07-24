@@ -42,43 +42,48 @@
   <main>
     <div class="grid project-text">
       <div class="cell-1">
-        <h1>Siemens EQ.900</h1>
-        <br>
-        <h4>Fully Automatic Coffee Machine</h4>
-        <br>
+        <div class="english">
+          <h1>Siemens EQ.900</h1>
+          <br>
+          <h4>Fully Automatic Coffee Machine</h4>
+          <br>
+        </div>
+        <div class="german">
+          <h1>Siemens EQ.900</h1>
+          <br>
+          <h4>Kaffeevollautomat</h4>
+          <br>
+        </div>
       </div>
       <div class="cell-2">
-        <h5>
-          The SIEMENS EQ.900 is designed for modern kitchens and characterised by an elegant synergy of architectural
-          forms and high-grade materials.
-        </h5>
-        <br>
-        <p>
-          The stainless-steel front presents an interplay of horizontal curvature and characteristic side view. This
-          is combined with a height-adjustable metal coffee outlet and a large 5" full-touch display to enable easy
-          user guidance.
+        <div class="english">
+          <h5>
+            The SIEMENS EQ.900 is designed for modern kitchens and characterised by an elegant synergy of architectural
+            forms and high-grade materials.
+          </h5>
           <br>
-          <br>
-        </p>
-        <div id="moreText" class="more-content hidden">
           <p>
-            Statement by the Red Dot Jury: "The SIEMENS EQ.900 automatic coffee machine fascinates with a well-designed
-            body and an intuitive user interface."
-            <br>
-            <br>
-            Selic Industriedesign service: CAD design, CAD freeform modeling and design concept refinement, processing
-            of design data for the engineering department
-            <br>
-            <br>
+            The stainless-steel front presents an interplay of horizontal curvature and characteristic side view. This
+            is combined with a height-adjustable metal coffee outlet and a large 5" full-touch display to enable easy
+            user guidance.
             <br>
             <br>
           </p>
-          <p class="DE">DE</p>
-          <h4>
-            Kaffeevollautomat
-          </h4>
-          <br>
-          <br>
+          <div id="moreText-en" class="more-content lang-hidden">
+            <p>
+              Statement by the Red Dot Jury: "The SIEMENS EQ.900 automatic coffee machine fascinates with a
+              well-designed
+              body and an intuitive user interface."
+              <br>
+              <br>
+              Selic Industriedesign service: CAD design, CAD freeform modeling and design concept refinement, processing
+              of design data for the engineering department
+              <br>
+              <br>
+            </p>
+          </div>
+        </div>
+        <div class="german">
           <h5>
             Die SIEMENS EQ.900 wurde für moderne Küchen entwickelt und charakterisiert sich durch ein elegantes
             Zusammenspiel aus architektonischen Formen und hochwertigen Materialien.
@@ -90,21 +95,32 @@
             Benutzerführung erlaubt.
             <br>
             <br>
-            Statement der Red Dot Jury: "Der Kaffeevollautomat SIEMENS EQ.900 begeistert mit einem formschönen Korpus
-            und einer intuitiven Benutzeroberfläche."
-            <br>
-            <br>
-            Selic Industriedesign Dienstleistung: CAD-Design, CAD-Freiform-Modellierung und Detailgestaltung,
-            Aufbereitung von Designdaten für die Konstruktion
-            <br>
-            <br>
           </p>
+          <div id="moreText-de" class="more-content lang-hidden">
+            <p>
+              Statement der Red Dot Jury: "Der Kaffeevollautomat SIEMENS EQ.900 begeistert mit einem formschönen Korpus
+              und einer intuitiven Benutzeroberfläche."
+              <br>
+              <br>
+              Selic Industriedesign Dienstleistung: CAD-Design, CAD-Freiform-Modellierung und Detailgestaltung,
+              Aufbereitung von Designdaten für die Konstruktion
+              <br>
+              <br>
+            </p>
+          </div>
         </div>
-        <button id="readMore" onclick="toggleReadMore()">Read more</button>
+        <div class="button-wrapper">
+          <button id="more" onclick="toggleMore()"></button>
+          <div class="language">
+            <button class="language-switch" id="en">EN</button>
+            <button class="language-switch" id="de">DE</button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="grid image-gallery">
-      <img src="2019-Siemens-EQ900-Edelstahl-02-1920x1200.jpg" alt="Siemens EQ.900: stainless-steel" class="thumbnail" data-index="1">
+      <img src="2019-Siemens-EQ900-Edelstahl-02-1920x1200.jpg" alt="Siemens EQ.900: stainless-steel" class="thumbnail"
+        data-index="1">
       <img src="Siemens-EQ900-Black-03-1920x1200.jpg" alt="Siemens EQ.900: black" class="thumbnail" data-index="2">
     </div>
     <p class="image-copyright">Images © BSH GmbH</p>
