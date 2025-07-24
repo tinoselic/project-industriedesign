@@ -371,15 +371,14 @@ main {
 }
 
 .awards {
-  /* display: inline-flex;
-  flex-direction: column; */
+  display: flex;
   margin-top: 1em;
+  gap: 1em;
 }
 
 img.awards-label {
   height: 4em;
   width: auto;
-  margin: 0 1em 1em 0;
 }
 
 .line {
@@ -1211,7 +1210,6 @@ footer {
 
   img.awards-label {
     height: 5em;
-    margin-right: 1em;
   }
 
   .team {
@@ -1294,10 +1292,6 @@ footer {
   #more:hover {
     color: var(--selic-violet);
     border-color: var(--selic-violet);
-  }
-
-  img.awards-label {
-    margin: 0 1em 0 0;
   }
 
   .grid {
