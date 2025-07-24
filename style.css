@@ -377,7 +377,7 @@ main {
 }
 
 img.awards-label {
-  height: 5em;
+  height: 4em;
   width: auto;
   margin: 0 1em 1em 0;
 }
@@ -1210,6 +1210,7 @@ footer {
   }
 
   img.awards-label {
+    height: 5em;
     margin-right: 1em;
   }
 
