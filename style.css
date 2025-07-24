@@ -168,7 +168,9 @@ body {
 
 nav {
   position: fixed;
-  width: 100%;
+  width: 100dvw;
+  margin-left: calc(50% - 50dvw);
+  margin-right: calc(50% - 50dvw);
   height: 5em;
   top: 0;
   background-color: transparent;
@@ -226,7 +228,9 @@ button {
 
 .mainMenu {
   height: calc(100vh - 4em);
-  width: 100vw;
+  width: 100dvw;
+  margin-left: calc(50% - 50dvw);
+  margin-right: calc(50% - 50dvw);
   top: 0;
   left: 0;
   display: none;
@@ -578,7 +582,9 @@ img.awards-label {
   top: 0;
   left: 0;
   z-index: 100;
-  width: 100vw;
+  width: 100dvw;
+  margin-left: calc(50% - 50dvw);
+  margin-right: calc(50% - 50dvw);
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.95);
   display: none;
@@ -592,7 +598,9 @@ img.awards-label {
 
 .slide-container {
   position: relative;
-  width: 100vw;
+  width: 100dvw;
+  margin-left: calc(50% - 50dvw);
+  margin-right: calc(50% - 50dvw);
   margin: 0 auto;
 }
 
@@ -850,7 +858,9 @@ video {
 
 .about-background {
   position: absolute;
-  width: 100%;
+  width: 100dvw;
+  margin-left: calc(50% - 50dvw);
+  margin-right: calc(50% - 50dvw);
   height: 100%;
   left: 0;
   top: -120px;
@@ -926,8 +936,9 @@ video {
 
 .marquee-wrapper {
   /* background-color: var(--selic-violet); */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100dvw;
+  margin-left: calc(50% - 50dvw);
+  margin-right: calc(50% - 50dvw);
   margin-bottom: 2em;
   padding: 1em 0 1em 0;
   border-block: 2px solid var(--selic-black);
@@ -969,8 +980,9 @@ video {
 
 .carousel {
   display: flex;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100dvw;
+  margin-left: calc(50% - 50dvw);
+  margin-right: calc(50% - 50dvw);
   overflow-x: scroll;
   /* gap: 1em; */
 }
@@ -1046,7 +1058,9 @@ video {
 }
 
 footer {
-  width: 100%;
+  width: 100dvw;
+  margin-left: calc(50% - 50dvw);
+  margin-right: calc(50% - 50dvw);
   padding: 3em 1em;
   background-color: var(--selic-violet);
   color: var(--selic-white);
@@ -1332,7 +1346,9 @@ footer {
   }
 
   .background-video video {
-    width: 100vw;
+    width: 100dvw;
+    margin-left: calc(50% - 50dvw);
+    margin-right: calc(50% - 50dvw);
     height: auto;
   }
 
