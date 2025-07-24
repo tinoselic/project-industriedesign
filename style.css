@@ -324,11 +324,12 @@ main {
 #more {
   font-size: 0.8rem;
   font-weight: bold;
-  /* text-decoration: underline;
-  text-underline-offset: 3px; */
-  border: solid var(--selic-black) 2px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1.5px;
+  /* border: solid var(--selic-black) 2px; */
   /* border-radius: 2em; */
-  padding: 1em;
+  /* padding: 1em; */
   cursor: pointer;
 }
 
