@@ -159,8 +159,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ======== Language Switch ========== //
   // Set button texts
-  enBtn.textContent = "English";
-  deBtn.textContent = "Deutsch";
+  enBtn.textContent = "EN";
+  deBtn.textContent = "DE";
 
   function setLanguage(lang) {
     if (lang === "en") {
