@@ -286,7 +286,7 @@ nav a:visited:hover {
 }
 
 main {
-  margin: 5em 1em 0;
+  margin: 0 1em 0;
   display: block;
 }
 
@@ -301,13 +301,14 @@ main {
   padding: 1em; */
   font-size: 0.85rem;
   /* margin: 0 0 2em 2em; */
-  color: #999;
+  color: #c8c8c8;
 }
 
 .language-switch {
   font-size: inherit;
+  font-weight: bold;
   color: inherit;
-  border: 1px solid #999;
+  border: 2px solid #c8c8c8;
   border-radius: 6em;
   padding: 1em;
 }
@@ -316,7 +317,6 @@ main {
   /* background-color: var(--selic-black); */
   color: var(--selic-black);
   border: 2px solid var(--selic-black);
-  font-weight: bold;
   /* text-decoration: underline;
   text-underline-offset: 5px; */
 }
@@ -373,7 +373,7 @@ main {
 .awards {
   /* display: inline-flex;
   flex-direction: column; */
-  margin: 1em 0 0 1em;
+  margin: 1em 0 6em 0;
 }
 
 img.awards-label {
@@ -469,6 +469,10 @@ img.awards-label {
   filter: brightness(0.7) blur(5px);
   transform: scale(1.05);
   transition: .5s ease;
+}
+
+.grid.project-text {
+  margin-bottom: 4em;
 }
 
 .info {
@@ -923,7 +927,7 @@ video {
 .marquee-wrapper {
   /* background-color: var(--selic-violet); */
   width: 100vw;
-  margin-left: calc(50% - 50vw); 
+  margin-left: calc(50% - 50vw);
   margin-bottom: 2em;
   padding: 1em 0 1em 0;
   border-block: 2px solid var(--selic-black);
@@ -966,7 +970,7 @@ video {
 .carousel {
   display: flex;
   width: 100vw;
-  margin-left: calc(50% - 50vw); 
+  margin-left: calc(50% - 50vw);
   overflow-x: scroll;
   /* gap: 1em; */
 }
@@ -1105,10 +1109,6 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
-  #more {
-    margin-bottom: 6em;
-  }
-
   .line {
     height: 1px;
   }
@@ -1209,6 +1209,10 @@ footer {
     margin-bottom: 8em;
   }
 
+  img.awards-label {
+    margin-right: 1em;
+  }
+
   .team {
     margin-bottom: 8em;
   }
@@ -1249,6 +1253,12 @@ footer {
     color: var(--selic-violet);
   }
 
+  .language-switch:hover {
+    font-weight: bold;
+    color: var(--selic-violet);
+    border: 2px solid var(--selic-violet);
+  }
+
   .prev:hover,
   .next:hover {
     color: var(--selic-yellow);
@@ -1285,8 +1295,8 @@ footer {
     border-color: var(--selic-violet);
   }
 
-  .language {
-  margin: 0 0 0 7em;
+  img.awards-label {
+    margin: 0 1em 0 0;
   }
 
   .grid {
@@ -1305,7 +1315,8 @@ footer {
     grid-gap: 1em;
     height: fit-content;
     grid-template-columns: 1fr 1fr;
-    padding: 2em 6em 6em 6em;
+    padding: 0 6em 0 6em;
+    margin-bottom: 6em;
   }
 
   .cell-3 {
@@ -1317,7 +1328,7 @@ footer {
   }
 
   .awards {
-    margin: 1em 7em;
+    margin: 1em 6em 6em 6em;
   }
 
   img.awards-label {
