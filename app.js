@@ -1,28 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
   // ========= DOM Elements ========= //
+  // ====== General Elements ======
   const body = document.body;
+  const bodyBg = getComputedStyle(body).backgroundColor;
+  const footer = document.getElementById('copyright');
+  const modal = document.querySelector('.previewModal');
+  const close = document.getElementById('closePreview');
+
+  // ====== Navigation ======
   const nav = document.querySelector('nav');
   const navContainer = document.querySelector('.nav-container');
   const mainMenu = document.querySelector('.mainMenu');
   const openMenu = document.querySelector('.openMenu');
-  const footer = document.getElementById('copyright');
+
+  // ====== Language Switcher ======
+  const deBtn = document.getElementById('de');
+  const enBtn = document.getElementById('en');
+  const englishTexts = document.querySelectorAll('.english');
+  const germanTexts = document.querySelectorAll('.german');
+
+  // ====== Gallery / Modal ======
+  const dots = document.getElementsByClassName('demo');
+  const slides = document.getElementsByClassName('slides');
+  const thumbnails = document.querySelectorAll('.thumbnail');
+
+  // ====== Project View ======
   const accordion = document.getElementsByClassName('contentBox');
   const filterButtons = document.querySelectorAll('.filter-button');
   const projectItems = document.querySelectorAll('.project-item');
   const projects = document.querySelectorAll('.project');
-  const modal = document.querySelector('.previewModal');
-  const close = document.getElementById('closePreview');
-  const thumbnails = document.querySelectorAll('.thumbnail');
-  const slides = document.getElementsByClassName("slides");
-  const dots = document.getElementsByClassName("demo");
-  const bodyBg = getComputedStyle(body).backgroundColor;
-  const enBtn = document.getElementById("en");
-  const deBtn = document.getElementById("de");
-  const englishTexts = document.querySelectorAll(".english");
-  const germanTexts = document.querySelectorAll(".german");
-  const moreButton = document.getElementById("more");
-  const moreTextEn = document.getElementById("moreText-en");
-  const moreTextDe = document.getElementById("moreText-de");
+
+  // ====== "More" Toggle Content ======
+  const moreButton = document.getElementById('more');
+  const moreTextDe = document.getElementById('moreText-de');
+  const moreTextEn = document.getElementById('moreText-en');
 
   let isRotated = false;
   let lastScroll = 0;
@@ -157,6 +168,15 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.style.display = 'none';
       body.style.overflow = 'auto';
     }
+  });
+
+
+  // ======== Set Back to Projects Button Content ========== //  
+  document.querySelectorAll('.back').forEach(el => {
+    el.innerHTML = `← <span class="underline">back to projects</span>`;
+    el.addEventListener('click', () => {
+      window.location.href = '../';s
+    });
   });
 
 
