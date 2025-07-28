@@ -227,7 +227,7 @@ button {
 }
 
 .mainMenu {
-  height: calc(100dvh - 5em);
+  height: calc(100dvh - 4em);
   width: 100dvw;
   margin-left: calc(50% - 50dvw);
   margin-right: calc(50% - 50dvw);
