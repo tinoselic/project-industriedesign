@@ -494,7 +494,7 @@ img.awards-label {
   margin: 6em 0 4em 0;
 }
 
-.info {
+.project-info {
   padding-bottom: 3em;
   text-align: left;
 }
@@ -1124,10 +1124,6 @@ footer {
     margin-top: 0;
   }
 
-  .back {
-    margin: 4em 0 4em 0;
-  }
-
   .grid {
     display: grid;
     grid-gap: 1em;
@@ -1286,6 +1282,14 @@ footer {
     color: var(--selic-violet);
   }
 
+  .project-info {
+    padding: 0 6em 0 6em;
+  }
+
+  .back {
+    margin: 4em 0 4em 0;
+  }
+
   .language-switch:hover {
     font-weight: bold;
     color: var(--selic-violet);
@@ -1344,7 +1348,6 @@ footer {
     grid-gap: 1em;
     height: fit-content;
     grid-template-columns: 1fr 1fr;
-    padding: 0 6em 0 6em;
     margin-bottom: 6em;
   }
 

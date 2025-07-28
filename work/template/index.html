@@ -40,80 +40,82 @@
     <img src="../../images/PreviewImage_Banner.jpg" alt="Project banner">
   </section>
   <main>
-    <section class="awards">
-      <img class="awards-label" src="../../images/PlaceholderImage.png" alt="Award label">
-      <img class="awards-label" src="../../images/PlaceholderImage.png" alt="Award label">
-      <img class="awards-label" src="../../images/PlaceholderImage.png" alt="Award label">
-      <img class="awards-label" src="../../images/PlaceholderImage.png" alt="Award label">
-      <img class="awards-label" src="../../images/PlaceholderImage.png" alt="Award label">
-      <img class="awards-label" src="../../images/PlaceholderImage.png" alt="Award label">
+    <section class="project-info">
+      <div class="awards">
+        <img class="awards-label" src="../../images/PlaceholderImage.png" alt="Award label">
+        <img class="awards-label" src="../../images/PlaceholderImage.png" alt="Award label">
+        <img class="awards-label" src="../../images/PlaceholderImage.png" alt="Award label">
+        <img class="awards-label" src="../../images/PlaceholderImage.png" alt="Award label">
+        <img class="awards-label" src="../../images/PlaceholderImage.png" alt="Award label">
+        <img class="awards-label" src="../../images/PlaceholderImage.png" alt="Award label">
+      </div>
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>Title</h1>
+            <br>
+            <h4>Subtitle</h4>
+            <br>
+          </div>
+          <div class="german">
+            <h1>Titel</h1>
+            <br>
+            <h4>Untertitel</h4>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              Introduction
+            </h5>
+            <br>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Einleitungssatz
+            </h5>
+            <br>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <button class="back"></button>
-    <div class="grid project-text">
-      <div class="cell-1">
-        <div class="english">
-          <h1>Title</h1>
-          <br>
-          <h4>Subtitle</h4>
-          <br>
-        </div>
-        <div class="german">
-          <h1>Titel</h1>
-          <br>
-          <h4>Untertitel</h4>
-          <br>
-        </div>
-      </div>
-      <div class="cell-2">
-        <div class="english">
-          <h5>
-            Introduction
-          </h5>
-          <br>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-            <br>
-            <br>
-          </p>
-          <div id="moreText-en" class="more-content lang-hidden">
-            <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.
-              <br>
-              <br>
-            </p>
-          </div>
-        </div>
-        <div class="german">
-          <h5>
-            Einleitungssatz
-          </h5>
-          <br>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-            <br>
-            <br>
-          </p>
-          <div id="moreText-de" class="more-content lang-hidden">
-            <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.
-              <br>
-              <br>
-            </p>
-          </div>
-        </div>
-        <div class="button-wrapper">
-          <button id="more" onclick="toggleMore()"></button>
-          <div class="language">
-            <button class="language-switch" id="en"></button>
-            <button class="language-switch" id="de"></button>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="grid image-gallery">
       <img src="../../images/PreviewImage_1920x1200.jpg" alt="Image description" class="thumbnail" data-index="1">
       <img src="../../images/PreviewImage_1920x1200.jpg" alt="Image description" class="thumbnail" data-index="2">
