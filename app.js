@@ -151,9 +151,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  close.addEventListener('click', () => {
-    modal.style.display = 'none';
-    body.style.overflow = 'auto';
+  // Close modal if clicking directly on the background
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal || event.target.closest('#closePreview')) {
+      modal.style.display = 'none';
+      body.style.overflow = 'auto';
+    }
   });
 
 
