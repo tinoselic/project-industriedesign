@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - Siemens EQ.700</title>
+  <meta name="description"
+    content="Selić Industriedesign is an award winning industrial design office with over 30 years of experience.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg (Germany), portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description"
+    content="Selić Industriedesign is an award winning industrial design office with over 30 years of experience.">
+  <meta property="og:image" content=""> <!-- add image -->
+  <meta property="og:url" content=""> <!-- add url -->
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="Siemens-EQ700-Banner.jpg" alt="Project banner">
+  </section>
+  <main>
+    <div class="info-wrapper">
+      <section class="awards">
+        <img class="awards-label" src="iF_DesignAward2022_red_p_RGB.png" alt="Award label">
+        <img class="awards-label" src="PD2022_RD.png" alt="Award label">
+      </section>
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>Siemens EQ.700</h1>
+            <br>
+            <h4>Fully Automatic Coffee Machine</h4>
+            <br>
+          </div>
+          <div class="german">
+            <h1>Siemens EQ.700</h1>
+            <br>
+            <h4>Kaffeevollautomat</h4>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              The SIEMENS EQ.700 is designed for modern kitchens and characterised by an elegant synergy of
+              architectural
+              forms and high-grade materials.
+            </h5>
+            <br>
+            <p>
+              The stainless-steel front presents an interplay of horizontal curvature and characteristic side view. This
+              is combined with a height-adjustable metal coffee outlet and a large 5" full-touch display to enable easy
+              user guidance.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                Statement by the Red Dot Jury:
+                <br>
+                "The SIEMENS EQ.700 automatic coffee machine fascinates with a well-designed
+                body and an intuitive user interface."
+                <br>
+                <br>
+                Selic Industriedesign service: CAD design, CAD freeform modeling and design concept refinement,
+                processing
+                of design data for the engineering department;
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Die SIEMENS EQ.700 wurde für moderne Küchen entwickelt und charakterisiert sich durch ein elegantes
+              Zusammenspiel aus architektonischen Formen und hochwertigen Materialien.
+            </h5>
+            <br>
+            <p>
+              Die Edelstahlfront setzt auf eine horizontale Wölbung mit einer markanten Seitenansicht. Sie wird
+              kombiniert
+              mit einem höhenverstellbaren Kaffeeauslauf aus Metall und einem 5"-Full-Touch-Display, das eine einfache
+              Benutzerführung erlaubt.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Statement der Red Dot Jury:
+                <br>
+                "Der Kaffeevollautomat SIEMENS EQ.700 begeistert mit einem formschönen Korpus
+                und einer intuitiven Benutzeroberfläche."
+                <br>
+                <br>
+                Selic Industriedesign Dienstleistung: CAD-Design, CAD-Freiform-Modellierung und Detailgestaltung,
+                Aufbereitung von Designdaten für die Konstruktion;
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid image-gallery">
+      <!-- <img src="Siemens-EQ700-01.jpg" alt="Siemens EQ.700: kitchen" class="thumbnail" data-index="1"> -->
+      <img src="Siemens-EQ700-02.jpg" alt="Siemens EQ.700: isolated with gray background" class="thumbnail"
+        data-index="1">
+      <img src="Siemens-EQ700-03.jpg" alt="Siemens EQ.700: isolated with light brown background" class="thumbnail"
+        data-index="2">
+    </div>
+    <p class="image-copyright">Images © BSH GmbH</p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="gallerySiemensEQ700">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsSiemensEQ700"></div>
+    </div>
+  </main>
+  <footer id="copyright"></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("gallerySiemensEQ700", "thumbnailsSiemensEQ700", [
+        "../../images/PreviewImage_1920x1200.jpg",
+        "../../images/PreviewImage_1920x1200.jpg",
+        "../../images/PreviewImage_1920x1200.jpg",
+        "../../images/PreviewImage_1920x1200.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
