@@ -227,7 +227,7 @@ button {
 }
 
 .mainMenu {
-  height: calc(100vh - 4em);
+  height: calc(100dvh - 5em);
   width: 100dvw;
   margin-left: calc(50% - 50dvw);
   margin-right: calc(50% - 50dvw);
@@ -891,8 +891,8 @@ video {
 #kukaKR500 {
   display: block;
   top: 16%;
-  left: -27%;
-  width: 350px;
+  left: -26%;
+  width: 300px;
 }
 
 .ideology {
