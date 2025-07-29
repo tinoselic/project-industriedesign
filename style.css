@@ -168,7 +168,7 @@ body {
 
 nav {
   position: fixed;
-  width: 100dvw;
+  width: 100%;
   height: 5em;
   top: 0;
   background-color: transparent;
@@ -226,9 +226,7 @@ button {
 
 .mainMenu {
   height: calc(100dvh - 4em);
-  width: 100dvw;
-  margin-left: calc(50% - 50dvw);
-  margin-right: calc(50% - 50dvw);
+  width: 100%;
   top: 0;
   left: 0;
   display: none;
@@ -290,7 +288,7 @@ nav a:visited:hover {
 main {
   padding: 0 1em 0;
   display: block;
-  width: 100dvw;
+  width: 100%;
 }
 
 .back {
@@ -434,6 +432,10 @@ img.awards-label {
   transition: opacity 1s ease;
 } */
 
+.project-gallery {
+  margin-bottom: 1em;
+}
+
 .project {
   aspect-ratio: 1;
   float: left;
@@ -559,13 +561,10 @@ img.awards-label {
   height: fit-content;
 }
 
-.references {
-  padding-bottom: 3em;
-}
-
 .references-wrapper {
   font-size: 1.2rem;
   font-weight: bold;
+  padding: 0 1em 3em 1em;
 }
 
 .references-wrapper a {
@@ -593,9 +592,7 @@ img.awards-label {
   top: 0;
   left: 0;
   z-index: 100;
-  width: 100dvw;
-  margin-left: calc(50% - 50dvw);
-  margin-right: calc(50% - 50dvw);
+  width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.95);
   display: none;
@@ -609,9 +606,7 @@ img.awards-label {
 
 .slide-container {
   position: relative;
-  width: 100dvw;
-  margin-left: calc(50% - 50dvw);
-  margin-right: calc(50% - 50dvw);
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -869,9 +864,7 @@ video {
 
 .about-background {
   position: absolute;
-  width: 100dvw;
-  margin-left: calc(50% - 50dvw);
-  margin-right: calc(50% - 50dvw);
+  width: 100%;
   height: 100%;
   left: 0;
   top: -120px;
@@ -925,6 +918,7 @@ video {
 }
 
 .elaboration p {
+  padding: 0 1em 0 1em;
   margin-bottom: 2em;
 }
 
@@ -942,14 +936,11 @@ video {
 }
 
 .awards-section {
-  margin-bottom: 1em;
+  margin-bottom: 6em;
 }
 
 .marquee-wrapper {
   /* background-color: var(--selic-violet); */
-  width: 100dvw;
-  margin-left: calc(50% - 50dvw);
-  margin-right: calc(50% - 50dvw);
   margin-bottom: 2em;
   padding: 1em 0 1em 0;
   border-block: 2px solid var(--selic-black);
@@ -991,9 +982,6 @@ video {
 
 .carousel {
   display: flex;
-  width: 100dvw;
-  margin-left: calc(50% - 50dvw);
-  margin-right: calc(50% - 50dvw);
   overflow-x: scroll;
   /* gap: 1em; */
 }
@@ -1018,6 +1006,7 @@ video {
 }
 
 .row {
+  padding: 0 1em 0 1em;
   display: block;
   text-align: center;
 }
@@ -1069,9 +1058,7 @@ video {
 }
 
 footer {
-  width: 100dvw;
-  margin-left: calc(50% - 50dvw);
-  margin-right: calc(50% - 50dvw);
+  width: 100%;
   padding: 3em 1em;
   background-color: var(--selic-violet);
   color: var(--selic-white);
@@ -1364,9 +1351,7 @@ footer {
   }
 
   .background-video video {
-    width: 100dvw;
-    margin-left: calc(50% - 50dvw);
-    margin-right: calc(50% - 50dvw);
+    width: 100%;
     height: auto;
   }
 
@@ -1402,6 +1387,7 @@ footer {
   }
 
   .elaboration p {
+    padding: 0;
     max-width: 30vw;
   }
 
@@ -1430,7 +1416,7 @@ footer {
   }
 
   .row {
-    padding: 0 10em 0 10em;
+    padding: 0 10vw 0 10vw;
   }
 
   .team {
@@ -1438,7 +1424,7 @@ footer {
   }
 
   .references-wrapper {
-    margin-left: 10vw;
+    padding-left: 10vw;
   }
 
   .image-copyright {
