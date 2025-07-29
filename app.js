@@ -63,15 +63,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ========= Dynamic Footer ========= //
   footer.innerHTML = `
-    <div class="address-section">
-      Selić Industriedesign<br>Schertlinstrasse 17a<br>86159 Augsburg
-    </div>
-    <div class="contact-section">
-      T +49 821 3499450<br>mario@selic.de
-    </div>
-    <div class="copyright-section">
-      © 2025 Selić Industriedesign<br>All rights reserved.
-    </div>
+  <div class="footer-wrapper">
+    <section class="address-section">
+      <div class="adress-wrapper">
+        <span>
+          <b>Selić Industriedesign</b>
+          <br>
+          Schertlinstrasse 17a
+          <br>
+          86159 Augsburg
+        </span>
+      </div>
+      <br>
+      <div class="contact-wrapper">
+        <span>
+          T +49 821 3499450
+          <br>
+          mario@selic.de
+        </span>
+      </div>
+      <br>
+      <div class="copyright-wrapper">
+        <span>
+          © 2025 Selić Industriedesign<br>All rights reserved.
+        </span>
+      </div>
+    </section>
+    <section class="navigation-section">
+      <ul class="footer-nav-list">
+        <li>
+          <a href="../">Home</a>
+        </li>
+        <li>
+          <a href="../work">Work</a>
+        </li>
+        <li>
+          <a href="../about">About</a>
+        </li>
+        <li>
+          <a href="../impressum">Impressum</a>
+        </li>
+        <br>
+        <li>
+          <a href="#top">&uarr; Back to Top</a>
+        </li>
+      </ul>
+    </section>
+  </div>
   `;
 
   // ========= Accordion ========= //
@@ -175,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('.back').forEach(el => {
     el.innerHTML = `← <span class="underline">back to projects</span>`;
     el.addEventListener('click', () => {
-      window.location.href = '../';s
+      window.location.href = '../'; s
     });
   });
 

@@ -1063,25 +1063,48 @@ footer {
   background-color: var(--selic-violet);
   color: var(--selic-white);
   font-size: 0.8rem;
-  line-height: 1.5;
-  text-align: center;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
 }
 
 .address-section {
-  color: var(--selic-white);
-  font-size: 0.8rem;
   padding-bottom: 2em;
 }
 
-.contact-section {
+.address-section span {
   color: var(--selic-white);
   font-size: 0.8rem;
+  line-height: 1;
+}
+
+.address-section span b {
+  color: inherit;
+  font-size: inherit;
+}
+
+.navigation-section {
   padding-bottom: 2em;
+}
+
+.footer-nav-list {
+  list-style-type: none;
+}
+
+.footer-nav-list li a {
+  color: var(--selic-white);
+  font-size: 1rem;
+  line-height: 2;
 }
 
 .copyright-section {
-  color: var(--selic-white);
+  color: inherit;
   font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .footer-home {
@@ -1240,9 +1263,6 @@ footer {
   }
 
   footer {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
     padding: 3em;
   }
 
