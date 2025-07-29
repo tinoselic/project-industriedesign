@@ -296,13 +296,14 @@ main {
 .back {
   font-weight: bold;
   font-size: 0.8rem;
-  margin: 2em 0 2em 0;
+  margin: 6em 0 2em 0;
 }
 
 .underline {
+  color: inherit;
   font-size: inherit;
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
   text-decoration-thickness: 1.5px;
 }
 
@@ -411,7 +412,6 @@ img.awards-label {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  margin-bottom: 2em;
 }
 
 .grid a {
@@ -490,12 +490,8 @@ img.awards-label {
   transition: .5s ease;
 }
 
-.grid.project-text {
-  margin: 6em 0 4em 0;
-}
-
 .project-info {
-  padding-bottom: 3em;
+  margin-bottom: 4em;
   text-align: left;
 }
 
@@ -946,7 +942,7 @@ video {
 }
 
 .awards-section {
-  margin-bottom: 6em;
+  margin-bottom: 1em;
 }
 
 .marquee-wrapper {
@@ -1069,7 +1065,7 @@ video {
   font-size: 0.8rem;
   text-align: center;
   max-width: 100%;
-  padding-bottom: 3em;
+  margin: 2em;
 }
 
 footer {
@@ -1122,6 +1118,10 @@ footer {
 
   .banner {
     margin-top: 0;
+  }
+
+  img.awards-label {
+    height: 5em;
   }
 
   .grid {
@@ -1238,10 +1238,6 @@ footer {
     margin-bottom: 8em;
   }
 
-  img.awards-label {
-    height: 5em;
-  }
-
   .team {
     margin-bottom: 8em;
   }
@@ -1287,7 +1283,11 @@ footer {
   }
 
   .back {
-    margin: 4em 0 4em 0;
+    margin: 10em 0 4em 0;
+  }
+
+  .back:hover {
+    color: var(--selic-violet);
   }
 
   .language-switch:hover {
@@ -1442,7 +1442,7 @@ footer {
   }
 
   .image-copyright {
-    padding-bottom: 2em;
+    margin: 4em;
   }
 
   footer {
