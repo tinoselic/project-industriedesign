@@ -1072,9 +1072,9 @@ footer {
 }
 
 .footer-wrapper {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
 }
 
 .address-section {
@@ -1102,8 +1102,11 @@ footer {
 
 .footer-nav-list li a {
   color: var(--selic-white);
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
   line-height: 2;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
 }
 
 .copyright-section {
@@ -1459,6 +1462,10 @@ footer {
 
   footer {
     padding: 3em 9em;
+  }
+
+  .footer-nav-list li a:hover {
+    color: var(--selic-white);
   }
 }
 

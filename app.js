@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <section class="navigation-section">
       <ul class="footer-nav-list">
         <li>
-          <a href="../">Home</a>
+          <a href="../../">Home</a>
         </li>
         <li>
           <a href="../work">Work</a>
