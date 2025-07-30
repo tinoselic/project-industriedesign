@@ -120,51 +120,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // ========= Filter Projects ========= //
-  // Function to update the counter
-  function updateProjectCounter() {
-    const visibleCount = Array.from(projectItems).filter(item => item.style.display !== 'none').length;
-    counter.textContent = `Project${visibleCount !== 1 ? 's' : ''}: ${visibleCount}`;
-  }
+  if (filterButtons.length > 0 && projectItems.length > 0 && counter) {
+    // Function to update the counter
+    function updateProjectCounter() {
+      const visibleCount = Array.from(projectItems).filter(item => item.style.display !== 'none').length;
+      counter.textContent = `Project${visibleCount !== 1 ? 's' : ''}: ${visibleCount}`;
+    }
 
-  // Initial count on page load
-  updateProjectCounter();
+    // Initial count on page load
+    updateProjectCounter();
 
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const filter = button.textContent.toLowerCase();
-      const isActive = button.classList.contains('active');
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.textContent.toLowerCase();
+        const isActive = button.classList.contains('active');
 
-      if (filter === 'show all') {
-        // Show All logic
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+        if (filter === 'show all') {
+          // Show All logic
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
 
-        projectItems.forEach(item => {
-          item.style.display = '';
-        });
+          projectItems.forEach(item => {
+            item.style.display = '';
+          });
 
-      } else if (isActive) {
-        // Toggle off: remove filter, show all
-        button.classList.remove('active');
-        projectItems.forEach(item => {
-          item.style.display = '';
-        });
+        } else if (isActive) {
+          // Toggle off: remove filter, show all
+          button.classList.remove('active');
+          projectItems.forEach(item => {
+            item.style.display = '';
+          });
 
-      } else {
-        // Toggle on: activate filter
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+        } else {
+          // Toggle on: activate filter
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
 
-        projectItems.forEach(item => {
-          const categories = item.getAttribute('data-category')?.toLowerCase() || '';
-          item.style.display = categories.includes(filter) ? '' : 'none';
-        });
-      }
+          projectItems.forEach(item => {
+            const categories = item.getAttribute('data-category')?.toLowerCase() || '';
+            item.style.display = categories.includes(filter) ? '' : 'none';
+          });
+        }
 
-      // Update the counter after filtering
-      updateProjectCounter();
+        // Update the counter after filtering
+        updateProjectCounter();
+      });
     });
-  });
+  }
 
 
   // ========= Gallery Generator ========= //
