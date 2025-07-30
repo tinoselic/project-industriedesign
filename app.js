@@ -117,19 +117,30 @@ document.addEventListener("DOMContentLoaded", function () {
     box.addEventListener('click', () => box.classList.toggle('active'))
   );
 
+  // ========= Filter Projects ========= //
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
       const filter = button.textContent.toLowerCase();
       const isActive = button.classList.contains('active');
 
-      // Toggle off: Show all
-      if (isActive) {
+      if (filter === 'show all') {
+        // Show All logic
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        projectItems.forEach(item => {
+          item.style.display = '';
+        });
+
+      } else if (isActive) {
+        // Toggle off: remove filter, show all
         button.classList.remove('active');
         projectItems.forEach(item => {
           item.style.display = '';
         });
+
       } else {
-        // Toggle on: Set active and filter
+        // Toggle on: activate filter
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
