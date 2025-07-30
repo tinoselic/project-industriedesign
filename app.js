@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const filterButtons = document.querySelectorAll('.filter-button');
   const projectItems = document.querySelectorAll('.project-item');
   const projects = document.querySelectorAll('.project');
+  const counter = document.getElementById('project-counter');
 
   // ====== "More" Toggle Content ======
   const moreButton = document.getElementById('more');
@@ -117,7 +118,17 @@ document.addEventListener("DOMContentLoaded", function () {
     box.addEventListener('click', () => box.classList.toggle('active'))
   );
 
+
   // ========= Filter Projects ========= //
+  // Function to update the counter
+  function updateProjectCounter() {
+    const visibleCount = Array.from(projectItems).filter(item => item.style.display !== 'none').length;
+    counter.textContent = `Project${visibleCount !== 1 ? 's' : ''}: ${visibleCount}`;
+  }
+
+  // Initial count on page load
+  updateProjectCounter();
+
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
       const filter = button.textContent.toLowerCase();
@@ -149,8 +160,12 @@ document.addEventListener("DOMContentLoaded", function () {
           item.style.display = categories.includes(filter) ? '' : 'none';
         });
       }
+
+      // Update the counter after filtering
+      updateProjectCounter();
     });
   });
+
 
   // ========= Gallery Generator ========= //
   window.generateGallery = function (slidesId, thumbnailsId, imagePaths) {

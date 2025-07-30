@@ -386,6 +386,12 @@ main {
   color: var(--selic-violet);
 }
 
+#project-counter {
+  margin-top: 1em;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
 .awards {
   display: flex;
   flex-wrap: wrap;
