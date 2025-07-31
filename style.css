@@ -180,6 +180,10 @@ nav {
   filter: invert();
 }
 
+#nav-impressum img, #nav-impressum a {
+  filter: invert();
+}
+
 nav.hide-on-scroll {
   transform: translateY(-100%);
   transition: transform 0.3s ease;
@@ -1064,6 +1068,15 @@ video {
   margin: 2em;
 }
 
+.impressum {
+  margin-top: 5em;
+  color: var(--selic-white);
+}
+
+.impressum p, b, a, h1, h2, h3 {
+  color: inherit;
+}
+
 footer {
   width: 100%;
   padding: 3em 1em;
@@ -1088,7 +1101,7 @@ footer {
   line-height: 1;
 }
 
-.address-section span b {
+.address-section span b, a {
   color: inherit;
   font-size: inherit;
 }

@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <span>
           T +49 821 3499450
           <br>
-          mario@selic.de
+          <a href="mailto:mario@selic.de" target="_blank" style="color: inherit">mario@selic.de</a>
         </span>
       </div>
       <br>
@@ -93,16 +93,16 @@ document.addEventListener("DOMContentLoaded", function () {
     <section class="navigation-section">
       <ul class="footer-nav-list">
         <li>
-          <a href="../../">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="../work">Work</a>
+          <a href="/work">Work</a>
         </li>
         <li>
-          <a href="../about">About</a>
+          <a href="/about">About</a>
         </li>
         <li>
-          <a href="../impressum">Impressum</a>
+          <a href="/impressum">Impressum</a>
         </li>
         <br>
         <li>
