@@ -1069,8 +1069,8 @@ video {
 }
 
 .impressum {
-  margin-top: 5em;
-  color: var(--selic-white);
+  margin: 8em 0 4em 0;
+  color: var(--selic-black);
 }
 
 .impressum p, b, a, h1, h2, h3 {
@@ -1474,8 +1474,12 @@ footer {
     margin: 4em;
   }
 
+  .impressum {
+    padding: 0 10vw 0 10vw;
+  }
+
   footer {
-    padding: 3em 9em;
+    padding: 3em 10vw;
   }
 
   .footer-nav-list li a:hover {
