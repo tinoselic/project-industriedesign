@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ====== General Elements ======
   const body = document.body;
   const bodyBg = getComputedStyle(body).backgroundColor;
-  const footer = document.getElementById('copyright');
+  const footer = document.querySelector('footer');
   const modal = document.querySelector('.previewModal');
   const close = document.getElementById('closePreview');
 
@@ -103,10 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </li>
         <li>
           <a href="/impressum">Impressum</a>
-        </li>
-        <br>
-        <li>
-          <a href="#top">&uarr; Back to Top</a>
         </li>
       </ul>
     </section>
