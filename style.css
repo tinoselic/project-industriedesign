@@ -1105,10 +1105,6 @@ footer {
   text-align: left;
 }
 
-.address-section {
-  padding-bottom: 2em;
-}
-
 .address-section span {
   color: var(--selic-white);
   font-size: 0.8rem;
