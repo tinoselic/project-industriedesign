@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - German Bionic Cray-Visier</title>
+  <meta name="description"
+    content="Selić Industriedesign is an award winning industrial design office with over 30 years of experience.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg (Germany), portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description"
+    content="Selić Industriedesign is an award winning industrial design office with over 30 years of experience.">
+  <meta property="og:image" content=""> <!-- add image -->
+  <meta property="og:url" content=""> <!-- add url -->
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="200603-GBS-Visier-1920x1200-Banner.jpg" alt="German Bionic Cray Visor banner">
+  </section>
+  <main>
+    <section class="project-info">
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>German Bionic Cray Visor</h1>
+            <br>
+          </div>
+          <div class="german">
+            <h1>German Bionic Cray-Visier</h1>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              The smart Cray Visor: protection and performance
+            </h5>
+            <br>
+            <p>
+              Combined with the Cray X power suit, the all-new smart Cray Visor brings the benefits of industrial IoT
+              and Smart Factory integration directly into the wearers line of view on the head-up display, without the
+              actual tasks to lose sight of.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+
+                The wireless connection between the Cray X, the German Bionic IO cloud-based IoT suite and the Cray
+                Visor itself, allows instructions and other useful information to be displayed on the visor screen. In
+                addition, the Cray Visor protects the wearer from health risks that can be transmitted via the air.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Das smarte Cray Visier: Schutz und Performance
+            </h5>
+            <br>
+            <p>
+              Kombiniert mit dem Cray X aus dem gleichen Haus bringt das neue intelligente Cray Visor, ein
+              Gesichts-Visier mit integriertem Head-Up-Display, die Vorteile der industriellen IoT- und Smart
+              Factory-Integration direkt in die Blickrichtung des Trägers, ohne die eigentlichen Aufgaben aus den Augen
+              zu verlieren.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Die drahtlose Verbindung zwischen Cray X, der Cloud-Plattform German Bionic IO und dem Cray Visor
+                ermöglicht die Einblendung von Handlungsanweisungen und anderen wichtigen Informationen auf dem Visier.
+                Darüber hinaus schützt das Cray Visor den Träger vor Gesundheitsgefahren, die über die Luft übertragen
+                werden können.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid image-gallery">
+      <img src="200603-GBS-Visier-1920x1200-01.jpg" alt="German Bionic Cray Visor: front" class="thumbnail" data-index="1">
+      <img src="200603-GBS-Visier-1920x1200-02.jpg" alt="German Bionic Cray Visor: perspective" class="thumbnail" data-index="2">
+    </div>
+    <p class="image-copyright">Images © Selić Industriedesign</p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryGermanBionicCrayVisor">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsGermanBionicCrayVisor"></div>
+    </div>
+  </main>
+  <div id="backToTop">
+    <a href="#top">&uarr; Back to Top</a>
+  </div>
+  <footer></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryGermanBionicCrayVisor", "thumbnailsGermanBionicCrayVisor", [
+        "200603-GBS-Visier-1920x1200-01.jpg",
+        "200603-GBS-Visier-1920x1200-02.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
