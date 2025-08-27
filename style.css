@@ -948,7 +948,7 @@ video {
 
 .marquee-wrapper {
   /* background-color: var(--selic-violet); */
-  margin-bottom: 2em;
+  margin-bottom: 4em;
   padding: 1em 0 1em 0;
   border-block: 2px solid var(--selic-black);
 }
@@ -1244,7 +1244,7 @@ a {
   }
 
   #siegmundSchweisszelle {
-    top: 3800px;
+    top: 4000px;
     right: 50px;
     max-width: 400px;
   }
@@ -1431,11 +1431,11 @@ a {
   #roboticKitchen {
     top: 1300px;
     right: 150px;
-    width: 600px;
+    width: 500px;
   }
 
   #siegmundSchweisszelle {
-    top: 3700px;
+    top: 4200px;
     right: 150px;
     max-width: 600px;
   }
