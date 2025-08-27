@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - KUKA Charging Assistant</title>
+  <meta name="description"
+    content="Selić Industriedesign is an award winning industrial design office with over 30 years of experience.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg (Germany), portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description"
+    content="Selić Industriedesign is an award winning industrial design office with over 30 years of experience.">
+  <meta property="og:image" content=""> <!-- add image -->
+  <meta property="og:url" content=""> <!-- add url -->
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="KUKA-E-Car-Charging-Assistant-banner.jpg" alt="KUKA Charging Assistant banner" loading="lazy">
+  </section>
+  <main>
+    <section class="project-info">
+      <div class="awards">
+        <img class="awards-label" src="German_Innovation_Awards_2019.png" alt="German Innovation Award label">
+        <img class="awards-label" src="GDA20_HO_WINNER_RGB.png" alt="German Design Award label">
+        <img class="awards-label" src="if_designaward2020_red_p_rgb.png" alt="iF Design Award label">
+        <img class="awards-label" src="PD2020_RD_RGB.png" alt=" Red Dot Design Award label">
+      </div>
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>KUKA Charging Assistant</h1>
+            <br>
+          </div>
+          <div class="german">
+            <h1>KUKA Ladeassistant</h1>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              The KUKA Charging Assistant is a user-friendly solution for domestic charging of electric vehicles.
+            </h5>
+            <br>
+            <p>
+              It is a complete and customized new development of kinematics, controller and image processing, that meets
+              the special requirements in terms of price, safety and environmental conditions. The industrial robot
+              manufacturer KUKA presents the first robot for home use and opens up a completely new field of application
+              in the field of automation.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                As soon as an electric car is parked next to the charging assistant, the flap of the charging port opens
+                automatically on this vehicle. Afterwards, the robot arm with its plug autonomously controlled by WLAN
+                control and optical detection by camera, the connection coupling and then recharges the batteries. The
+                driver does not have to worry about the charging process.
+                <br>
+                <br>
+                The design avoids bruising and injury hazards. The leverage is reduced to a safe level. This becomes
+                especially important when children are directly at the robot. The coloring is adapted to the CI of the
+                company and fits seamlessly into the product family of the robot company.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Der KUKA Ladeassistent ist eine benutzerfreundliche Lösung zum heimischen Laden von Elektrofahrzeugen.
+            </h5>
+            <br>
+            <p>
+              Er ist eine vollständige und maßgeschneiderte Neuentwicklung von Kinematik, Steuerung und
+              Bildverarbeitung, die den speziellen Anforderungen bezüglich Preis, Sicherheit und Umgebungsbedingungen
+              gerecht wird. Der Industrieroboterhersteller KUKA präsentiert den ersten Roboter für den Heimbereich und
+              eröffnet ein völlig neues Anwendungsgebiet.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Sobald ein Elektroauto neben dem Ladeassistenten geparkt wird, öffnet an diesem Fahrzeug automatisch die
+                Klappe des Ladeanschlusses. Anschließend fährt der Roboterarm mit seinem Stecker autonom gesteuert per
+                WLAN-Steuerung und optischer Erfassung per Kamera die Anschlusskupplung an und lädt anschließend die
+                Akkus auf. Der Fahrer muss sich nicht weiter um den Ladevorgang kümmern.
+                <br>
+                <br>
+                Das Design vermeidet Quetschungen und Verletzungsgefahren. Auch die Hebelkräfte sind auf ein
+                unbedenkliches Maß ausgelegt. Das wird dann besonders wichtig, wenn sich Kinder direkt am Roboter
+                aufhalten. Die Farbgebung ist auf das CI der Firma abgestimmt und passt nahtlos in die Produktfamilie
+                der Roboterfirma.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid image-gallery">
+      <img src="KUKA-E-Car-Charging-Assistant-01.jpg" alt="KUKA Charging Assistant: right side with car" class="thumbnail" loading="lazy"
+        data-index="1">
+      <img src="KUKA-E-Car-Charging-Assistant-02.jpg" alt="KUKA Charging Assistant: left perspective at garage" class="thumbnail" loading="lazy"
+        data-index="2">
+      <img src="KUKA-E-Car-Charging-Assistant-03.jpg" alt="KUKA Charging Assistant: close-up front" class="thumbnail" loading="lazy"
+        data-index="3">
+      <img src="KUKA-E-Car-Charging-Assistant-04.jpg" alt="KUKA Charging Assistant: close-up perspective" class="thumbnail" loading="lazy"
+        data-index="4">
+    </div>
+    <p class="image-copyright">Images © KUKA AG, © Selić Industriedesign</p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryKUKAChargingAssistant">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsKUKAChargingAssistant"></div>
+    </div>
+  </main>
+  <div id="backToTop">
+    <a href="#top">&uarr; Back to Top</a>
+  </div>
+  <footer></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryKUKAChargingAssistant", "thumbnailsKUKAChargingAssistant", [
+        "KUKA-E-Car-Charging-Assistant-01.jpg",
+        "KUKA-E-Car-Charging-Assistant-02.jpg",
+        "KUKA-E-Car-Charging-Assistant-03.jpg",
+        "KUKA-E-Car-Charging-Assistant-04.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
