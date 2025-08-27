@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - KUKA KR C5 micro</title>
+  <meta name="description"
+    content="Selić Industriedesign is an award winning industrial design office with over 30 years of experience.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg (Germany), portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description"
+    content="Selić Industriedesign is an award winning industrial design office with over 30 years of experience.">
+  <meta property="og:image" content=""> <!-- add image -->
+  <meta property="og:url" content=""> <!-- add url -->
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="KUKA-KR-C5-Banner.jpg" alt="KUKA KR C5 micro banner" loading="lazy">
+  </section>
+  <main>
+    <section class="project-info">
+      <div class="awards">
+        <img class="awards-label" src="PD2020_RD.png" alt="Award label">
+      </div>
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>KUKA KR C5 micro</h1>
+            <br>
+            <h4>Robot Controller</h4>
+            <br>
+          </div>
+          <div class="german">
+            <h1>KUKA KR C5 micro</h1>
+            <br>
+            <h4>Robotersteuerung</h4>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              The KUKA control KR C5 micro is the heart of the drive for dynamic small robot systems.
+            </h5>
+            <br>
+            <p>
+              The patented cooling and air flow principle offers reliable operation even at high ambient temperatures
+              and ensures an extremely compact design with the highest integration density of functions and
+              connectivity. Both the device handling and the KUKA brand language are harmoniously combined in the
+              design.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                The KR C5 micro can be set up as a single device in various positions (upright, lying flat, on the side)
+                or installed in a 9 "rack with optional mounting brackets. Several controls can also be stacked on top
+                of each other, with small catches on the housing cover preventing them from slipping.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Die KUKA Steuerung KR C5 micro ist das Herzstück zum Antrieb von dynamischen Kleinrobotersystemen.
+            </h5>
+            <br>
+            <p>
+              Mit ihr bietet KUKA eine äußerst platzsparende Steuerungslösung mit höchster Integrationsdichte an
+              Funktionen und Konnektivität. Im Design sind sowohl die Gerätehandhabung als auch die KUKA Markensprache
+              harmonisch vereint.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Die KR C5 micro kann sowohl als Einzelgerät in verschiedenen Positionen (hochkant, flach liegend,
+                seitlich) aufgestellt, als auch in ein 9" Rack mit optionalen Befestigungswinkeln eingebaut werden. Es
+                können auch mehrere Steuerungen aufeinander gestapelt werden, wobei eine Arretierung ein Verrutschen
+                verhindert.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid image-gallery">
+      <img src="KUKA-KR-C5-micro-01.jpg" alt="KUKA KR C5 micro: back" class="thumbnail" loading="lazy"
+        data-index="1">
+      <img src="KUKA-KR-C5-micro-02.jpg" alt="KUKA KR C5 micro: front" class="thumbnail" loading="lazy"
+        data-index="2">
+    </div>
+    <p class="image-copyright">Images © KUKA AG</p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryKUKAKRC5micro">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsKUKAKRC5micro"></div>
+    </div>
+  </main>
+  <div id="backToTop">
+    <a href="#top">&uarr; Back to Top</a>
+  </div>
+  <footer></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryKUKAKRC5micro", "thumbnailsKUKAKRC5micro", [
+        "KUKA-KR-C5-micro-01.jpg",
+        "KUKA-KR-C5-micro-02.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
