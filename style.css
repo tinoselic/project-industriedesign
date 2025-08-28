@@ -821,10 +821,24 @@ video {
   height: 100%;
 }
 
+#playPauseBtn {
+  position: absolute;
+  right: 1em;
+  top: 6em;
+  font-size: 1rem;
+  padding: 0.11em;
+  color: var(--selic-white);
+  font-weight: bold;
+  /* border: var(--selic-white) solid; */
+  opacity: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
 .quote {
   /* font-family: 'RobotoCondensed'; */
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.15;
   /* text-transform: uppercase; */
   position: absolute;
@@ -855,9 +869,9 @@ video {
 
 .explanation {
   position: absolute;
-  right: 5%;
+  left: 50%;
   top: 85%;
-  transform: translate(-5%, -15%);
+  transform: translate(-50%, -15%);
 }
 
 .explanation p {
@@ -865,8 +879,8 @@ video {
   opacity: 0.8;
   font-size: 0.8em;
   font-weight: bold;
-  line-height: 1.15;
-  text-align: right;
+  line-height: 1;
+  text-align: center;
 }
 
 .about-background {
@@ -1247,7 +1261,7 @@ a {
     top: 90%;
     right: 5%;
     max-width: 400px;
-  transform: scaleX(-1);
+    transform: scaleX(-1);
   }
 
   .ideology {
@@ -1355,13 +1369,13 @@ a {
   }
 
   .quote {
-    font-size: 3rem;
+    font-size: 2.5rem;
     top: 25%;
   }
 
   #work-button {
     font-size: 2rem;
-    top: 70%;
+    top: 65%;
   }
 
   #work-button:hover {
