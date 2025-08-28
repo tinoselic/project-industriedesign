@@ -1365,8 +1365,8 @@ a {
   }
 
   #work-button:hover {
-    border: var(--selic-yellow) solid;
-    color: var(--selic-yellow);
+    border: var(--selic-violet) solid;
+    color: var(--selic-violet);
   }
 
   #more:hover {
