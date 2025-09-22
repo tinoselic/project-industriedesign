@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
 
     const syncBtn = () => {
-      btn.innerHTML = video.paused ? '▶ play video' : '⏸ pause video';
+      btn.innerHTML = video.paused ? '▶ play video' : '⏸&#xFE0E; pause video';
       btn.setAttribute('aria-pressed', String(!video.paused));
       btn.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
     };
