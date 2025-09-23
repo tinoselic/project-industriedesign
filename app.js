@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       isRotated = !isRotated;
       nav.style.backgroundColor = isRotated ? bodyBg : 'transparent';
       navContainer.style.height = isRotated ? '100dvh' : '0';
+      btn.style.display = isRotated ? 'none' : 'block';
       mainMenu.style.display = isRotated ? 'inline-flex' : 'none';
       mainMenu.style.backgroundColor = isRotated ? bodyBg : '';
       openMenu.style.transform = isRotated ? 'rotate(calc(45*7deg))' : 'rotate(0deg)';
@@ -125,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
 
     const syncBtn = () => {
-      btn.innerHTML = video.paused ? '▶ play video' : '⏸&#xFE0E; pause video';
+      btn.innerHTML = video.paused ? '▶ play video' : '⏸ pause video';
       btn.setAttribute('aria-pressed', String(!video.paused));
       btn.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
     };

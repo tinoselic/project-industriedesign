@@ -240,6 +240,7 @@ button {
   align-items: center;
   list-style-type: none;
   overflow: hidden;
+  z-index: 50;
 }
 
 .mainMenu a {
@@ -832,7 +833,7 @@ video {
   /* border: var(--selic-white) solid; */
   opacity: 50%;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 49;
 }
 
 .quote {
