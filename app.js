@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Play / Pause
   const video = qs('#bgVideo');
-  const btn = qs('#playPauseBtn');
+  const playPauseBtn = qs('#playPauseBtn');
 
   // Language
   const deBtn = qs('#de');
@@ -57,11 +57,11 @@ document.addEventListener("DOMContentLoaded", function () {
       isRotated = !isRotated;
       nav.style.backgroundColor = isRotated ? bodyBg : 'transparent';
       navContainer.style.height = isRotated ? '100dvh' : '0';
-      btn.style.display = isRotated ? 'none' : 'block';
       mainMenu.style.display = isRotated ? 'inline-flex' : 'none';
       mainMenu.style.backgroundColor = isRotated ? bodyBg : '';
       openMenu.style.transform = isRotated ? 'rotate(calc(45*7deg))' : 'rotate(0deg)';
       body.style.overflow = isRotated ? 'hidden' : 'auto';
+      playPauseBtn.style.display = isRotated ? 'none' : 'block';
     });
   }
 
@@ -116,25 +116,25 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ========= Play / Pause Button (robust) ========= //
-  if (video && btn) {
+  if (video && playPauseBtn) {
     // ensure the button is visible in case of z-index issues (optional)
-    btn.style.zIndex = btn.style.zIndex || '9999';
+    playPauseBtn.style.zIndex = playPauseBtn.style.zIndex || '9999';
 
     // accessible attributes
-    btn.setAttribute('role', 'button');
-    btn.setAttribute('aria-pressed', String(!video.paused));
-    btn.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
+    playPauseBtn.setAttribute('role', 'button');
+    playPauseBtn.setAttribute('aria-pressed', String(!video.paused));
+    playPauseBtn.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
 
-    const syncBtn = () => {
-      btn.innerHTML = video.paused ? '▶ play video' : '⏸ pause video';
-      btn.setAttribute('aria-pressed', String(!video.paused));
-      btn.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
+    const syncPlayPauseBtn = () => {
+      playPauseBtn.innerHTML = video.paused ? '▶ play video' : '⏸ pause video';
+      playPauseBtn.setAttribute('aria-pressed', String(!video.paused));
+      playPauseBtn.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
     };
 
     // initial sync (if metadata not loaded yet, this still works)
-    syncBtn();
+    syncPlayPauseBtn();
 
-    btn.addEventListener('click', async (ev) => {
+    playPauseBtn.addEventListener('click', async (ev) => {
       try {
         if (video.paused) {
           // some browsers block autoplay — make sure video is muted before play()
@@ -150,12 +150,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // keep button in sync if something else pauses/plays the video
-    video.addEventListener('play', syncBtn);
-    video.addEventListener('pause', syncBtn);
+    video.addEventListener('play', syncPlayPauseBtn);
+    video.addEventListener('pause', syncPlayPauseBtn);
     // update after metadata loads (optional)
-    video.addEventListener('loadedmetadata', syncBtn);
+    video.addEventListener('loadedmetadata', syncPlayPauseBtn);
   } else {
-    console.warn('Play/pause elements not found:', { video, btn });
+    console.warn('Play/pause elements not found:', { video, playPauseBtn });
   }
 
   // ========= Accordion ========= //
