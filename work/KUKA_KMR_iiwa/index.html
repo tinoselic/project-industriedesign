@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - KUKA KMR iiwa</title>
+  <meta name="description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg, Germany, portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta property="og:image" content="https://selic.de/images/231025-KUKA-KR-FORTEC-2-1920x1200-01.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="KUKA KMR iiwa 01.jpg" alt="KUKA KMR iiwa banner" loading="lazy">
+  </section>
+  <main>
+    <section class="project-info">
+      <div class="awards">
+        <img class="awards-label" src="GDA17_HO_SPECIAL_RGB.png" alt="Award label">
+      </div>
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>KUKA KMR iiwa</h1>
+            <br>
+            <h4>Mobile Robotic</h4>
+            <br>
+          </div>
+          <div class="german">
+            <h1>KUKA KMR iiwa</h1>
+            <br>
+            <h4>Mobile Robotik</h4>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              Omnidirectional and safe operating mobile robot-platform for industry 4.0 production concepts with various
+              and flexible applications in direct human-robot cooperation
+            </h5>
+            <br>
+            <p>
+              The KMR iiwa fetches required components independently, fits machine tools and deposits finished
+              workpieces. As an intelligent industrial work assistant it relieves the worker before strenuous and tiring
+              tasks.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                Highest precision and simple operation control positioning accuracy ±1 mm Autonomous navigation with
+                collision-free path planning
+                <br>
+                <br>
+                Selić Industriedesign service: Design concept, design consultation, design sketches, CAD design support,
+                CAD freeform modeling, design refinement, processing of design data for the engineering department
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Omnidirektional und sicher verfahrende, mobile Roboterplattform für Industrie-4.0-Produktionskonzepte mit
+              vielfältigen, flexiblen Anwendungsmöglichkeiten in der direkten Zusammenarbeit von Mensch und Roboter
+            </h5>
+            <br>
+            <p>
+              Der KMR iiwa holt selbständig benötigte Bauteile, bestückt Werkzeugmaschinen, legt bearbeitete Werkstücke
+              ab. Er entlastet als intelligenter, industrieller Produktionshelfer somit den Werker vor anstrengenden,
+              ermüdenden Aufgaben.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Höchste Präzision und einfache Bediensteuerung, Positioniergenauigkeit ±1 mm Autonome Navigation mit
+                kollisionsfreier Bahnplanung in der Arbeitsumgebung
+                <br>
+                <br>
+                Selić Industriedesign Dienstleistung: Designkonzept, Designberatung, Designentwürfe, CAD-Design
+                Unterstützung, CAD-Freiform-Modellierung und Detailgestaltung, Aufbereitung von Designdaten für die
+                Konstruktion
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid image-gallery">
+      <img src="KUKA KMR iiwa 01.jpg" alt="Image description" class="thumbnail" loading="lazy"
+        data-index="1">
+    </div>
+    <p class="image-copyright">Images © Selić Industriedesign</p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryKUKAKMRiiwa">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsKUKAKMRiiwa"></div>
+    </div>
+  </main>
+  <div id="backToTop">
+    <a href="#top">&uarr; Back to Top</a>
+  </div>
+  <footer></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryKUKAKMRiiwa", "thumbnailsKUKAKMRiiwa", [
+        "KUKA KMR iiwa 01.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
