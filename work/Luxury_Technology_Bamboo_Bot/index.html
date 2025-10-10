@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - Luxury Technology Bamboo Bot</title>
+  <meta name="description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg, Germany, portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta property="og:image" content="https://selic.de/images/231025-KUKA-KR-FORTEC-2-1920x1200-01.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="Luxury-Technology-Bamboo-Bot-Banner.jpg" alt="Luxury Technology Bamboo Bot banner" loading="lazy">
+  </section>
+  <main>
+    <section class="project-info">
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>Luxury Technology Bamboo Bot</h1>
+            <br>
+            <h4>Service Robot</h4>
+            <br>
+          </div>
+          <div class="german">
+            <h1>Luxury Technology Bamboo Bot</h1>
+            <br>
+            <h4>Serviceroboter</h4>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              The Bamboo Bot is a new service robot which is used in restaurants to bring food and drinks directly to
+              the table. It can as well be used on events or parties to serve the guests.
+            </h5>
+            <br>
+            <p>
+              The design concept is based on the vision of a mobile bistro table. The serving height of the table is
+              individually adaptable from 650 to 950 mm and can be controlled wireless by WLAN or by sensors to serve
+              standing or seated guests. The table base ends below in a squarely arranged chassis that for the
+              protection is covered with four transparent spheres.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                Complex sensors steer the robot certainly through ground-level rooms and immediately recognize people
+                and obstacles. The chassis is based on an omnidirectional moving platform that can also turn on spot.
+                The speed was adapted to the severe safety specifications. The service robot owns high-capacity
+                accumulators which guarantee a sufficient operation. In order to recharge the device automatically moves
+                to a battery charger.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Der Bamboo Bot ist ein neuartiger Serviceroboter, der in Restaurants eingesetzt wird, um Speisen und
+              Getränke direkt an den Tisch zu bringen. Ebenso kann er auf Veranstaltungen oder Partys eingesetzt werden,
+              um die Gäste zu bedienen.
+            </h5>
+            <br>
+            <p>
+              Das gestalterische Konzept beruht auf der Vision eines fahrbaren Bistrotisches. Die Servierhöhe des
+              Tisches ist individuell von 650 bis 950 mm anpassbar und lässt sich per WLAN oder durch Sensoren
+              fernsteuern, um Gäste im Stehen oder Sitzen zu versorgen. Der Tischfuß endet unten in einem quadratisch
+              angeordneten Fahrwerk, das zum Schutz mit vier transparenten Kugeln abgedeckt ist.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Eine komplexe Sensorik steuert den Roboter sicher durch ebenerdige Räume und lässt sofort Personen und
+                Hindernisse erkennen. Das Fahrwerk basiert auf einer omnidirektional verfahrbaren Plattform, die auch
+                auf der Stelle drehen kann. Die Fahrgeschwindigkeit wurde an die strengen Sicherheitsvorgaben angepasst.
+                Der Service-Roboter besitzt Hochleistungs-Akkus, die einen ordentlichen Betrieb sicherstellen. Zum
+                Nachladen fährt das Gerät automatisch eine Ladestation an.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid image-gallery">
+      <img src="Luxury-Technology-Bamboo-Bot-01.jpg" alt="Image description" class="thumbnail" loading="lazy"
+        data-index="1">
+      <img src="Luxury-Technology-Bamboo-Bot-02.jpg" alt="Image description" class="thumbnail" loading="lazy"
+        data-index="2">
+    </div>
+    <p class="image-copyright">Images © Selić Industriedesign</p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryLuxuryTechnologyBambooBot">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsLuxuryTechnologyBambooBot"></div>
+    </div>
+  </main>
+  <div id="backToTop">
+    <a href="#top">&uarr; Back to Top</a>
+  </div>
+  <footer></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryLuxuryTechnologyBambooBot", "thumbnailsLuxuryTechnologyBambooBot", [
+        "Luxury-Technology-Bamboo-Bot-01.jpg",
+        "Luxury-Technology-Bamboo-Bot-02.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
