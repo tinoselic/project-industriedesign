@@ -461,7 +461,7 @@ img.awards-label {
 .project .text-box {
   display: block;
   position: absolute;
-  width: 20em;
+  width: 100%;
   left: 20%;
   top: 90%;
   transform: translate(-20%, -90%);
