@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - Bosch MUM 5</title>
+  <meta name="description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg, Germany, portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta property="og:image" content="https://selic.de/images/231025-KUKA-KR-FORTEC-2-1920x1200-01.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="BOSCH-MUM5-Kitchen-Machine-Banner.jpg" alt="Bosch MUM 5 banner" loading="lazy">
+  </section>
+  <main>
+    <section class="project-info">
+      <div class="awards">
+        <img class="awards-label" src="rdda_bob12.png" alt="Red Dot Design Award label">
+      </div>
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>Bosch MUM 5</h1>
+            <br>
+            <h4>Food Mixer</h4>
+            <br>
+          </div>
+          <div class="german">
+            <h1>Bosch MUM 5</h1>
+            <br>
+            <h4>Untertitel</h4>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              The MUM5 kitchen machines from Bosch stands for top functionality with classy design.
+            </h5>
+            <br>
+            <p>
+              Its consistent shell design sets new standards. The contrasting exterior shell describes the machine’s
+              integrative contours and creates tension with its soft interior contours.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                Selić Industriedesign service: CAD design support, CAD freeform modeling and design refinement,
+                processing of design data for the engineering department
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Die MUM5 Küchenmaschine steht für Top-Funktionalität in edlem Design.
+            </h5>
+            <br>
+            <p>
+              Stilbildend ist das konsequente c-förmige Schalen-Design. Die farblich abgesetzte Außenschale verbindet
+              den Multifunktionsarm mit der Stellfläche und erzeugt zugleich ein Spannungsfeld zur weichen Innenkontur.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Selić Industriedesign Dienstleistung: CAD-Design Unterstützung, CAD-Freiform-Modellierung und
+                Detailgestaltung, Aufbereitung von Designdaten für die Konstruktion
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid image-gallery">
+      <img src="BOSCH-MUM5-Kitchen-Machine-01.jpg" alt="Bosch MUM 5: lemon front" class="thumbnail" loading="lazy"
+        data-index="1">
+      <img src="BOSCH-MUM5-Kitchen-Machine-02.jpg" alt="Bosch MUM 5: silver perspective, mixer up" class="thumbnail" loading="lazy"
+        data-index="2">
+      <img src="BOSCH-MUM5-Kitchen-Machine-03.jpg" alt="Bosch MUM 5: white front" class="thumbnail" loading="lazy"
+        data-index="3">
+      <img src="BOSCH-MUM5-Kitchen-Machine-04.jpg" alt="Bosch MUM 5: lemon perspective from top" class="thumbnail" loading="lazy"
+        data-index="4">
+    </div>
+    <p class="image-copyright">
+      Images © BSH GmbH
+      <br>
+      Renderings © Selić Industriedesign
+    </p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryBoschMUM5">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsBoschMUM5"></div>
+    </div>
+  </main>
+  <div id="backToTop">
+    <a href="#top">&uarr; Back to Top</a>
+  </div>
+  <footer></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryBoschMUM5", "thumbnailsBoschMUM5", [
+        "BOSCH-MUM5-Kitchen-Machine-01.jpg",
+        "BOSCH-MUM5-Kitchen-Machine-02.jpg",
+        "BOSCH-MUM5-Kitchen-Machine-03.jpg",
+        "BOSCH-MUM5-Kitchen-Machine-04.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
