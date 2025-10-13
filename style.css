@@ -393,6 +393,7 @@ main {
 }
 
 #project-counter {
+  display: none;
   margin-top: 1em;
   font-size: 0.8rem;
   font-weight: bold;
