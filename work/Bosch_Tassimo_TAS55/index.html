@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - Bosch Tassimo TAS55</title>
+  <meta name="description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg, Germany, portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta property="og:image" content="https://selic.de/images/231025-KUKA-KR-FORTEC-2-1920x1200-01.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="BOSCH-TASSIMO-TAS55-Banner.jpg" alt="Bosch Tassimo TAS55 banner" loading="lazy">
+  </section>
+  <main>
+    <section class="project-info">
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>Bosch Tassimo TAS55</h1>
+            <br>
+            <h4>Hot Drink Machine</h4>
+            <br>
+          </div>
+          <div class="german">
+            <h1>Bosch Tassimo TAS55</h1>
+            <br>
+            <h4>Heißgetränk-Vollautomat</h4>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              The hot drink machine Bosch Tassimo TAS55 is characterized by its high-quality materials and its timeless
+              shape.
+            </h5>
+            <br>
+            <p>
+              Because of its 360° design, the compact body is suitable for placement in open kitchen and living areas.
+              Thanks to the transparent water tank, the user can look through the machine like through an archway. The
+              cup stand is height adjustable, so that even 15 cm high latte macchiato glasses fit easily under it.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                Selić Industriedesign service: CAD design support, CAD freeform modeling and design refinement,
+                processing of design data for the engineering department
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Charakteristisch für den Heißgetränk-Vollautomaten Bosch Tassimo TAS55 sind die hochwertige Materialität
+              und die zeitlose Form.
+            </h5>
+            <br>
+            <p>
+              Der kompakte Kubus eignet sich aufgrund der Rundumgestaltung perfekt für die Positionierung in offenen
+              Küchen und Wohnräumen. Dank des transparenten Wassertanks kann der Betrachter wie bei einem Torbogen durch
+              die Maschine hindurch sehen. Das Tassenpodest ist höhenverstellbar, so dass auch 15cm hohe Latte Macchiato
+              Gläser problemlos darunter passen.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Selić Industriedesign Dienstleistung: CAD-Design Unterstützung, CAD-Freiform-Modellierung und
+                Detailgestaltung, Aufbereitung von Designdaten für die Konstruktion
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid image-gallery">
+      <img src="BOSCH-TASSIMO-TAS55-01.jpg" alt="Bosch Tassimo TAS55: black model with medium cup of cappuccino"
+        class="thumbnail" loading="lazy" data-index="1">
+      <img src="BOSCH-TASSIMO-TAS55-02.jpg" alt="Bosch Tassimo TAS55: black model with large cup of latte macchiato"
+        class="thumbnail" loading="lazy" data-index="2">
+      <img src="BOSCH-TASSIMO-TAS55-03.jpg" alt="Bosch Tassimo TAS55: black model with small cup of espresso"
+        class="thumbnail" loading="lazy" data-index="3">
+      <img src="BOSCH-TASSIMO-TAS55-04.jpg" alt="Bosch Tassimo TAS55: silver model" class="thumbnail" loading="lazy"
+        data-index="4">
+      <img src="BOSCH-TASSIMO-TAS55-05.jpg" alt="Bosch Tassimo TAS55: white model" class="thumbnail" loading="lazy"
+        data-index="5">
+    </div>
+    <p class="image-copyright">Images © BSH GmbH</p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryBoschTassimoTAS55">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsBoschTassimoTAS55"></div>
+    </div>
+  </main>
+  <div id="backToTop">
+    <a href="#top">&uarr; Back to Top</a>
+  </div>
+  <footer></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryBoschTassimoTAS55", "thumbnailsBoschTassimoTAS55", [
+        "BOSCH-TASSIMO-TAS55-01.jpg",
+        "BOSCH-TASSIMO-TAS55-02.jpg",
+        "BOSCH-TASSIMO-TAS55-03.jpg",
+        "BOSCH-TASSIMO-TAS55-04.jpg",
+        "BOSCH-TASSIMO-TAS55-05.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
