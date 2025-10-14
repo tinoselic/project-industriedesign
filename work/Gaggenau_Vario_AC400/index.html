@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - Gaggenau Vario AC400</title>
+  <meta name="description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg, Germany, portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta property="og:image" content="https://selic.de/images/231025-KUKA-KR-FORTEC-2-1920x1200-01.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="GAGGENAU-Ceiling-Ventilation-AC400-Banner.jpg" alt="Gaggenau Vario AC400 banner" loading="lazy">
+  </section>
+  <main>
+    <section class="project-info">
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>Gaggenau Vario AC400</h1>
+            <br>
+            <h4>Ceiling Ventilation</h4>
+            <br>
+          </div>
+          <div class="german">
+            <h1>Gaggenau Vario AC400</h1>
+            <br>
+            <h4>Deckenlüftung</h4>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <p>
+              Particularly appealing features of this ceiling ventilation integrated into the kitchen architecture are
+              the system's minimalist design and its high degree of modularity, which enables flexible configuration of
+              the individual ventilation elements. As a result, it can be perfectly adapted to fulfil individual needs
+              and desires.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                Selić Industriedesign service: CAD design support, CAD modeling and design refinement, processing of
+                design data for the engineering department
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <p>
+              Die in die Küchenarchitektur integrierbare Deckenlüftung überzeugt neben ihrem minimalistischen Design
+              durch ihre Modularität, die eine flexible Konfiguration der einzelnen Lüftungselemente ermöglicht. Sie
+              kann somit perfekt auf die individuellen Bedürfnisse und Wünsche abgestimmt werden.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Selić Industriedesign Dienstleistung: CAD-Design Unterstützung, CAD-Modellierung und Detailgestaltung,
+                Aufbereitung von Designdatei für die Konstruktion
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid image-gallery">
+      <img src="GAGGENAU-Ceiling-Ventilation-AC400-01.jpg" alt="Gaggenau Vario AC400" class="thumbnail" loading="lazy"
+        data-index="1">
+      <img src="GAGGENAU-Ceiling-Ventilation-AC400-02.jpg" alt="Gaggenau Vario AC400" class="thumbnail" loading="lazy"
+        data-index="2">
+    </div>
+    <p class="image-copyright">Photos © Gaggenau Hausgeräte GmbH</p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryGaggenauVarioAC400">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsGaggenauVarioAC400"></div>
+    </div>
+  </main>
+  <div id="backToTop">
+    <a href="#top">&uarr; Back to Top</a>
+  </div>
+  <footer></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryGaggenauVarioAC400", "thumbnailsGaggenauVarioAC400", [
+        "GAGGENAU-Ceiling-Ventilation-AC400-01.jpg",
+        "GAGGENAU-Ceiling-Ventilation-AC400-02.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
