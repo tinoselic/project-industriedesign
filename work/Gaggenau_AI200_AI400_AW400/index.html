@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - Gaggenau AI200, AI400, AW400</title>
+  <meta name="description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg, Germany, portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta property="og:image" content="https://selic.de/images/231025-KUKA-KR-FORTEC-2-1920x1200-01.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="Gaggenau-AI230-Banner.jpg" alt="Gaggenau AI200, AI400, AW400 banner" loading="lazy">
+  </section>
+  <main>
+    <section class="project-info">
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>Gaggenau AI200, AI400, AW400</h1>
+            <br>
+            <h4>Ventilation</h4>
+            <br>
+          </div>
+          <div class="german">
+            <h1>Gaggenau AI200, AI400, AW400</h1>
+            <br>
+            <h4>Dunstabzug</h4>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              As a design element of a modern kitchen the island hood takes a central position and is a real eye-catcher
+              over the cook place.
+            </h5>
+            <br>
+            <p>
+              Free-hanging the island hood sets a strong architectural accent. Wall-mounted hoods are also the
+              aesthetically perfect solution where less space does not permit a central cooking island.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                Selić Industriedesign service: CAD design support, CAD modeling and design refinement, processing of
+                design data for the engineering department
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Als Gestaltungselement einer modernen Küche nimmt die Dunstabzugshaube eine zentrale Position ein und ist
+              ein echter Blickfang über der Kochstelle.
+            </h5>
+            <br>
+            <p>
+              Frei schwebend setzt die Insel-Abzugshaube einen starken architektonischen Akzent. Wenn der Raum keine
+              Kochinsel zulässt, ist die Wand-Abzugshaube ebenfalls eine ästhetisch perfekte Lösung.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Selić Industriedesign Dienstleistung: CAD-Design Unterstützung, CAD-Modellierung und Detailgestaltung,
+                Aufbereitung von Designdaten für die Konstruktion
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid image-gallery">
+      <img src="GAGGENAU-AW-240-Wall-mounted-Hood-01.jpg" alt="Gaggenau AW 240: perspective below, close-up"
+        class="thumbnail" loading="lazy" data-index="1">
+      <img src="GAGGENAU-AW-240-Wall-mounted-Hood-02.jpg" alt="Gaggenau AW 240: total" class="thumbnail" loading="lazy"
+        data-index="2">
+      <img src="GAGGENAU-AI-220-Island-Hood.jpg" alt="Gaggenau AI220: perspective below" class="thumbnail"
+        loading="lazy" data-index="3">
+      <img src="GAGGENAU-AI-230-Island-Hood.jpg" alt="Gaggenau AI230: perspective total" class="thumbnail"
+        loading="lazy" data-index="4">
+      <img src="GAGGENAU-AI-400-Island-Hood.jpg" alt="Gaggenau AI400: perspective below" class="thumbnail"
+        loading="lazy" data-index="5">
+    </div>
+    <p class="image-copyright">Images © Gaggenau Hausgeräte GmbH</p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryGaggenauAI200AI400AW400">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsGaggenauAI200AI400AW400"></div>
+    </div>
+  </main>
+  <div id="backToTop">
+    <a href="#top">&uarr; Back to Top</a>
+  </div>
+  <footer></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryGaggenauAI200AI400AW400", "thumbnailsGaggenauAI200AI400AW400", [
+        "GAGGENAU-AW-240-Wall-mounted-Hood-01.jpg",
+        "GAGGENAU-AW-240-Wall-mounted-Hood-02.jpg",
+        "GAGGENAU-AI-220-Island-Hood.jpg",
+        "GAGGENAU-AI-230-Island-Hood.jpg",
+        "GAGGENAU-AI-400-Island-Hood.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
