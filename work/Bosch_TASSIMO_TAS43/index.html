@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - Bosch TASSIMO TAS43</title>
+  <meta name="description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg, Germany, portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta property="og:image" content="https://selic.de/images/231025-KUKA-KR-FORTEC-2-1920x1200-01.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="Bosch-TASSIMO-TAS43-Banner.jpg" alt="Bosch TASSIMO TAS43 banner" loading="lazy">
+  </section>
+  <main>
+    <section class="project-info">
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>Bosch TASSIMO TAS43</h1>
+            <br>
+            <h4>Hot Drink Machine</h4>
+            <br>
+          </div>
+          <div class="german">
+            <h1>Bosch TASSIMO TAS43</h1>
+            <br>
+            <h4>Heißgetränk-Vollautomat</h4>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              The Bosch TAS43 hot drink machine appears in the timeless modern design.
+            </h5>
+            <br>
+            <p>
+              A highly brilliantly running around front surface, high grade chromium-plated design applications and an
+              integrated water tank round the appearance harmoniously. The cup stand is height adjustable, so that even
+              15 cm high latte macchiato glasses fit easily under it.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                Selić Industriedesign service: CAD design support, CAD freeform modeling and design refinement,
+                processing of design data for the engineering department
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Der Bosch TAS43 Heißgetränk-Vollautomat erscheint in einem zeitlos modernen Design.
+            </h5>
+            <br>
+            <p>
+              Eine frontseitige Hochglanzoberfläche, edle Chrom-Applikationen und ein integrierter Wassertank runden das
+              Erscheinungsbild harmonisch ab. Das Tassenpodest ist höhenverstellbar, so dass auch 15 cm hohe Latte
+              Macchiato Gläser problemlos darunter passen.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Selić Industriedesign Dienstleistung: CAD-Design Unterstützung, CAD-Freiform-Modellierung und
+                Detailgestaltung, Aufbereitung von Designdaten für die Konstruktion
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid image-gallery">
+      <img src="Bosch-TASSIMO-TAS43-01.jpg" alt="Bosch TASSIMO TAS43: purple model" class="thumbnail" loading="lazy"
+        data-index="1">
+      <img src="Bosch-TASSIMO-TAS43-02.jpg" alt="Bosch TASSIMO TAS43: red model" class="thumbnail" loading="lazy"
+        data-index="2">
+      <img src="Bosch-TASSIMO-TAS43-03.jpg" alt="Bosch TASSIMO TAS43: black and white model" class="thumbnail"
+        loading="lazy" data-index="3">
+      <img src="Bosch-TASSIMO-TAS43-04.jpg" alt="Bosch TASSIMO TAS43: gray and black model" class="thumbnail"
+        loading="lazy" data-index="4">
+      <img src="Bosch-TASSIMO-TAS43-05.jpg" alt="Bosch TASSIMO TAS43: white and gray model" class="thumbnail"
+        loading="lazy" data-index="5">
+    </div>
+    <p class="image-copyright">Images © Selić Industriedesign</p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryBoschTASSIMOTAS43">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsBoschTASSIMOTAS43"></div>
+    </div>
+  </main>
+  <div id="backToTop">
+    <a href="#top">&uarr; Back to Top</a>
+  </div>
+  <footer></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryBoschTASSIMOTAS43", "thumbnailsBoschTASSIMOTAS43", [
+        "../../images/PreviewImage_1920x1200.jpg",
+        "../../images/PreviewImage_1920x1200.jpg",
+        "../../images/PreviewImage_1920x1200.jpg",
+        "../../images/PreviewImage_1920x1200.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
