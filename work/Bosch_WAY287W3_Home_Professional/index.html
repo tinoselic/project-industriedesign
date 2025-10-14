@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - Bosch WAY287W3 Home Professional</title>
+  <meta name="description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg, Germany, portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta property="og:image" content="https://selic.de/images/231025-KUKA-KR-FORTEC-2-1920x1200-01.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="BOSCH-WAY287W3-Home-Professional-Banner.jpg" alt="Bosch WAY287W3 Home Professional banner" loading="lazy">
+  </section>
+  <main>
+    <section class="project-info">
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>Bosch WAY287W3 Home Professional</h1>
+            <br>
+            <h4>Washing Machines</h4>
+            <br>
+          </div>
+          <div class="german">
+            <h1>Bosch WAY287W3 Home Professional</h1>
+            <br>
+            <h4>Waschmaschinen</h4>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              The Bosch washing machines are aimed at the very discerning customers.
+            </h5>
+            <br>
+            <p>
+              All technical highlights are packed into one design, accommodating this degree of innovation. Symmetrical
+              proportions, high-quality materials and clever details give this product a unique identity.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                Selić Industriedesign service: CAD design support, CAD freeform modeling and design refinement,
+                processing of design data for the engineering department
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Die Bosch-Waschmaschinen wenden sich an Kunden mit höchsten Ansprüchen.
+            </h5>
+            <br>
+            <p>
+              Die technischen Highlights sind verpackt in einem Design, das dem Innovationsgrad Rechnung trägt. Der
+              Designaufbau im CAD verleiht dem Produkt die erwünschte gestalterische Präzision. Symmetrische
+              Proportionen, hochwertige Materialien und durchdachte Details verleihen dem Produkt eine einzigartige
+              Identität.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Selić Industriedesign Dienstleistung: CAD-Design Unterstützung, CAD-Freiform-Modellierung und
+                Detailgestaltung, Aufbereitung von Designdaten für die Konstruktion
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid image-gallery">
+      <img src="BOSCH-WAY287W3-Home-Professional-01.jpg" alt="Bosch WAY287W3 Home Professional: closed"
+        class="thumbnail" loading="lazy" data-index="1">
+      <img src="BOSCH-WAY287W3-Home-Professional-02.jpg" alt="Bosch WAY287W3 Home Professional: open" class="thumbnail"
+        loading="lazy" data-index="2">
+      <img src="BOSCH-WAY287W3-Home-Professional-03.jpg" alt="Bosch WAY287W3 Home Professional: green towel"
+        class="thumbnail" loading="lazy" data-index="3">
+      <img src="BOSCH-WAY287W3-Home-Professional-04.jpg" alt="Bosch WAY287W3 Home Professional: red towel"
+        class="thumbnail" loading="lazy" data-index="4">
+    </div>
+    <p class="image-copyright">Images © BSH GmbH</p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryBoschWAY287W3">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsBoschWAY287W3"></div>
+    </div>
+  </main>
+  <div id="backToTop">
+    <a href="#top">&uarr; Back to Top</a>
+  </div>
+  <footer></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryBoschWAY287W3", "thumbnailsBoschWAY287W3", [
+        "BOSCH-WAY287W3-Home-Professional-01.jpg",
+        "BOSCH-WAY287W3-Home-Professional-02.jpg",
+        "BOSCH-WAY287W3-Home-Professional-03.jpg",
+        "BOSCH-WAY287W3-Home-Professional-04.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
