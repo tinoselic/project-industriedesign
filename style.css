@@ -844,11 +844,11 @@ video {
 .quote {
   font-family: 'RobotoCondensed';
   /* font-weight: bold; */
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.15;
   text-transform: uppercase;
   position: absolute;
-  top: 45%;
+  top: 55%;
   /* text-align: center; */
   color: var(--selic-white);
   opacity: 1;
@@ -859,8 +859,8 @@ video {
 
 #work-button {
   position: absolute;
-  top: 70%;
-  font-size: 1.25rem;
+  bottom: 0.7em;
+  font-size: 1.5rem;
   color: var(--selic-white);
   font-weight: bold;
   /* text-transform: uppercase;
@@ -873,15 +873,12 @@ video {
 .explanation p {
   position: absolute;
   right: 1em;
-  top: 85%;
-}
-
-.explanation p {
+  bottom: 1em;
   color: var(--selic-white);
   opacity: 0.7;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   font-weight: bold;
-  line-height: 1;
+  line-height: 1.15;
   text-align: right;
 }
 
@@ -1176,6 +1173,14 @@ a {
     text-transform: uppercase; */
   }
 
+  .quote {
+    font-size: 3rem;
+  }
+
+  #work-button {
+    font-size: 2rem;
+  }
+
   .banner {
     margin-top: 0;
   }
@@ -1245,6 +1250,7 @@ a {
     top: 0;
     right: -30%;
     width: 900px;
+    animation: 5s normal slide-in-right;
   }
 
   #kukaKR500 {
@@ -1252,12 +1258,14 @@ a {
     top: 13%;
     left: -13%;
     width: 700px;
+    animation: 5s normal slide-in-left;
   }
 
   #roboticKitchen {
     top: 31%;
     right: -20%;
     width: 500px;
+    animation: 5s normal slide-in-right;
   }
 
   #siegmundSchweisszelle {
@@ -1265,7 +1273,28 @@ a {
     right: 5%;
     max-width: 400px;
     transform: scaleX(-1);
+    animation: 5s normal slide-in-right;
   }
+
+  @keyframes slide-in-right {
+  from {
+    translate: 100vw 0;
+  }
+
+  to {
+    translate: 0 0;
+  }
+}
+
+  @keyframes slide-in-left {
+  from {
+    translate: -100vw 0;
+  }
+
+  to {
+    translate: 0 0;
+  }
+}
 
   .ideology {
     margin: 0 5vw 8em 5vw;
@@ -1372,17 +1401,17 @@ a {
   }
 
   .quote {
-    font-size: 2.5rem;
-  }
-
-  #work-button {
-    font-size: 2rem;
-    top: 85%;
+    top: 40%;
   }
 
   #work-button:hover {
     border: var(--selic-violet) solid;
     color: var(--selic-violet);
+  }
+
+  .explanation p {
+    font-size: 0.8rem;
+    line-height: 1;
   }
 
   #more:hover {
@@ -1519,8 +1548,20 @@ a {
   }
 }
 
-@media only screen and (min-width: 1920px) {}
+@media only screen and (min-width: 2560px) {
+  .quote {
+    font-size: 5rem;
+    top: 50%;
+  }
 
-@media only screen and (min-width: 2560px) {}
+  #work-button {
+    font-size: 3rem;
+  }
+
+  .explanation p {
+    font-size: 1rem;
+    line-height: 1.15;
+  }
+}
 
 @media only screen and (min-width: 3840px) {}
