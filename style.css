@@ -926,6 +926,10 @@ video {
 }
 
 .statement {
+  margin: 3em 0 1.5em;
+}
+
+.statement h1 {
   font-family: 'RobotoCondensed';
   font-size: 3rem;
   font-weight: normal;
@@ -934,7 +938,6 @@ video {
   text-transform: uppercase;
   /* letter-spacing: 1px; */
   text-align: center;
-  margin: 3em 0 1.5em;
 }
 
 .elaboration p {
@@ -948,11 +951,14 @@ video {
 }
 
 .mission {
+  margin: 4em 0em;
+  padding: 0 1em 0 1em;
+}
+
+.mission h3 {
   font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
-  margin: 4em 0em;
-  padding: 0 1em 0 1em;
 }
 
 .awards-section {
@@ -1046,6 +1052,11 @@ video {
 
 .bio {
   text-align: left;
+}
+
+.bio p {
+  font-size: 1rem;
+  max-width: 100%;
 }
 
 .portrait {
@@ -1248,60 +1259,63 @@ a {
 
   #kukaKR800 {
     top: 0;
-    right: -30%;
-    width: 900px;
+    right: 10vw;
+    width: 600px;
     animation: 5s normal slide-in-right;
   }
 
   #kukaKR500 {
     display: inline-block;
-    top: 13%;
-    left: -13%;
-    width: 700px;
+    top: 14%;
+    left: 10vw;
+    width: 500px;
     animation: 5s normal slide-in-left;
+    animation-delay: 1s;
   }
 
   #roboticKitchen {
     top: 31%;
-    right: -20%;
-    width: 500px;
+    right: 10vw;
+    width: 300px;
     animation: 5s normal slide-in-right;
+    animation-delay: 2s;
   }
 
   #siegmundSchweisszelle {
     top: 90%;
-    right: 5%;
-    max-width: 400px;
+    right: 10vw;
+    width: 400px;
     transform: scaleX(-1);
     animation: 5s normal slide-in-right;
+    animation-delay: 5s;
   }
 
   @keyframes slide-in-right {
-  from {
-    translate: 100vw 0;
-  }
+    from {
+      translate: 100vw 0;
+    }
 
-  to {
-    translate: 0 0;
+    to {
+      translate: 0 0;
+    }
   }
-}
 
   @keyframes slide-in-left {
-  from {
-    translate: -100vw 0;
-  }
+    from {
+      translate: -100vw 0;
+    }
 
-  to {
-    translate: 0 0;
+    to {
+      translate: 0 0;
+    }
   }
-}
 
   .ideology {
     margin: 0 5vw 8em 5vw;
   }
 
   .statement {
-    margin: 5em 0 3em;
+    margin: 15em 0 10em;
   }
 
   .elaboration p {
@@ -1314,7 +1328,7 @@ a {
     margin-left: 45vw;
   }
 
-  .mission {
+  .mission h3 {
     font-size: 2.2rem;
     margin: 3em 0;
   }
@@ -1327,6 +1341,12 @@ a {
 
   .awards-section {
     margin-bottom: 8em;
+  }
+
+  .awards-list h3 {
+    margin-top: 2em;
+    font-size: 2.2rem;
+    text-align: center;
   }
 
   .team {
@@ -1466,6 +1486,7 @@ a {
   #kukaKR800 {
     top: 0.2%;
     right: -5%;
+    width: 900px;
   }
 
   #kukaKR500 {
@@ -1483,7 +1504,7 @@ a {
   #siegmundSchweisszelle {
     top: 4200px;
     right: 150px;
-    max-width: 600px;
+    width: 600px;
   }
 
   .ideology {
@@ -1509,6 +1530,10 @@ a {
 
   .mission {
     margin: 3em 5em;
+  }
+
+  .mission h3 {
+    padding: 0 5em 0 5em;
   }
 
   .awards-section {
@@ -1561,6 +1586,75 @@ a {
   .explanation p {
     font-size: 1rem;
     line-height: 1.15;
+  }
+
+  #kukaKR800 {
+    top: 0%;
+    right: 15vw;
+    width: 1000px;
+  }
+
+  #kukaKR500 {
+    top: 15%;
+    left: 15vw;
+    width: 900px;
+  }
+
+  #roboticKitchen {
+    top: 30%;
+    right: 15vw;
+    width: 750px;
+  }
+
+  #siegmundSchweisszelle {
+    top: 85%;
+    right: 15vw;
+    width: 800px;
+  }
+
+  .ideology {
+    margin: 0 15vw 0 15vw;
+  }
+
+  .statement {
+    margin: 20em 0 15em 0;
+  }
+
+  .statement h1 {
+    font-size: 4rem;
+  }
+
+  .elaboration p {
+    font-size: 1.5rem;
+    max-width: 30vw;
+    margin-bottom: 10em;
+  }
+
+  #right {
+    margin-left: 40vw;
+  }
+
+  .mission {
+    margin: 0 0 10em 0;
+    padding: 0;
+  }
+
+  .mission h3 {
+    margin: 0;
+    padding: 0 12em 0 12em;
+  }
+
+  .ideology {
+    margin-bottom: 20em;
+  }
+
+  .bio p {
+    font-size: 1.2rem;
+    padding: 0 5vw 0 5vw;
+  }
+
+  .references-wrapper {
+    padding-left: 15vw;
   }
 }
 
