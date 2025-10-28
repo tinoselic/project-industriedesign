@@ -883,6 +883,7 @@ video {
 }
 
 .about-background {
+  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -906,14 +907,12 @@ video {
 }
 
 #kukaKR800 {
-  display: block;
   top: 0;
   right: -40%;
   width: 500px;
 }
 
 #kukaKR500 {
-  display: none;
   top: 15%;
   left: -20%;
   width: 300px;
@@ -926,12 +925,13 @@ video {
 }
 
 .statement {
-  margin: 3em 0 1.5em;
+  margin: 8em 0 3em;
+  padding: 0 1em 0 1em;
 }
 
 .statement h1 {
   font-family: 'RobotoCondensed';
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-weight: normal;
   line-height: 1;
   color: var(--selic-black);
@@ -963,6 +963,12 @@ video {
 
 .awards-section {
   margin-bottom: 6em;
+}
+
+.awards-list h3 {
+  margin-top: 2em;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .marquee-wrapper {
@@ -1249,6 +1255,7 @@ a {
   }
 
   .about-background {
+    display: inline-block;
     top: -220px;
   }
 
@@ -1258,16 +1265,15 @@ a {
   }
 
   #kukaKR800 {
-    top: 0;
-    right: 10vw;
+    top: 5em;
+    right: 1em;
     width: 600px;
     animation: 5s normal slide-in-right;
   }
 
   #kukaKR500 {
-    display: inline-block;
     top: 14%;
-    left: 10vw;
+    left: 1em;
     width: 500px;
     animation: 5s normal slide-in-left;
     animation-delay: 1s;
@@ -1316,6 +1322,11 @@ a {
 
   .statement {
     margin: 15em 0 10em;
+    padding: 0 5em 0 5em;
+  }
+
+  .statement h1 {
+    font: 3rem;
   }
 
   .elaboration p {
@@ -1344,9 +1355,7 @@ a {
   }
 
   .awards-list h3 {
-    margin-top: 2em;
     font-size: 2.2rem;
-    text-align: center;
   }
 
   .team {
@@ -1502,7 +1511,7 @@ a {
   }
 
   #siegmundSchweisszelle {
-    top: 4200px;
+    top: 4100px;
     right: 150px;
     width: 600px;
   }
