@@ -1110,12 +1110,12 @@ h3 {
   color: inherit;
 }
 
-#backToTop {
+.backToTop {
   padding: 2em 0 2em 0;
   text-align: center;
 }
 
-#backToTop a {
+#backToTop {
   font-size: 0.8rem;
   font-weight: bold;
   line-height: 2;

@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainMenu = qs('.mainMenu');
   const openMenu = qs('.openMenu');
 
+  // Back to Top
+  const backToTopButton = document.getElementById('backToTop');
+
   // Play / Pause
   const video = qs('#bgVideo');
   const playPauseBtn = qs('#playPauseBtn');
@@ -28,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <path d="M12,0C18.623,0 24,5.377 24,12C24,18.623 18.623,24 12,24C5.377,24 0,18.623 0,12C0,5.377 5.377,0 12,0ZM12,1.5C6.205,1.5 1.5,6.205 1.5,12C1.5,17.795 6.205,22.5 12,22.5C17.795,22.5 22.5,17.795 22.5,12C22.5,6.205 17.795,1.5 12,1.5Z" style="fill:#fafbfc;"/>
 </svg>
 `;
-
   const pause_svg = `
   <svg width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <g transform="matrix(0.685714,0,0,1,3.459998,0)">
@@ -94,6 +96,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  // Back to Top Button
+  document.addEventListener('DOMContentLoaded', function () {
+    if (backToTopButton) {
+      backToTopButton.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+  });
 
   // Footer (guarded)
   if (footer) {
