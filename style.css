@@ -1590,16 +1590,16 @@ a {
 
 @media only screen and (min-width: 2560px) {
   .quote {
-    font-size: 5rem;
+    font-size: 8rem;
     top: 50%;
   }
 
   #work-button {
-    font-size: 3rem;
+    font-size: 8rem;
   }
 
   .explanation p {
-    font-size: 1rem;
+    font-size: 2rem;
     line-height: 1.15;
   }
 
