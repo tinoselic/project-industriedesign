@@ -98,18 +98,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Back to Top Button
-  document.addEventListener('DOMContentLoaded', function () {
-    if (backToTopButton) {
-      backToTopButton.addEventListener('click', function (event) {
-        event.preventDefault();
+  if (backToTopButton) {
+    backToTopButton.addEventListener('click', function (event) {
+      event.preventDefault();
 
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
       });
-    }
-  });
+    });
+  }
 
   // Footer (guarded)
   if (footer) {
