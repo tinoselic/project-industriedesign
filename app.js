@@ -85,6 +85,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Function to close the menu and reset all related styles
+  function closeMenu() {
+    isRotated = false; // Reset the state variable
+
+    if (nav && navContainer && mainMenu && openMenu && body && playPauseBtn) {
+      // Reset styles to the 'closed' (isRotated = false) state
+      nav.style.backgroundColor = 'transparent';
+      navContainer.style.height = '0';
+      mainMenu.style.display = 'none';
+      mainMenu.style.backgroundColor = '';
+      openMenu.style.transform = 'rotate(0deg)';
+      body.style.overflow = 'auto';
+      playPauseBtn.style.display = 'block';
+    }
+  }
+
+  // Add this block separate from your click listener
+  document.addEventListener('pageshow', function (event) {
+    // Checks if the page is loaded from the browser cache (i.e., user hit the Back button)
+    if (event.persisted) {
+      // Call the function to reset the menu state
+      closeMenu();
+    }
+  });
+
   // Scroll behaviour (guarded)
   if (nav) {
     window.addEventListener('scroll', () => {
