@@ -22,6 +22,24 @@ document.addEventListener("DOMContentLoaded", function () {
   // Play / Pause
   const video = qs('#bgVideo');
   const playPauseBtn = qs('#playPauseBtn');
+  const play_svg = `
+  <svg width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <path d="M18.1,12L8.1,6.2L8.1,17.8L18.1,12Z" style="fill:#fafbfc;fill-rule:nonzero;"/>
+    <path d="M12,0C18.623,0 24,5.377 24,12C24,18.623 18.623,24 12,24C5.377,24 0,18.623 0,12C0,5.377 5.377,0 12,0ZM12,1.5C6.205,1.5 1.5,6.205 1.5,12C1.5,17.795 6.205,22.5 12,22.5C17.795,22.5 22.5,17.795 22.5,12C22.5,6.205 17.795,1.5 12,1.5Z" style="fill:#fafbfc;"/>
+</svg>
+`;
+
+  const pause_svg = `
+  <svg width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.685714,0,0,1,3.459998,0)">
+        <rect x="6.7" y="6.2" width="3.6" height="11.6" style="fill:#fafbfc;"/>
+    </g>
+    <g transform="matrix(0.685714,0,0,1,4.082856,0)">
+        <rect x="13.7" y="6.2" width="3.6" height="11.6" style="fill:#fafbfc;"/>
+    </g>
+    <path d="M12,0C18.623,0 24,5.377 24,12C24,18.623 18.623,24 12,24C5.377,24 0,18.623 0,12C0,5.377 5.377,0 12,0ZM12,1.5C6.205,1.5 1.5,6.205 1.5,12C1.5,17.795 6.205,22.5 12,22.5C17.795,22.5 22.5,17.795 22.5,12C22.5,6.205 17.795,1.5 12,1.5Z" style="fill:#fafbfc;"/>
+</svg>
+`;
 
   // Language
   const deBtn = qs('#de');
@@ -126,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
     playPauseBtn.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
 
     const syncPlayPauseBtn = () => {
-      playPauseBtn.innerHTML = video.paused ? '&#x25B6;&#xFE0E;' : '&#x23F8;&#xFE0E;';
+      playPauseBtn.innerHTML = video.paused ? play_svg : pause_svg;
       playPauseBtn.setAttribute('aria-pressed', String(!video.paused));
       playPauseBtn.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
     };
