@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ========= DOM Elements ========= //
   const body = document.body;
   // Get initial body background color for the menu background
-  const bodyBg = getComputedStyle(body).backgroundColor; 
+  const bodyBg = getComputedStyle(body).backgroundColor;
 
   const footer = qs('footer');
   const modal = qs('.previewModal');
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Play / Pause
   const video = qs('#bgVideo');
   const playPauseBtn = qs('#playPauseBtn');
-  
+
   // SVGs for Play/Pause
   const play_svg = `<svg width="100%" height="100%" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M18.1,12L8.1,6.2L8.1,17.8L18.1,12Z" style="fill:#fafbfc;fill-rule:nonzero;"/><path d="M12,0C18.623,0 24,5.377 24,12C24,18.623 18.623,24 12,24C5.377,24 0,18.623 0,12C0,5.377 5.377,0 12,0ZM12,1.5C6.205,1.5 1.5,6.205 1.5,12C1.5,17.795 6.205,22.5 12,22.5C17.795,22.5 22.5,17.795 22.5,12C22.5,6.205 17.795,1.5 12,1.5Z" style="fill:#fafbfc;"/></svg>`;
   const pause_svg = `<svg width="100%" height="100%" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g transform="matrix(0.685714,0,0,1,3.459998,0)"><rect x="6.7" y="6.2" width="3.6" height="11.6" style="fill:#fafbfc;"/></g><g transform="matrix(0.685714,0,0,1,4.082856,0)"><rect x="13.7" y="6.2" width="3.6" height="11.6" style="fill:#fafbfc;"/></g><path d="M12,0C18.623,0 24,5.377 24,12C24,18.623 18.623,24 12,24C5.377,24 0,18.623 0,12C0,5.377 5.377,0 12,0ZM12,1.5C6.205,1.5 1.5,6.205 1.5,12C1.5,17.795 6.205,22.5 12,22.5C17.795,22.5 22.5,17.795 22.5,12C22.5,6.205 17.795,1.5 12,1.5Z" style="fill:#fafbfc;"/></svg>`;
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let slideIndex = 1;
 
   // ========= MENU LOGIC (Consolidated) ========= //
-  
+
   // 1. Define the Open/Close logic in one place
   function toggleMenu(forceClose = false) {
     if (!nav || !navContainer || !mainMenu || !openMenuBtn) return;
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       mainMenu.style.backgroundColor = bodyBg;
       openMenuBtn.style.transform = 'rotate(calc(45*7deg))';
       body.style.overflow = 'hidden'; // Lock scroll
-      
+
       // Safety: Ensure nav is visible (not hidden by scroll logic)
       nav.classList.remove('hide-on-scroll');
       if (playPauseBtn) playPauseBtn.style.display = 'none';
@@ -107,12 +107,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (body.classList.contains('menu-active')) {
         // If menu is open, FORCE nav to be visible and exit immediately
         nav.classList.remove('hide-on-scroll');
-        return; 
+        return;
       }
 
       // 2. Normal Scroll Logic (only runs if menu is closed)
       const currentScroll = window.pageYOffset;
-      
+
       // Change background opacity
       nav.style.backgroundColor = window.scrollY > 10 ? bodyBg : 'transparent';
 
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ========= UTILS (Accordion, Filters, Lang) ========= //
-  
+
   // Accordion
   Array.from(accordion).forEach(box =>
     box.addEventListener('click', () => box.classList.toggle('active'))
@@ -273,13 +273,13 @@ document.addEventListener("DOMContentLoaded", function () {
       else moreButton.textContent = isVisible ? "Show more" : "Show less";
     });
   }
-  
+
   if (enBtn) enBtn.addEventListener("click", () => setLanguage("en"));
   if (deBtn) deBtn.addEventListener("click", () => setLanguage("de"));
 
 
   // ========= GALLERY & MODAL ========= //
-  
+
   // NOTE: Keeping generateGallery on 'window' so your inline script in index.html works.
   window.generateGallery = function (slidesId, thumbnailsId, imagePaths) {
     const slidesContainer = document.getElementById(slidesId);
@@ -330,4 +330,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+
+  // ========= INFINITE MARQUEE GENERATOR ========= //
+  // This finds all elements with class "infinite-marquee" 
+  // and repeats their content to create a seamless loop.
+  const marquees = document.querySelectorAll('.infinite-marquee');
+
+  marquees.forEach(marquee => {
+    // 1. Get the original content (e.g., "<h2>Team</h2>")
+    const originalContent = marquee.innerHTML;
+
+    // 2. Clear the container
+    marquee.innerHTML = '';
+
+    // 3. Create the track element
+    const track = document.createElement('div');
+    track.className = 'marquee-track';
+
+    // 4. Create a "segment" of repeated items.
+    // We repeat the word enough times to ensuring it's wider than the screen.
+    // 20 times is usually safe for short words like "Team".
+    let segment = '';
+    for (let i = 0; i < 20; i++) {
+      segment += originalContent;
+    }
+
+    // 5. Add TWO copies of the segment to the track.
+    // The CSS animates from 0% to -50%. 
+    // This means when the first segment slides off screen, 
+    // the second segment is perfectly in place to restart the loop.
+    track.innerHTML = segment + segment;
+
+    // 6. Append the track to the container
+    marquee.appendChild(track);
+  });
 });

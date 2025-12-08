@@ -973,28 +973,46 @@ video {
   text-align: center;
 }
 
-.marquee-wrapper {
-  /* background-color: var(--selic-violet); */
+.infinite-marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: transparent;
   margin-bottom: 4em;
   padding: 1em 0 1em 0;
   border-block: 2px solid var(--selic-black);
 }
 
-.marquee-text {
-  overflow: clip;
-}
-
-.marquee-text-track {
+.marquee-track {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  width: max-content;
-  animation: scroll 10s linear infinite;
+  white-space: nowrap;
+  width: fit-content;
+  animation: marquee-scroll 40s linear infinite;
 }
 
-.marquee-text-track h2 {
-  color: var(--selic-black);
+.marquee-track h2,
+.marquee-track a {
+  flex-shrink: 0;
+  /* Prevent text from squishing */
+  padding-right: 0.5em;
+  /* Spacing between words */
+  margin: 0;
+  /* Your existing font styles will apply here automatically */
+}
+
+/* Pause on hover */
+/* .infinite-marquee:hover .marquee-track {
+  animation-play-state: paused;
+} */
+
+/* The animation logic */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 #swipe {
@@ -1085,7 +1103,7 @@ video {
 }
 
 #tino {
-  background-image: url(images/202208_TinoSelic_bw.jpg);
+  background-image: url(images/Tino_Selic_sw.jpg);
   background-size: contain;
 }
 
@@ -1673,4 +1691,20 @@ a {
   }
 }
 
-@media only screen and (min-width: 3840px) {}
+@media only screen and (min-width: 3840px) {
+  .marquee-text-track {
+    gap: 1.5rem;
+  }
+
+  .marquee-text-track h2 {
+    font-size: 6rem;
+  }
+
+  .statement h1 {
+    font-size: 8rem;
+  }
+
+  .mission h3 {
+    font-size: 4rem;
+  }
+}
