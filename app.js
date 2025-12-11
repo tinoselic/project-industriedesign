@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ========= DOM Elements ========= //
   const body = document.body;
-  // Get initial body background color for the menu background
   const bodyBg = getComputedStyle(body).backgroundColor;
 
   const footer = qs('footer');
@@ -18,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nav = qs('nav');
   const navContainer = qs('.nav-container');
   const mainMenu = qs('.mainMenu');
-  const openMenuBtn = qs('.openMenu'); // Renamed variable for clarity
+  const openMenuBtn = qs('.openMenu');
 
   // Back to Top
   const backToTopButton = document.getElementById('backToTop');
@@ -51,12 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
   let slideIndex = 1;
 
   // ========= MENU LOGIC (Consolidated) ========= //
-
-  // 1. Define the Open/Close logic in one place
   function toggleMenu(forceClose = false) {
     if (!nav || !navContainer || !mainMenu || !openMenuBtn) return;
 
-    // Determine if we are opening or closing
+    // Determine opening or closing
     const isCurrentlyOpen = body.classList.contains('menu-active');
     const shouldOpen = forceClose ? false : !isCurrentlyOpen;
 
@@ -82,46 +79,32 @@ document.addEventListener("DOMContentLoaded", function () {
       mainMenu.style.display = 'none';
       mainMenu.style.backgroundColor = '';
       openMenuBtn.style.transform = 'rotate(0deg)';
-      body.style.overflow = 'auto'; // Unlock scroll
+      body.style.overflow = 'auto';
       if (playPauseBtn) playPauseBtn.style.display = 'block';
     }
   }
-
-  // 2. Button Click Listener
   if (openMenuBtn) {
     openMenuBtn.addEventListener('click', () => toggleMenu());
   }
-
-  // 3. Browser History (Back Button) Listener
   document.addEventListener('pageshow', function (event) {
     if (event.persisted) {
-      toggleMenu(true); // Force close
+      toggleMenu(true);
     }
   });
 
 
-  // ========= SCROLL LOGIC (Fixed) ========= //
+  // ========= SCROLL LOGIC ========= //
   if (nav) {
     window.addEventListener('scroll', () => {
-      // 1. Check if menu is open via the class we added in toggleMenu()
       if (body.classList.contains('menu-active')) {
-        // If menu is open, FORCE nav to be visible and exit immediately
         nav.classList.remove('hide-on-scroll');
         return;
       }
-
-      // 2. Normal Scroll Logic (only runs if menu is closed)
       const currentScroll = window.pageYOffset;
-
-      // Change background opacity
       nav.style.backgroundColor = window.scrollY > 10 ? bodyBg : 'transparent';
-
-      // Hide/Show logic
-      // Hide if scrolling down AND parsed > 50px
       const shouldHide = currentScroll > lastScroll && currentScroll > 50;
       nav.classList.toggle('hide-on-scroll', shouldHide);
-
-      lastScroll = currentScroll <= 0 ? 0 : currentScroll; // prevent negative
+      lastScroll = currentScroll <= 0 ? 0 : currentScroll;
     });
   }
 
@@ -159,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>`;
   }
 
-  // ========= VIDEO PLAYER ========= //
+  // ========= VIDEO PLAYER ========= //  
   if (video && playPauseBtn) {
     playPauseBtn.style.zIndex = playPauseBtn.style.zIndex || '9999';
     playPauseBtn.setAttribute('role', 'button');
@@ -187,8 +170,8 @@ document.addEventListener("DOMContentLoaded", function () {
     video.addEventListener('loadedmetadata', syncPlayPauseBtn);
   }
 
-  // ========= UTILS (Accordion, Filters, Lang) ========= //
 
+  // ========= UTILS (Accordion, Filters, Lang) ========= //
   // Accordion
   Array.from(accordion).forEach(box =>
     box.addEventListener('click', () => box.classList.toggle('active'))
@@ -237,7 +220,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (enBtn && deBtn) {
     enBtn.textContent = "EN";
     deBtn.textContent = "DE";
-    // Initialize default
     setLanguage("en");
   }
 
@@ -279,8 +261,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // ========= GALLERY & MODAL ========= //
-
-  // NOTE: Keeping generateGallery on 'window' so your inline script in index.html works.
   window.generateGallery = function (slidesId, thumbnailsId, imagePaths) {
     const slidesContainer = document.getElementById(slidesId);
     const thumbnailsContainer = document.getElementById(thumbnailsId);
@@ -332,36 +312,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // ========= INFINITE MARQUEE GENERATOR ========= //
-  // This finds all elements with class "infinite-marquee" 
-  // and repeats their content to create a seamless loop.
   const marquees = document.querySelectorAll('.infinite-marquee');
 
   marquees.forEach(marquee => {
-    // 1. Get the original content (e.g., "<h2>Team</h2>")
     const originalContent = marquee.innerHTML;
-
-    // 2. Clear the container
     marquee.innerHTML = '';
-
-    // 3. Create the track element
     const track = document.createElement('div');
     track.className = 'marquee-track';
-
-    // 4. Create a "segment" of repeated items.
-    // We repeat the word enough times to ensuring it's wider than the screen.
-    // 20 times is usually safe for short words like "Team".
     let segment = '';
     for (let i = 0; i < 20; i++) {
       segment += originalContent;
     }
-
-    // 5. Add TWO copies of the segment to the track.
-    // The CSS animates from 0% to -50%. 
-    // This means when the first segment slides off screen, 
-    // the second segment is perfectly in place to restart the loop.
     track.innerHTML = segment + segment;
-
-    // 6. Append the track to the container
     marquee.appendChild(track);
   });
 });
