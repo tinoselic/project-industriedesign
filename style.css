@@ -50,37 +50,14 @@
   box-sizing: border-box;
   color: var(--selic-black);
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 100%;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
-  /* scrollbar-width: thin;
-  scrollbar-color: #fff #000; */
 }
-
-/* width 
-::-webkit-scrollbar {
-  width: 0.3em;
-  height: 1em;
-}*/
-
-/* Track 
-::-webkit-scrollbar-track {
-  background: var(--selic-black);
-}*/
-
-/* Handle 
-::-webkit-scrollbar-thumb {
-  background: #999;
-}*/
-
-/* Handle on hover 
-::-webkit-scrollbar-thumb:hover {
-  background: #999;
-}*/
 
 h1 {
   font-family: 'RobotoCondensed';
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: normal;
   line-height: 1;
   color: var(--selic-black);
@@ -91,7 +68,7 @@ h1 {
 h2 {
   font-family: 'RobotoCondensed';
   color: var(--selic-black);
-  font-size: 3rem;
+  font-size: clamp(3rem, 4vw + 1rem, 6rem);
   line-height: 1.1;
   font-weight: normal;
   text-transform: uppercase;
@@ -109,7 +86,7 @@ h2 i {
 
 h3 {
   color: var(--selic-black);
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2vw, 3rem);
   line-height: 1.1;
   font-weight: bold;
 }
@@ -130,6 +107,8 @@ h5 {
 
 p {
   color: var(--selic-black);
+  font-size: clamp(1rem, 1vw, 1.4rem);
+  line-height: 1.6;
   line-height: 1.5;
 }
 
@@ -585,7 +564,7 @@ img.awards-label {
 }
 
 .favourites-wrapper {
-  padding: 0 1em 0em 1em;
+  padding: 0 1em 0 1em;
 }
 
 .favourites-container {
@@ -920,13 +899,17 @@ video {
 #kukaKR800 {
   top: 0;
   right: -40%;
-  width: 500px;
+  width: 50vw;
+  /* Scales with screen */
+  max-width: 1200px;
+  /* Cap it so it's not absurdly huge */
 }
 
 #kukaKR500 {
   top: 15%;
   left: -20%;
-  width: 300px;
+  width: 40vw;
+  max-width: 1000px;
 }
 
 #about {
@@ -946,7 +929,7 @@ video {
 
 .statement h1 {
   font-family: 'RobotoCondensed';
-  font-size: 2.7rem;
+  font-size: clamp(2rem, 5vw + 1rem, 8rem);
   font-weight: normal;
   line-height: 1;
   color: var(--selic-black);
@@ -1058,7 +1041,7 @@ video {
 .carousel img {
   display: block;
   height: auto;
-  width: 20em;
+  width: clamp(20em, 1vw, 40em);
   transition: .5s ease;
 }
 
@@ -1073,10 +1056,6 @@ video {
 .row {
   display: block;
   text-align: center;
-}
-
-#favourites {
-  margin-bottom: 5em;
 }
 
 .column {
@@ -1287,7 +1266,7 @@ a {
   }
 
   p {
-    max-width: 650px;
+    max-width: 75ch;
   }
 
   .about-background {
@@ -1303,30 +1282,30 @@ a {
   #kukaKR800 {
     top: 5em;
     right: 1em;
-    width: 600px;
     animation: 5s normal slide-in-right;
   }
 
   #kukaKR500 {
     top: 14%;
     left: 1em;
-    width: 500px;
     animation: 5s normal slide-in-left;
     animation-delay: 1s;
   }
 
   #roboticKitchen {
-    top: 22%;
+    top: 27%;
     right: 10vw;
-    width: 300px;
+    width: 30vw;
+    max-width: 600px;
     animation: 5s normal slide-in-right;
     animation-delay: 2s;
   }
 
   #siegmundSchweisszelle {
-    top: 90%;
+    top: 75%;
     right: 10vw;
-    width: 400px;
+    width: 40vw;
+    max-width: 600px;
     transform: scaleX(-1);
     animation: 5s normal slide-in-right;
     animation-delay: 5s;
@@ -1363,10 +1342,6 @@ a {
   .statement {
     margin: 15em 0 10em;
     padding: 0 5em 0 5em;
-  }
-
-  .statement h1 {
-    font: 3rem;
   }
 
   .elaboration p {
@@ -1535,25 +1510,21 @@ a {
   #kukaKR800 {
     top: 0.2%;
     right: -5%;
-    width: 900px;
   }
 
   #kukaKR500 {
     top: 10%;
     left: -2%;
-    width: 800px;
   }
 
   #roboticKitchen {
-    top: 21%;
+    top: 23%;
     right: 10%;
-    width: 500px;
   }
 
   #siegmundSchweisszelle {
-    top: 4100px;
-    right: 150px;
-    width: 600px;
+    top: 70%;
+    right: 10%;
   }
 
   #about {
@@ -1605,11 +1576,15 @@ a {
     padding-left: 10vw;
   }
 
+  #favourites {
+    padding: 0 10vw 0 10vw;
+  }
+
   .impressum {
     padding: 0 10vw 0 10vw;
   }
 
-  #backToTop {
+  .backToTop {
     padding: 4em 0 4em 0;
   }
 
@@ -1640,25 +1615,20 @@ a {
   #kukaKR800 {
     top: 0%;
     right: 15vw;
-    width: 1000px;
   }
 
   #kukaKR500 {
     top: 15%;
     left: 15vw;
-    width: 900px;
   }
 
   #roboticKitchen {
     top: 30%;
     right: 15vw;
-    width: 750px;
   }
 
   #siegmundSchweisszelle {
-    top: 85%;
     right: 15vw;
-    width: 800px;
   }
 
   .ideology {
@@ -1667,10 +1637,6 @@ a {
 
   .statement {
     margin: 20em 0 15em 0;
-  }
-
-  .statement h1 {
-    font-size: 4rem;
   }
 
   .elaboration p {
@@ -1705,6 +1671,22 @@ a {
   .references-wrapper {
     padding-left: 15vw;
   }
+
+  #favourites {
+    padding: 0 15vw 0 15vw;
+  }
+
+  .favourites-wrapper {
+    padding: 0 15vw 0 15vw;
+  }  
+
+  .backToTop {
+    padding: 6em 0 6em 0;
+  }
+
+  #about-footer {
+    padding: 3em 15vw 3em 15vw;
+  }
 }
 
 @media only screen and (min-width: 3840px) {
@@ -1714,10 +1696,6 @@ a {
 
   .marquee-text-track h2 {
     font-size: 6rem;
-  }
-
-  .statement h1 {
-    font-size: 8rem;
   }
 
   .mission h3 {
