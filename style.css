@@ -1201,12 +1201,16 @@ a {
     font-size: clamp(1rem, 1vw, 1.4rem);
   }
 
+  h1 {
+    font-size: clamp(3rem, 4vw + 0.1rem, 5rem);
+  }
+
   h2 {
     font-size: clamp(3rem, 4vw + 1rem, 6rem);
   }
 
   h3 {
-    font-size: clamp(1.5rem, 2vw, 3rem);
+    font-size: clamp(1.5rem, 2vw, 4rem);
   }
 
   button.logo span.logo-text {
@@ -1526,12 +1530,12 @@ a {
   }
 
   #kukaKR500 {
-    top: 14%;
+    top: 15%;
     left: -2%;
   }
 
   #roboticKitchen {
-    top: 23%;
+    top: 24.5%;
     right: 10%;
   }
 
@@ -1705,13 +1709,5 @@ a {
 @media only screen and (min-width: 3840px) {
   .marquee-text-track {
     gap: 1.5rem;
-  }
-
-  .marquee-text-track h2 {
-    font-size: 6rem;
-  }
-
-  .mission h3 {
-    font-size: 4rem;
   }
 }
