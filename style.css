@@ -767,8 +767,8 @@ video {
   justify-content: center;
 }
 
-.background-video {
-  /* position: fixed;
+/* .background-video {
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -777,8 +777,8 @@ video {
   /* filter:
     brightness(0.5);
     grayscale(1);
-    display: none; */
-}
+    display: none;
+} */
 
 .background-video video {
   height: 100dvh;
