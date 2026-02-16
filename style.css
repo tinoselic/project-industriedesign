@@ -390,7 +390,7 @@ main {
 }
 
 img.awards-label {
-  height: clamp(2em, 10vw, 6em);
+  height: clamp(3em, 10vw, 6em);
   width: auto;
 }
 
@@ -767,6 +767,17 @@ video {
   justify-content: center;
 }
 
+.background-video {
+  position: fixed;
+  width: auto;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  pointer-events: none;
+}
+
 /* .background-video {
   position: fixed;
   top: 50%;
@@ -784,11 +795,8 @@ video {
   height: 100dvh;
 }
 
-#bgVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.background-video iframe {
+  position: relative;
   height: 100dvh;
   z-index: -1;
   pointer-events: none;
@@ -1235,7 +1243,18 @@ a {
     text-transform: uppercase; */
   }
 
-  #bgVideo {
+  .background-video {
+    width: 100vw;
+    height: 100%;
+  }
+
+  .background-video video {
+    width: 100vw;
+    height: 100%;
+  }
+
+  .background-video iframe {
+    width: 100vw;
     height: 100%;
   }
 
@@ -1518,20 +1537,6 @@ a {
 
   .project-gallery {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .background-video {
-    width: 100%;
-  }
-
-  .background-video video {
-    width: 100%;
-    height: auto;
-  }
-
-  .background-video iframe {
-    width: 100%;
-    height: auto;
   }
 
   .about-background {
