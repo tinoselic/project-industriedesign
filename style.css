@@ -390,7 +390,7 @@ main {
 }
 
 img.awards-label {
-  height: 4em;
+  height: clamp(2em, 10vw, 6em);
   width: auto;
 }
 
@@ -1251,10 +1251,6 @@ a {
     margin-top: 0;
   }
 
-  img.awards-label {
-    height: 5em;
-  }
-
   .grid {
     display: grid;
     grid-gap: 1em;
@@ -1522,10 +1518,6 @@ a {
 
   .project-gallery {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  img.awards-label {
-    height: 6em;
   }
 
   .background-video {
