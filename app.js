@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <span>T +49 821 3499450<br><a href="mailto:mario@selic.de" target="_blank" style="color: inherit">mario@selic.de</a></span>
           </div><br>
           <div class="copyright-wrapper">
-            <span>© 2025 Selić Industriedesign<br>All rights reserved.</span>
+            <span>© 2026 Selić Industriedesign<br>All rights reserved.</span>
           </div>
         </section>
         <section class="navigation-section">
@@ -139,7 +139,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><a href="/impressum">Impressum</a></li>
           </ul>
         </section>
-      </div>`;
+      </div>
+      `;
   }
 
   // ========= VIDEO PLAYER ========= //  
