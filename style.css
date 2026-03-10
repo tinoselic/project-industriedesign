@@ -1243,21 +1243,6 @@ a {
     text-transform: uppercase; */
   }
 
-  .background-video {
-    width: 100vw;
-    height: 100%;
-  }
-
-  .background-video video {
-    width: 100vw;
-    height: 100%;
-  }
-
-  .background-video iframe {
-    width: 100vw;
-    height: 100%;
-  }
-
   .quote {
     font-size: 3rem;
   }
