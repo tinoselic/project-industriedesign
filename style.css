@@ -145,6 +145,20 @@ body {
   background: var(--selic-white);
 }
 
+#home {
+  background: black;
+}
+
+#home .logo,
+#home .openMenu,
+#home .closeMenu,
+#home .mainMenu a:link,
+#home .mainMenu a:hover,
+#home .mainMenu a:visited,
+#home .mainMenu a:visited:hover {
+  filter: invert();
+}
+
 nav {
   position: fixed;
   width: 100%;
@@ -153,10 +167,6 @@ nav {
   background-color: transparent;
   transition: transform .5s ease-in-out;
   z-index: 50;
-}
-
-#nav-home {
-  filter: invert();
 }
 
 #nav-impressum img,
