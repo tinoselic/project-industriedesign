@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - ELBEO Socks Packaging</title>
+  <meta name="description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg, Germany, portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta property="og:image" content="https://selic.de/images/231025-KUKA-KR-FORTEC-2-1920x1200-01.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="ELBEO-Socks-Packaging-Banner.jpg" alt="ELBEO Socks Packaging banner" loading="lazy">
+  </section>
+  <main>
+    <section class="project-info">
+      <div class="awards">
+        <img class="awards-label" src="Design-Innovationen NRW 1997.jpg" alt="Design Innovation NRW 1997 Award label">
+      </div>
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>Socks Packaging</h1>
+            <br>
+            <h4>ELBEO GmbH, 1996</h4>
+            <br>
+          </div>
+          <div class="german">
+            <h1>Sockenverpackung</h1>
+            <br>
+            <h4>ELBEO GmbH, 1996</h4>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              The concept was that new socks packaging should reconcile the splendid world of fashion with ecological
+              aspects.
+            </h5>
+            <br>
+            <p>
+              Furthermore, it should help promote sales and be convenient for the customer, as well. The solution is an
+              environmentally friendly packaging and an eye catcher too: made of one single material, the cardboard is
+              folded in a clever way and the pattern has been optimised saving material.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                The cover shows an effective display and on the other hand the packing almost presents each detail of
+                the socks. So consumers can test the socks without having to open the packaging. It is made from
+                recycled cardboard, and a hanger is punched out as well, thus eliminating the need for an additional
+                plastic hanger. The socks are not stitched through with the packaging, therefore they can be easily
+                unpacked at home and will not be damaged.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Die glanzvolle Welt der Mode mit einer ökologischen Verpackung in Einklang zu bringen, ohne ihre
+              verkaufsfördernde und kundenfreundliche Wirkung zu vernachlässigen—das ist die Herausforderung, die an die
+              neue Sockenverpackung gestellt wurde.
+            </h5>
+            <br>
+            <p>
+              Das Ergebnis ist eine umweltfreundliche Einstoffverpackung in einer raffinierten Falttechnik und mit
+              minimalem Verschnitt. Das großflächige Cover erlaubt eine präsentationswirksame Bedruckung, und zugleich
+              wird den Verbrauchern nahezu vollständig die Ware gezeigt. Diese können sich von der Qualität der Socken
+              überzeugen, ohne die Verpackung öffnen zu müssen.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Die Hängevorrichtung ist mit ausgestanzt und erspart den sonst üblichen Plastikbügel.
+                Der Verzicht auf das Durchnähen der Verpackung mit den Socken erleichtert das Auspacken zu Hause und die
+                Ware bleibt unversehrt. Die Verpackung ist selbstverständlich vollständig recycelbar.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid image-gallery">
+      <img src="ELBEO-Socks-Packaging-1.jpg" alt="ELBEO Socks Packaging: total" class="thumbnail" loading="lazy"
+        data-index="1">
+      <img src="ELBEO-Socks-Packaging-2.jpg" alt="ELBEO Socks Packaging: close-up" class="thumbnail" loading="lazy"
+        data-index="2">
+    </div>
+    <p class="image-copyright">Images © Selić Industriedesign</p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryELBEOSocksPackaging">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsELBEOSocksPackaging"></div>
+    </div>
+  </main>
+  <div class="backToTop">
+    <a href="#" id="backToTop">&uarr; Back to Top</a>
+  </div>
+  <footer></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryELBEOSocksPackaging", "thumbnailsELBEOSocksPackaging", [
+        "ELBEO-Socks-Packaging-1.jpg",
+        "ELBEO-Socks-Packaging-2.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
