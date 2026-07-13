@@ -1124,12 +1124,12 @@ video {
 }
 
 #mario {
-  background-image: url(images/Mario_Selic_sw.jpg);
+  background-image: url(images/Mario_Selic_sw.webp);
   background-size: contain;
 }
 
 #tino {
-  background-image: url(images/Tino_Selic_sw.jpg);
+  background-image: url(images/Tino_Selic_sw.webp);
   background-size: contain;
 }
 
