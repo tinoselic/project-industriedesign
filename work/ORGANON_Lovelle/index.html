@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selić Industriedesign - ORGANON Lovelle</title>
+  <meta name="description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta name="keywords" content="Selić Industriedesign, industrial design, Augsburg, Germany, portfolio">
+  <meta name="author" content="Tino Selic">
+  <meta property="og:title" content="Selić Industriedesign">
+  <meta property="og:description" content="Selić Industriedesign is an award winning industrial design office.">
+  <meta property="og:image" content="https://selic.de/images/231025-KUKA-KR-FORTEC-2-1920x1200-01.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="../../assets/logo.svg" alt="Logo icon">
+          <span class="logo-text">Selić Industriedesign</span>
+        </button>
+        <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button>
+        <ul class="mainMenu">
+          <li><a href="../../work/">Work</a></li>
+          <li><a href="../../about/">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <img src="ORGANON-Lovelle-Banner.jpg" alt="ORGANON Lovelle banner" loading="lazy">
+  </section>
+  <main>
+    <section class="project-info">
+      <div class="awards">
+        <img class="awards-label" src="Design-Innovationen NRW 1995.jpg" alt="Design Zentrum NRW 1995 Award label">
+      </div>
+      <button class="back"></button>
+      <div class="grid project-text">
+        <div class="cell-1">
+          <div class="english">
+            <h1>ORGANON Lovelle</h1>
+            <br>
+            <h4>Contraceptive Pill Blister Pack with Multifunctional Case, 1995</h4>
+            <br>
+          </div>
+          <div class="german">
+            <h1>ORGANON Lovelle</h1>
+            <br>
+            <h4>Verhütungspillen-Blister mit Multifunktions-Etui, 1995</h4>
+            <br>
+          </div>
+        </div>
+        <div class="cell-2">
+          <div class="english">
+            <h5>
+              The Lovelle Multifunctional Case expands upon the classic contraceptive pill blister pack with a
+              thoughtfully designed kit that combines functionality and sustainability.
+            </h5>
+            <br>
+            <p>
+              The refillable cardboard case offers discreet storage for the pill blister pack as well as other
+              contraceptive and menstrual hygiene products. Thanks to the integrated mirror, it also functions as a
+              versatile cosmetic case.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-en" class="more-content lang-hidden">
+              <p>
+                The product adheres to strict environmental principles: In addition to using 100% recycled cardboard,
+                the case's recyclable design allows for easy separation of all components for high-quality recycling.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="german">
+            <h5>
+              Mit dem Lovelle Multifunktions-Etui wurde die klassische Blisterverpackung der Verhütungspille um ein
+              durchdachtes Set erweitert, das Funktionalität und Nachhaltigkeit vereint.
+            </h5>
+            <br>
+            <p>
+              Das nachfüllbare Papp-Etui bietet diskreten Stauraum für den Pillenblister sowie für weitere Verhütungs-
+              und Monatshygieneartikel. Dank des integrierten Spiegels fungiert es gleichzeitig als vielseitiges
+              Kosmetiketui.
+              <br>
+              <br>
+            </p>
+            <div id="moreText-de" class="more-content lang-hidden">
+              <p>
+                Das Produkt folgt strengen ökologischen Prinzipien: Neben der Verwendung von 100 % Recycling-Pappe
+                ermöglicht das kreislauffähige Design des Etuis eine mühelose Trennung aller Komponenten für ein
+                hochwertiges Recycling.
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button id="more" onclick="toggleMore()"></button>
+            <div class="language">
+              <button class="language-switch" id="en"></button>
+              <button class="language-switch" id="de"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="grid image-gallery">
+      <img src="ORGANON-Lovelle-1.jpg" alt="ORGANON Lovelle: total" class="thumbnail" loading="lazy" data-index="1">
+      <img src="ORGANON-Lovelle-2.jpg" alt="ORGANON Lovelle: close-up" class="thumbnail" loading="lazy" data-index="2">
+    </div>
+    <p class="image-copyright">Images © Selić Industriedesign</p>
+    <div class="previewModal">
+      <span id="closePreview"><img src="../../assets/close.svg" alt="Close icon"></span>
+
+      <div id="galleryORGANONLovelle">
+        <a class="prev" onclick="plusSlides(-1)"><img src="../../assets/arrow_left.svg" alt="Arrow left"></a>
+        <a class="next" onclick="plusSlides(1)"><img src="../../assets/arrow_right.svg" alt="Arrow right"></a>
+      </div>
+
+      <div class="slideshow-row" id="thumbnailsORGANONLovelle"></div>
+    </div>
+  </main>
+  <div class="backToTop">
+    <a href="#" id="backToTop">&uarr; Back to Top</a>
+  </div>
+  <footer></footer>
+  <script src="../../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      generateGallery("galleryORGANONLovelle", "thumbnailsORGANONLovelle", [
+        "ORGANON-Lovelle-1.jpg",
+        "ORGANON-Lovelle-2.jpg"
+      ]);
+    });
+  </script>
+</body>
+
+</html>
