@@ -1244,6 +1244,14 @@ a {
     font-size: clamp(1.5rem, 2vw, 4rem);
   }
 
+  /* h4 {
+    font-size: clamp(1.5rem, 2vw, 4rem);
+  }
+
+  h5 {
+    font-size: clamp(1rem, 1vw, 1.4rem);
+  } */
+
   button.logo span.logo-text {
     display: inline-block;
     padding-left: 0.5em;
