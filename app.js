@@ -19,8 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainMenu = qs('.mainMenu');
   const openMenuBtn = qs('.openMenu');
 
-  // Back to Top
-  const backToTopButton = document.getElementById('backToTop');
+  // Back Button Render
+  document.querySelectorAll('.back').forEach(el => {
+    el.innerHTML = `← <span class="underline">Back to projects</span>`;
+    el.addEventListener('click', () => window.location.href = '../');
+  });
+
+  // Back to Top Render
+  document.querySelectorAll('.backToTop').forEach(el => {
+    el.innerHTML = `&uarr; <span class="underline">Back to top</span>`;
+    el.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
 
   // Play / Pause
   const video = qs('#bgVideo');
@@ -105,14 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const shouldHide = currentScroll > lastScroll && currentScroll > 50;
       nav.classList.toggle('hide-on-scroll', shouldHide);
       lastScroll = currentScroll <= 0 ? 0 : currentScroll;
-    });
-  }
-
-  // ========= Back to Top (History Safe) ========= //
-  if (backToTopButton) {
-    backToTopButton.addEventListener('click', function (event) {
-      event.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
@@ -210,12 +213,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
-
-  // Back Button Render
-  document.querySelectorAll('.back').forEach(el => {
-    el.innerHTML = `← <span class="underline">back to projects</span>`;
-    el.addEventListener('click', () => window.location.href = '../');
-  });
 
   // Language Switcher
   if (enBtn && deBtn) {

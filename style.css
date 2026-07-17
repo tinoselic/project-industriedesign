@@ -294,6 +294,17 @@ main {
   margin: 6em 0 4em 0;
 }
 
+.backToTop {
+  font-weight: bold;
+  font-size: 0.8rem;
+  display: block;
+  padding: 2em 0 2em 0;
+  margin: auto;
+  width: fit-content;
+  align-self: center;
+  justify-self: center;
+}
+
 .underline {
   color: inherit;
   font-size: inherit;
@@ -795,7 +806,7 @@ video {
   transform: translate(-50%, -50%);
   user-select: none;
   pointer-events: none; */
-  /* filter:
+/* filter:
     brightness(0.5);
     grayscale(1);
     display: none;
@@ -1152,19 +1163,6 @@ h1,
 h2,
 h3 {
   color: inherit;
-}
-
-.backToTop {
-  padding: 2em 0 2em 0;
-  text-align: center;
-}
-
-#backToTop {
-  font-size: 0.8rem;
-  font-weight: bold;
-  line-height: 2;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1.5px;
 }
 
 footer {
